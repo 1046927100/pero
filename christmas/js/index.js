@@ -8,6 +8,7 @@
 	
 	window.onscroll = function(){
 		var gao = getScroll().top
+		console.log(gao)
 		if(gao>500&gao<=1300){
 			var h = gao+620;
 			$(".three").stop().fadeIn();	
@@ -138,22 +139,49 @@
 			}else if(gao>5020&gao<=5254){
 				var l2 = 350-(gao-5020)/1.3;
 				$(".people").css({left:""+l2+"px",top:""+ h +"px"});
-			}else if(gao>5254&gao<=5337){
+			}else if(gao>5254&gao<=5555){
 				var l3 = 177+(gao-5254)/1.1;
 				$(".people").css({left:""+l3+"px",top:""+ h +"px"});
 			}else{
-				$(".people").stop().fadeOut()
+				$('.people').hide()
 			}
 		}else{
 			$(".nine").stop().fadeOut();
 		}
 		if(gao>5600&gao<=6300){
+			var h = gao+670
+			$(".people").stop().fadeIn();
+			$(".people").css({left:"520px",top:""+ h +"px"});
 			$(".ten").stop().fadeIn();	
+			if(gao>5800)
+			$('.ele').stop().fadeIn();
 		}else{
 			$(".ten").stop().fadeOut();
+			$(".ele").stop().fadeOut()
 		}
 	}
 	
 	$('.huigu').on('click',function(){
 		scrollTo(0,0)
+	})
+	
+	window._bd_share_config = {
+			"common": {
+				"bdSnsKey": {},
+				"bdText": "哒哒哒哒",
+				"bdMini": "2",
+				"bdMiniList": false,
+				"bdPic": "",
+				"bdStyle": "0",
+				"bdSize": "24"
+			},
+			"share": {}
+		};
+		with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+		
+	$('.zhanwang').on('click',function(){
+		$('#share').show().removeClass('animated fadeOutDownBig').addClass('animated fadeInUpBig')
+	})
+	$('.btn').on('click',function(){
+		$('#share').hide().removeClass('animated fadeInUpBig').addClass('animated fadeOutDownBig')
 	})
