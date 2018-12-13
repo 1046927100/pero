@@ -28,14 +28,14 @@
         // 跑进度  
         var onprogress = function () {  
             // 随机时间  
-            var timeout = random(10, 30);  
+            var timeout = random(50, 100);  
 			// 随机进度  
 			progress = random(1, 5)+progress; 
             var progress2 = progress/(100/56)
 			
 			// 随机进度不能超过 98%，以免页面还没加载完毕，进度已经 100% 了  
-			if(progress > 98){  
-				progress = 98;  
+			if(progress > 99){  
+				progress = 99;  
 			}  
 			$progress.style.width = progress + '%'; 
 			$img.style.left = progress2 + '%';
@@ -55,15 +55,16 @@
         onprogress();  
   
         window.onload = function(){  
-            window.loaded = true;
-	        function sleep (time) {
+        	function sleep (time) {
 					return new Promise((resolve) => setTimeout(resolve, time));
 				}
 				// 用法
-				sleep(800).then(() => {
+				sleep(2000).then(() => {
 					// 这里写sleep之后需要去做的事情
+					window.loaded = true;
 					$('.container').hide();
-	    			$('.content').show();
+		    		$('.content').show();
 				}) 
         };  
+        
     	})();
