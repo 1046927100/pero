@@ -28,7 +28,7 @@
         // 跑进度  
         var onprogress = function () {  
             // 随机时间  
-            var timeout = random(50, 100);  
+            var timeout = random(50, 80);  
 			// 随机进度  
 			progress = random(1, 5)+progress; 
             var progress2 = progress/(100/56)
@@ -59,11 +59,13 @@
 					return new Promise((resolve) => setTimeout(resolve, time));
 				}
 				// 用法
-				sleep(2000).then(() => {
+				sleep(1500).then(() => {
 					// 这里写sleep之后需要去做的事情
 					window.loaded = true;
-					$('.container').hide();
-		    		$('.content').show();
+					sleep(1500).then(()=>{
+						$('.container').hide();
+		    		    $('.content').show();
+					})
 				}) 
         };  
         
