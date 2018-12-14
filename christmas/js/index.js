@@ -8,7 +8,11 @@
 	
 	window.onscroll = function(){
 		var gao = getScroll().top
-//		console.log(gao)
+		console.log(gao)
+		if(gao>=20&gao<=500){
+			var h = gao+620;
+			$('.people').show().css({left:"400px",top:""+ h +"px"});
+		}
 		if(gao>500&gao<=1300){
 			var h = gao+620;
 			$(".three").stop().fadeIn();	

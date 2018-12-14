@@ -28,7 +28,7 @@
         // 跑进度  
         var onprogress = function () {  
             // 随机时间  
-            var timeout = random(50, 80);  
+            var timeout = random(150,151);  
 			// 随机进度  
 			progress = random(1, 5)+progress; 
             var progress2 = progress/(100/56)
