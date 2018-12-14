@@ -8,7 +8,7 @@
 	
 	window.onscroll = function(){
 		var gao = getScroll().top
-		console.log(gao)
+//		console.log(gao)
 		if(gao>500&gao<=1300){
 			var h = gao+620;
 			$(".three").stop().fadeIn();	
@@ -139,17 +139,15 @@
 			}else if(gao>5020&gao<=5254){
 				var l2 = 350-(gao-5020)/1.3;
 				$(".people").css({left:""+l2+"px",top:""+ h +"px"});
-			}else if(gao>5254&gao<=5555){
+			}else if(gao>5254&gao<=5600){
 				var l3 = 177+(gao-5254)/1.1;
 				$(".people").css({left:""+l3+"px",top:""+ h +"px"});
-			}else{
-				$('.people').hide()
 			}
 		}else{
 			$(".nine").stop().fadeOut();
 		}
 		if(gao>5600&gao<=6300){
-			var h = gao+670
+			var h = gao+523
 			$(".people").stop().fadeIn();
 			$(".people").css({left:"520px",top:""+ h +"px"});
 			$(".ten").stop().fadeIn();	
@@ -162,13 +160,24 @@
 	}
 	
 	$('.huigu').on('click',function(){
-		scrollTo(0,0)
+        //设置一个定时器
+        timer = setInterval(function(){
+            //获取滚动条的滚动高度
+            var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+            //用于设置速度差，产生缓动的效果
+            var speed = Math.floor(-osTop/3);
+            document.documentElement.scrollTop = document.body.scrollTop = osTop + speed;
+            isTop =true;  //用于阻止滚动事件清除定时器
+            if(osTop == 0){
+                clearInterval(timer);
+            }
+        },30);
 	})
 	
 	window._bd_share_config = {
 			"common": {
 				"bdSnsKey": {},
-				"bdText": "哒哒哒哒",
+				"bdText": "回顾2018",
 				"bdMini": "2",
 				"bdMiniList": false,
 				"bdPic": "",
@@ -178,10 +187,20 @@
 			"share": {}
 		};
 		with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
-		
+	
+	
 	$('.zhanwang').on('click',function(){
-		$('#share').show().removeClass('animated fadeOutDownBig').addClass('animated fadeInUpBig')
+		$('.zhezhao').show();
+		$('#share').show().removeClass('animated fadeOutDownBig').addClass('animated fadeInUpBig').css({animation:'fadeInUpBig 0.2s '});
+		$('.content').css({touchAction:'none'})
 	})
 	$('.btn').on('click',function(){
-		$('#share').hide().removeClass('animated fadeInUpBig').addClass('animated fadeOutDownBig')
+		$('.zhezhao').hide();
+		$('#share').hide().removeClass('animated fadeInUpBig').addClass('animated fadeOutDownBig').css({animation:'fadeOutDownBig 0.2s '})
+		$('.content').css({touchAction:'auto'})
+	})
+	$('.zhezhao').on('click',function(){	
+		$('.zhezhao').hide();
+		$('#share').hide().removeClass('animated fadeInUpBig').addClass('animated fadeOutDownBig').css({animation:'fadeOutDownBig 0.2s '})
+		$('.content').css({touchAction:'auto'})
 	})

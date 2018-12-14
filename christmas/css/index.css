@@ -2,6 +2,9 @@
 				margin:0;
 				padding:0;
 			}
+			ul,ol,li{
+				list-style: none;
+			}
 			.content{
 				width:100%;
 				display: flex;
@@ -36,9 +39,9 @@
 				position:absolute;
 				left:95px;
 				top:208px;
-				animation:pulse 4s infinite;
-				-moz-animation:pulse 4s infinite;
-				-webkit-animation:pulse 4s infinite;
+				animation:big 4s infinite;
+				-moz-animation:big 4s infinite;
+				-webkit-animation:big 4s infinite;
 			}
 			.star,.star1,.star2,.star3,.star4,.star5,.star6{
 				position:absolute;
@@ -76,6 +79,52 @@
 				top:6606px;
 			}
 			
+			@keyframes	big{
+				0% {
+					-webkit-transform: scaleX(1);
+					transform: scaleX(1);
+				}
+				
+				50% {
+					-webkit-transform: scale3d(1.05,1.05,1.05);
+					transform: scale3d(1.2,1.2,1.2);
+				}
+				100% {
+					-webkit-transform: scaleX(1);
+					transform: scaleX(1);
+				}
+			}
+			@-moz-keyframes	big{
+				0% {
+					-webkit-transform: scaleX(1);
+					transform: scaleX(1);
+				}
+				
+				50% {
+					-webkit-transform: scale3d(1.05,1.05,1.05);
+					transform: scale3d(1.2,1.2,1.2);
+				}
+				100% {
+					-webkit-transform: scaleX(1);
+					transform: scaleX(1);
+				}
+			}
+			@-webkit-keyframes	big{
+				0% {
+					-webkit-transform: scaleX(1);
+					transform: scaleX(1);
+				}
+				
+				50% {
+					-webkit-transform: scale3d(1.05,1.05,1.05);
+					transform: scale3d(1.2,1.2,1.2);
+				}
+				100% {
+					-webkit-transform: scaleX(1);
+					transform: scaleX(1);
+				}
+			}
+
 			@keyframes buling{
 				0%{opacity: 0.2;transform: scale(1);}
 				50%{opacity: 2;transform: scale(2.5);}
@@ -91,11 +140,7 @@
 				50%{opacity: 2;transform: scale(2.5);}
 				100%{opacity: 0.2;transform: scale(1);}
 			}
-			@-o-keyframes buling{
-				0%{opacity: 0.2;transform: scale(1);}
-				50%{opacity: 2;transform: scale(2.5);}
-				100%{opacity: 0.2;transform: scale(1);}
-			}
+			
 			
 			@keyframes buling2{
 				0%{opacity: 0.2;transform: scale(1);}
@@ -112,11 +157,7 @@
 				50%{opacity: 2;transform: scale(1.5);}
 				100%{opacity: 0.2;transform: scale(1);}
 			}
-			@-o-keyframes buling2{
-				0%{opacity: 0.2;transform: scale(1);}
-				50%{opacity: 2;transform: scale(1.5);}
-				100%{opacity: 0.2;transform: scale(1);}
-			}
+		
 			
 			@keyframes show{
 				0%{
@@ -128,8 +169,27 @@
 					opacity: 1;
 					}
 			}
-			
-			
+			@-moz-keyframes	show{
+				0%{
+					transform: scale(0.5);
+					opacity: 0.3;
+				}
+				100%{
+					transform: scale(1);
+					opacity: 1;
+					}
+			}
+			@-webkit-keyframes	show{
+				0%{
+					transform: scale(0.5);
+					opacity: 0.3;
+				}
+				100%{
+					transform: scale(1);
+					opacity: 1;
+					}
+			}
+
 			@keyframes zhuan{
 				0%{transform: rotateZ(0)}
 				100%{transform: rotate(360deg)}
@@ -142,10 +202,7 @@
 				0%{transform: rotateZ(0)}
 				100%{transform: rotate(360deg)}
 			}
-			@-o-keyframes zhuan{
-				0%{transform: rotateZ(0)}
-				100%{transform: rotate(360deg)}
-			}
+		
 			
 			@keyframes move{
 				0%{}
@@ -165,12 +222,7 @@
 				75%{transform: translateX(-50px);}
 				100%{}
 			}
-			@-o-keyframes move{
-				0%{}
-				30%{transform: translateX(100px);}
-				75%{transform: translateX(-50px);}
-				100%{}
-			}
+		
 			@keyframes move2{
 				0%{}
 				50%{transform: translateX(-100px);}
@@ -186,14 +238,18 @@
 				50%{transform: translateX(-100px);}
 				100%{}
 			}
-			@-o-keyframes move2{
-				0%{}
-				50%{transform: translateX(-100px);}
-				100%{}
-			}
-				
 			
 			@keyframes shine{
+				0%{transform: skew(0deg);}
+				50%{transform: skew(80deg,0deg);}
+				100%{transform: skew(0deg)}
+			}
+			@-moz-keyframes	shine{
+				0%{transform: skew(0deg);}
+				50%{transform: skew(80deg,0deg);}
+				100%{transform: skew(0deg)}
+			}
+			@-webkit-keyframes	shine{
 				0%{transform: skew(0deg);}
 				50%{transform: skew(80deg,0deg);}
 				100%{transform: skew(0deg)}
@@ -256,19 +312,23 @@
 				position: fixed;
 				height:400px;
 				bottom:0px;
-				background: #ccc;
 				display: none;
+				z-index: 10;
 			}
 			.bdsharebuttonbox{
 				height:325px;
+				background: #F2F2F2;
+			}
+			#share h3{
+				text-align: center;
+				font-size: 24px;
+			}
+			#share ul{
+				margin:60px auto 0;
 			}
 			#share a{
-				display: inline-block;
-				padding: 0;
-				margin:0 50px;
-				width:50px;
+				font-size: 30px;
 				height:50px;
-				transform: scale(3);
 			}
 			.btn{
 				text-align: center;
@@ -279,3 +339,13 @@
 				font-size: 30px;
 				background: white;
 			}
+			.zhezhao{
+				width:750px;
+				height:100%;
+				background: rgba(0,0,0,0.2);
+				position: absolute;
+				left:0;
+				top:0;
+				display: none;
+			}
+			

@@ -34,8 +34,8 @@
             var progress2 = progress/(100/56)
 			
 			// 随机进度不能超过 98%，以免页面还没加载完毕，进度已经 100% 了  
-			if(progress > 99){  
-				progress = 99;  
+			if(progress > 98){  
+				progress = 98;  
 			}  
 			$progress.style.width = progress + '%'; 
 			$img.style.left = progress2 + '%';
