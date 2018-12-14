@@ -9,22 +9,23 @@
 	window.onscroll = function(){
 		var gao = getScroll().top
 //		console.log(gao)
-		if(gao>=20&gao<=500){
-			var h = gao+620;
-			$('.people').show().css({left:"400px",top:""+ h +"px"});
+		if(gao<=600){
+			var h = gao+500;
+			var l1 = 500-(gao)/4.5;
+			$('.people').show().css({left:""+l1+"px",top:""+ h +"px"});
 		}
-		if(gao>500&gao<=1300){
-			var h = gao+620;
+		if(gao>600&gao<=1300){
+			var h = gao+520;
 			$(".three").stop().fadeIn();	
 			$(".people").show();
-			if(gao<=620){
-				var l1 = 340-(gao-520)/1.3;
+			if(gao<=720){
+				var l1 = 340-(gao-600)/1.3;
 				$(".people").css({left:""+l1+"px",top:""+ h +"px"});
-			}else if(gao>620&gao<=854){
-				var l2 = 295+(gao-620)/1.3;
+			}else if(gao>720&gao<=954){
+				var l2 = 295+(gao-720)/1.3;
 				$(".people").css({left:""+l2+"px",top:""+ h +"px"});
-			}else if(gao>854&gao<=1014){
-				var l3 = 453-(gao-854)/1.3;
+			}else if(gao>954&gao<=1114){
+				var l3 = 453-(gao-954)/1.3;
 				$(".people").css({left:""+l3+"px",top:""+ h +"px"});
 			}else{
 				$(".people").stop().fadeOut();
