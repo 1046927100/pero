@@ -191,20 +191,29 @@
 			"share": {}
 		};
 		with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
-	
-	
+		
+		var mo=function(e){e.preventDefault();};
+		function stop(){
+	        document.body.style.overflow='hidden';        
+	        document.addEventListener("touchmove",mo,false);//禁止页面滑动
+		}
+		function move(){
+        document.body.style.overflow='';//出现滚动条
+        document.removeEventListener("touchmove",mo,false);        
+}
 	$('.zhanwang').on('click',function(){
 		$('.zhezhao').show();
-		$('#share').show().removeClass('animated fadeOutDownBig').addClass('animated fadeInUpBig').css({animation:'fadeInUpBig 0.2s '});
-		$('.content').css({touchAction:'none'})
-	})
-	$('.btn').on('click',function(){
-		$('.zhezhao').hide();
-		$('#share').hide().removeClass('animated fadeInUpBig').addClass('animated fadeOutDownBig').css({animation:'fadeOutDownBig 0.2s '})
-		$('.content').css({touchAction:'auto'})
+		$('.share').show().removeClass('animated fadeOutDownBig').addClass('animated fadeInUpBig').css({animation:'fadeInUpBig 0.2s '});
+//		$('.content').css({touchAction:'none'})
+		stop()
 	})
 	$('.zhezhao').on('click',function(){	
 		$('.zhezhao').hide();
-		$('#share').hide().removeClass('animated fadeInUpBig').addClass('animated fadeOutDownBig').css({animation:'fadeOutDownBig 0.2s '})
-		$('.content').css({touchAction:'auto'})
+		$('.share').hide().removeClass('animated fadeInUpBig').addClass('animated fadeOutDownBig').css({animation:'fadeOutDownBig 0.2s '})
+		move();
+	})
+	$('.share').on('click',function(){
+		$('.zhezhao').hide();
+		$('.share').hide().removeClass('animated fadeInUpBig').addClass('animated fadeOutDownBig').css({animation:'fadeOutDownBig 0.2s '})
+		move();
 	})

@@ -341,45 +341,20 @@
 				left:410px
 			}
 			
-			#share{
-				width:100%;
-				position: fixed;
-				height:400px;
-				bottom:0px;
-				display: none;
-				z-index: 10;
-			}
-			.bdsharebuttonbox{
-				height:325px;
-				background: #F2F2F2;
-			}
-			#share h3{
-				text-align: center;
-				font-size: 24px;
-			}
-			#share ul{
-				margin:60px auto 0;
-			}
-			#share a{
-				font-size: 30px;
-				height:50px;
-			}
-			.btn{
-				text-align: center;
-				width:100%;
-				height:75px;
-				line-height: 75px;
-				border:0 none;
-				font-size: 30px;
-				background: white;
-			}
 			.zhezhao{
 				width:750px;
 				height:100%;
-				background: rgba(0,0,0,0.2);
+				background: rgba(0,0,0,0.5);
 				position: absolute;
 				left:0;
 				top:0;
 				display: none;
+			}
+			.share{
+				position: fixed;
+				left:25%;
+				top:25%;
+				display: none;
+				z-index: 30;
 			}
 			
