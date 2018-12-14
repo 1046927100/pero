@@ -11,7 +11,7 @@
 //		console.log(gao)
 		if(gao<=600){
 			var h = gao+500;
-			var l1 = 500-(gao)/4.5;
+			var l1 = 500-(gao)/4.6;
 			$('.people').show().css({left:""+l1+"px",top:""+ h +"px"});
 		}
 		if(gao>600&gao<=1300){
