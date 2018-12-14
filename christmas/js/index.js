@@ -9,7 +9,7 @@
 	window.onscroll = function(){
 		var gao = getScroll().top
 //		console.log(gao)
-		if(gao<=600){
+		if(gao>0&gao<=600){
 			var h = gao+500;
 			var l1 = 500-(gao)/4.6;
 			$('.people').show().css({left:""+l1+"px",top:""+ h +"px"});
