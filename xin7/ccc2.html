@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+
+				height:100%;
+			}
+			html{
+
+				height:100%;
+			}
+			.one{
+				width:100%;
+				height:100%;
+			}
+			button{
+				width:50%;
+				font-size: 50px;
+				float:left;
+			}
+		</style>
+	</head>
+	<body>
+		<div class='one'>
+			<button id='left'>top20电影</button>
+			<button>top20电视剧</button>
+			<!--<iframe id='if' src="http://m.miguvideo.com/wap/resource/mh/hd/ht/index.jsp?nodeId=70052019&platform=PLATFORM"  frameborder="0" scrolling="no" width="100%" height="100%"></iframe>-->
+		</div>
+	</body>
+</html>
+<script>
+	
+	window.onload = function(){
+		var left = document.getElementById("left");
+		var ifr = document.getElementById("if");
+		left.onclick = function(){
+			if(ifr.style.display == "none"){
+				ifr.style.display = "block"
+			}else{
+				ifr.style.display = "none"
+			}
+			
+		}
+		
+		var one = document.getElementsByClassName("one")[0]
+		var ifr = document.createElement("iframe")
+		ifr.src = "https://m.miguvideo.com/wap/resource/mh/hd/ht/index.jsp?nodeId=70052019&platform=PLATFORM";
+		ifr.id = 'if';
+		ifr.frameborder="0"; 
+		ifr.scrolling="no"; 
+		ifr.width="100%";
+		ifr.height="100%";
+		one.appendChild(ifr)
+	}
+</script>
