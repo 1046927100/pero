@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+		<title></title>
+		<style>
+			@-webkit-keyframes flipInX {
+				0% {
+					-webkit-transform: perspective(400px) rotateX(90deg);
+					transform: perspective(400px) rotateX(90deg);
+					opacity: 0
+				}
+				0%,
+				40% {
+					-webkit-animation-timing-function: ease-in;
+					animation-timing-function: ease-in
+				}
+				to {
+					-webkit-transform: perspective(400px);
+					transform: perspective(400px)
+				}
+			}
+			
+			@keyframes flipInX {
+				0% {
+					-webkit-transform: perspective(400px) rotateX(20deg);
+					transform: perspective(400px) rotateX(20deg);
+					opacity: 0
+				}
+				0%,
+				40% {
+					-webkit-animation-timing-function: ease-in;
+					animation-timing-function: ease-in
+				}
+				to {
+					-webkit-transform: perspective(400px);
+					transform: perspective(400px)
+				}
+			}
+			
+			.flipInX {
+				-webkit-backface-visibility: visible!important;
+				backface-visibility: visible!important;
+				-webkit-animation: flipInX 1s linear;
+				animation: flipInX 1s linear;
+			}
+			@keyframes show{
+				0%{
+					opacity: 0;
+					transform: scale3d(0.8,0.8,0.8);
+				}
+				to{
+					opacity: 1;
+					transform: scale3d(1,1,1);
+				}
+			}
+			@-webkit-keyframes show{
+				0%{
+					opacity: 0;
+					transform: scale(0.5);
+				}
+				to{
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+			.show{
+				-webkit-animation: show 1s linear;
+				animation: show 1s linear;
+			}
+			@keyframes	big{
+				0% {
+					-webkit-transform: scaleX(1);
+					transform: scaleX(1);
+				}
+				
+				50% {
+					-webkit-transform: scale3d(1.05,1.05,1.05);
+					transform: scale3d(1.2,1.2,1.2);
+				}
+				100% {
+					-webkit-transform: scaleX(1);
+					transform: scaleX(1);
+				}
+			}
+			@-webkit-keyframes	big{
+				0% {
+					-webkit-transform: scaleX(1);
+					transform: scaleX(1);
+				}
+				
+				50% {
+					-webkit-transform: scale3d(1.05,1.05,1.05);
+					transform: scale3d(1.2,1.2,1.2);
+				}
+				100% {
+					-webkit-transform: scaleX(1);
+					transform: scaleX(1);
+				}
+			}
+			.big{
+				-webkit-animation: big 2s linear infinite;
+				animation: big 2s linear infinite;
+			}
+			*{
+				margin:0;
+				padding:0;
+			}
+			
+			.container{
+				position: relative;
+			}
+			.one{
+				width:100%;
+			}
+			.two{
+				width:2.61rem;
+				height:2.73rem;
+				position: absolute;
+				top:6.7rem;
+				left:6.3rem;
+			}
+			.three{
+				width:2.41rem;
+				height:2.41rem;
+				position: absolute;
+				left:2.8rem;
+				top:6.54rem;
+			}
+			.four{
+				width:2.09rem;
+				height:1.41rem;
+				position: absolute;
+				left:4.7rem;
+				top:3.9rem;
+			}
+			.five{
+				width:2.15rem;
+				height:1.51rem;
+				position: absolute;
+				left:7.66rem;
+				top:11.45rem;
+			}
+			.six{
+				width:1.71rem;
+				height:1.51rem;
+				position: absolute;
+				left:4.07rem;
+				top:13.6rem;
+			}
+			.seven{
+				width:1.64rem;
+				height:1.64rem;
+				position: absolute;
+				left:1.9rem;
+				top:7.75rem;
+			}
+			.eight{
+				width:1.73rem;
+				height:1.97rem;
+				position: absolute;
+				left:0.4rem;
+				top:3.7rem;
+			}
+			.nine{
+				width:1.37rem;
+				height:1.85rem;
+				position: absolute;
+				left:6.7rem;
+				top:9.9rem;
+			}
+			.ten{
+				width:1.88rem;
+				height:1.93rem;
+				position: absolute;
+				left:6.78rem;
+				top:13.15rem;
+			}
+			.ele{
+				width:1.65rem;
+				height:1.61rem;
+				position: absolute;
+				left:4.85rem;
+				top:12.5rem;
+			}
+			.a{
+				width:2rem;
+				height:2.11rem;
+				position: absolute;
+				left:1.6rem;
+				top:10rem;
+			}
+			.c{
+				width:1.92rem;
+				height:1.92rem;
+				position: absolute;
+				left:4.6rem;
+				top:7.8rem;
+			}
+			.d{
+				width:2.33rem;
+				height:2.33rem;
+				position: absolute;
+				left:4.4rem;
+				top:9.85rem;
+			}
+			.e{
+				width:1.69rem;
+				height:1.69rem;
+				position: absolute;
+				left:3.6rem;
+				top:11.58rem;
+			}
+			.f{
+				width:2.14rem;
+				height:2.01rem;
+				position: absolute;
+				left:1.4rem;
+				top:5.5rem;
+			}
+			.ziyuan{
+				width:8.9rem;
+				height:10.8rem;
+				position: absolute;
+				left:5%;
+				top:16%;
+				display:none;
+			}
+			.bbq{
+				width:100%;
+				height:100%;
+				position: absolute;
+				left:0;
+				top:0;
+			}
+			.start{
+				width:0.72rem;
+				height:0.72rem;
+				position: absolute;
+				left:8rem;
+				top:6.1rem;
+			}
+			.alert{
+				display: none;
+			}
+			.close{
+				width:0.86rem;
+				height:0.86rem;
+				position: absolute;
+				left:4.5rem;
+				top:15.2rem;
+			}
+			.black{
+				width:100%;
+				height:100%;
+				background-color:rgba(0,0,0,0.5);
+				position: absolute;
+				top:0;
+				left:0;
+			}
+			.food{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class='container'>
+			<img src="img/春运美食H5-09.png"  class='one'/>
+			<img src="img/1x/资源 10.png"  class='two food'/>
+			<img src="img/1x/资源 11.png" class='three food' />
+			<img src="img/1x/资源 12.png" class='four food' />
+			<img src='img/1x/资源 13.png' class='five food'>
+			<img src="img/1x/资源 14.png" class='six food'/>
+			<img src="img/1x/资源 15.png" class='seven food'/>
+			<img src="img/1x/资源 16.png" class='eight food'/>
+			<img src="img/1x/资源 2.png" class='nine food'/>
+			<img src="img/1x/资源 3.png" class='ten food'/>
+			<img src="img/1x/资源 4.png" class='ele food'/>
+			<img src="img/1x/资源 5.png" class='a food'/>
+			<img src="img/1x/资源 7.png" class='c food'/>
+			<img src="img/1x/资源 8.png" class='d food'/>
+			<img src="img/1x/资源 9.png" class='e food'/>
+			<img src="img/1x(1)/111.png" class='f food' />
+			<div class="black"></div>
+		</div>
+		<div class='alert'>
+				<div class='bbq'>
+					<img src="img/1x(1)/资源 26.png"  class='ziyuan aa'/>
+					<img src="img/1x(1)/播放语音1@3x.png" class='start no1' />
+				</div>
+				<div class='bbq'>
+					<img src="img/1x(1)/资源 27.png"  class='ziyuan bb'/>
+					<img src="img/1x(1)/播放语音1@3x.png" class='start no2' />
+				</div>
+				<div class='bbq'>
+					<img src="img/1x(1)/资源 28.png"  class='ziyuan cc'/>
+					<img src="img/1x(1)/播放语音1@3x.png" class='start no3' />
+				</div>
+				<div class='bbq'>
+					<img src="img/1x(1)/资源 29.png"  class='ziyuan dd'/>
+					<img src="img/1x(1)/播放语音1@3x.png" class='start no4' />
+				</div>
+				<div class='bbq'>
+					<img src="img/1x(1)/资源 29.png"  class='ziyuan dd'/>
+					<img src="img/1x(1)/播放语音1@3x.png" class='start no5' />
+				</div>
+				<div class='bbq'>
+					<img src="img/1x(1)/资源 31.png"  class='ziyuan ff'/>
+					<img src="img/1x(1)/播放语音1@3x.png" class='start no6' />
+				</div>
+				<div class='bbq'> 
+					<img src="img/1x(1)/资源 32.png"  class='ziyuan gg'/>
+					<img src="img/1x(1)/播放语音1@3x.png" class='start no7' />
+				</div>
+				<div class='bbq'>
+					<img src="img/1x(1)/资源 33.png"  class='ziyuan hh'/>
+					<img src="img/1x(1)/播放语音1@3x.png" class='start no8' />
+				</div>
+				<div class='bbq'>
+					<img src="img/1x(1)/资源 34.png"  class='ziyuan ii'/>
+					<img src="img/1x(1)/播放语音1@3x.png" class='start no9' />
+				</div>
+				<div class='bbq'>
+					<img src="img/1x(1)/资源 35.png"  class='ziyuan jj'/>
+					<img src="img/1x(1)/播放语音1@3x.png" class='start no10' />
+				</div>
+				<div class='bbq'>
+					<img src="img/1x(1)/资源 36.png"  class='ziyuan kk'/>
+					<img src="img/1x(1)/播放语音1@3x.png" class='start no11' />
+				</div>
+				<div class='bbq'>
+					<img src="img/1x(1)/资源 37.png"  class='ziyuan ll'/>
+					<img src="img/1x(1)/播放语音1@3x.png" class='start no12' />
+				</div>
+				<div class='bbq'>
+					<img src="img/1x(1)/资源 38.png"  class='ziyuan mm'/>
+					<img src="img/1x(1)/播放语音1@3x.png" class='start no13' />
+				</div>
+				<div class='bbq'>
+					<img src="img/1x(1)/资源 39.png"  class='ziyuan nn'/>
+					<img src="img/1x(1)/播放语音1@3x.png" class='start no14' />
+				</div>
+				<div class='bbq'>
+					<img src="img/1x(1)/资源 40.png"  class='ziyuan oo'/>
+					<img src="img/1x(1)/播放语音1@3x.png" class='start no15' />
+				</div>
+				
+				<img src="img/1x(1)/关闭ICON.png" class='close' />
+		</div>
+		<div class="video">
+			<audio src="audio/连云港.mp3" class='lianyungan'></audio>
+			<audio src="audio/常州.m4a" class='changzhou'></audio>
+			<audio src="audio/淮安方言.m4a" class='huaian'></audio>
+			<audio src="audio/南通.m4a" class='nantong'></audio>
+			<audio src="audio/苏州方言.m4a" class='suzhou'></audio>
+			<audio src="audio/盐城.m4a" class='yancheng'></audio>
+			<audio src="audio/镇江.m4a" class='zhenjiang'></audio>
+			<audio src="audio/扬州话.m4a" class='yanzhou'></audio>
+			<audio src="audio/无锡.m4a" class='wuxi'></audio>
+		</div>
+	</body>
+</html>
+<script src='js/jquery.js'></script>
+<script>
+	var a = document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+	var scale = 1 / devicePixelRatio;
+	document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+	
+	(function flexible (window, document) {
+	  var docEl = document.documentElement
+	  var dpr = window.devicePixelRatio || 1
+	
+	  // adjust body font size
+	  function setBodyFontSize () {
+	    if (document.body) {
+	      document.body.style.fontSize = (12 * dpr) + 'px'
+	    }
+	    else {
+	      document.addEventListener('DOMContentLoaded', setBodyFontSize)
+	    }
+	  }
+	  setBodyFontSize();
+	
+	  // set 1rem = viewWidth / 10
+	  function setRemUnit () {
+	    var rem = docEl.clientWidth / 10
+	    docEl.style.fontSize = rem + 'px'
+	  }
+	
+	  setRemUnit()
+	
+	  // reset rem unit on page resize
+	  window.addEventListener('resize', setRemUnit)
+	  window.addEventListener('pageshow', function (e) {
+	    if (e.persisted) {
+	      setRemUnit()
+	    }
+	  })
+	
+	  // detect 0.5px supports
+	  if (dpr >= 2) {
+	    var fakeBody = document.createElement('body')
+	    var testElement = document.createElement('div')
+	    testElement.style.border = '.5px solid transparent'
+	    fakeBody.appendChild(testElement)
+	    docEl.appendChild(fakeBody)
+	    if (testElement.offsetHeight === 1) {
+	      docEl.classList.add('hairlines')
+	    }
+	    docEl.removeChild(fakeBody)
+	  }
+	}(window, document))
+	
+	//页面加载后执行的函数
+	window.load= (function aa(){
+		$(".food").show().addClass("show");
+	})()
+	
+	//点击弹窗
+	$(".ziyuan").addClass("flipInX");
+	$(".start").addClass("flipInX");
+	$(".two").on("click",function(){
+		$(".alert").show();
+		$(".bb").show();
+		$(".lianyungan").play();
+	});
+	$(".three").on("click",function(){
+		$(".alert").show();
+		$(".mm").show();
+	});
+	$(".four").on("click",function(){
+		$(".alert").show();
+		$(".dd").show();
+	});
+	$(".five").on("click",function(){
+		$(".alert").show();
+		$(".aa").show();
+	});
+	$(".six").on("click",function(){
+		$(".alert").show();
+		
+	});
+	$(".seven").on("click",function(){
+		$(".alert").show();
+		
+	});
+	$(".eight").on("click",function(){
+		$(".alert").show();
+		$(".ee").show();
+	});
+	$(".nine").on("click",function(){
+		$(".alert").show();
+		$(".cc").show();
+	});
+	$(".ten").on("click",function(){
+		$(".alert").show();
+		$(".jj").show();
+	});
+	$(".ele").on("click",function(){
+		$(".alert").show();
+		$(".ff").show();
+	});
+	$(".a").on("click",function(){
+		$(".alert").show();
+		$(".ll").show();
+	});
+	$(".c").on("click",function(){
+		$(".alert").show();
+		$(".gg").show();
+	});
+	$(".d").on("click",function(){
+		$(".alert").show();
+		$(".kk").show();
+	});
+	$(".e").on("click",function(){
+		$(".alert").show();
+		$(".ii").show();
+	});
+	$(".f").on("click",function(){
+		$(".alert").show();
+		$(".hh").show();
+	});
+	//
+	var ale = document.getElementsByClassName("alert")[0];
+	if($(".alert").css("display") == "none"){
+		$(".black").hide();
+		console.log(111)
+	}else{
+		$(".black").show();
+	}
+	//点击播放按钮
+	var start = document.getElementsByClassName("start")[0];
+	var src1 = start.getAttribute("src");
+	$(".start").on("click",function(){
+		if(src1 == "img/1x(1)/播放语音1@3x.png"){
+			src1 = "img/1x(1)/播放语音@3x.png";
+		}else{
+			src1 = "img/1x(1)/播放语音1@3x.png";
+		}
+		start.src = src1
+	});
+	$(".no1").on("click",function(){
+
+	});
+	$(".no2").on("click",function(){
+		$(".lianyungan").play();
+	});
+	//点击关闭按钮
+	$(".close").on("click",function(){
+		$(".alert").hide();
+		$(".ziyuan").hide();
+	})
+</script>
