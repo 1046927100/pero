@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			.ready{
+				background: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<audio id="audio1" controls  ></audio>
+			<audio id="audio2" controls src='audio/suqian.m4a'></audio>
+			<audio id="audio3" controls></audio>
+			<audio id="audio4" controls></audio>
+			<audio id="audio5" controls></audio>
+			<audio id="audio6" controls></audio>
+		</div>
+		<div style="width:100px;height:100px;background:blue;display: none;" class='one'>
+			
+		</div>
+	</body>
+</html>
+<script src='js/jquery.js'></script>
+<script src='js/PxLoader.js'></script>
+<script type="text/javascript" src="js/soundManager2.js"></script>
+<script src='js/PxLoaderSound.js'></script>
+<script>
+	//对于此示例，我们将加载5个音频剪辑。一旦所有声音都准备就绪，我们将显示一组可以单击以播放每个声音的图像。
+	// initialize the sound manager 
+	soundManager.url = 'soundManager2/'; 
+	soundManager.flashVersion = 9; 
+	soundManager.useHighPerformance = true; // reduces delays 
+	 
+	// reduce the default 1 sec delay to 500 ms 
+	soundManager.flashLoadTimeout = 500; 
+	 
+	// mp3 is required by default, but we don't want any requirements 
+	soundManager.audioFormats.mp3.required = false; 
+	 
+	// flash may timeout if not installed or when flashblock is installed 
+	soundManager.ontimeout(function(status) { 
+	    // no flash, go with HTML5 audio 
+	    soundManager.useHTML5Audio = true; 
+	    soundManager.preferFlash = false; 
+	    soundManager.reboot(); 
+	}); 
+	 
+	soundManager.onready(function() { 
+	    // ok to show the button to run the sound sample 
+	    $('.one').show(); 
+	}); 
+	
+//	//最后，这是加载和播放每个音频剪辑的代码：
+//	var soundNames = ['suqian', '徐州', '盐城', '扬州话', '镇江','aaa'], 
+//  loader = new PxLoader(), 
+//  i, len, url; 
+// 
+//	// queue each sound for loading 
+//	for(i=0, len = soundNames.length; i < len; i++) { 
+//	 
+//	    // see if the browser can play m4a 
+//	    url = 'audio/' + soundNames[i] + '.m4a'; 
+////	    if (!soundManager.canPlayURL(url)) { 
+////	    	console.log("aaa");
+////	        // ok, what about ogg? 
+////	        url = 'audio/' + soundNames[i] + '.mp3'; 
+////	        if (!soundManager.canPlayURL(url)) { 
+////	            continue; // can't be played 
+////	        } 
+////	    } 
+//	 
+//	    // queue the sound using the name as the SM2 id 
+//	    loader.addSound(soundNames[i], url); 
+//	} 
+//	    console.log(loader)
+//	
+//	 
+//	// listen to load events 
+//	loader.addProgressListener(function(e) { 
+//	 
+//	    // show the icon once a sound has loaded 
+//	    var soundId = e.resource.sound.sID, 
+//	    $icon = $('#' + soundId).addClass('ready'); 
+//	    
+//	 
+//	    // play the sound when the icon is clicked 
+//	    $icon.click(function() { 
+//	 
+//	        // highlight the icon while playing 
+//	        $icon.addClass('playing'); 
+//	 
+//	        soundManager.play(soundId, { 
+//	            onfinish: function() { 
+//	                $icon.removeClass('playing'); 
+//	            } 
+//	        }); 
+//	    }); 
+//	}); 
+//	loader.start(); 
+//	
+
+//复制
+soundManager.onload=function(){
+
+ var sound=soundManager.createSound({
+
+  id: 'audio1', 
+
+  url: 'audio/aaa.mp3'
+
+ });
+
+ soundManager.play('audio1');
+
+}
+	
+	
+</script>
