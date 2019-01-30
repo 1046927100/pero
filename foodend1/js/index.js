@@ -525,19 +525,19 @@
 			bgmusic.play();
 	            // 发送给好友
 	
-//	            WeixinJSBridge.on('menu:share:appmessage', function(){
+	            WeixinJSBridge.on('menu:share:appmessage', function(){
 	
 	                shareFriend();
 	
-//	            });
+	            });
 	
 	            // 分享到朋友圈
 	
-//	            WeixinJSBridge.on('menu:share:timeline', function(){
+	            WeixinJSBridge.on('menu:share:timeline', function(){
 	
 	                shareTimeline();
 	
-//	            });
+	            });
 			}
 	   document.addEventListener('WeixinJSBridgeReady',onBridgeReady, false);
 
