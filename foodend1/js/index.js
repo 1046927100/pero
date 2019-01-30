@@ -536,12 +536,12 @@
 	        }
 	
 	   // 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
-	
-	   document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-				bgmusic.play();
+		
+		onBridgeReady = function(){
+			bgmusic.play();
 	            // 发送给好友
 	
-	            WeixinJSBridge.on('menu:share:appmessage', function(argv){
+	            WeixinJSBridge.on('menu:share:appmessage', function(){
 	
 	                shareFriend();
 	
@@ -549,7 +549,7 @@
 	
 	            // 分享到朋友圈
 	
-	            WeixinJSBridge.on('menu:share:timeline', function(argv){
+	            WeixinJSBridge.on('menu:share:timeline', function(){
 	
 	                shareTimeline();
 	
@@ -557,14 +557,13 @@
 	
 	            // 分享到微博
 	
-	            WeixinJSBridge.on('menu:share:weibo', function(argv){
+	            WeixinJSBridge.on('menu:share:weibo', function(){
 	
 	                shareWeibo();
 	
-	            });
-				onBridgeReady();
-			
-	        }, false);
+	            });	
+			}
+	   document.addEventListener('WeixinJSBridgeReady',onBridgeReady, false);
 
 		
 	}
