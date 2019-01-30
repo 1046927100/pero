@@ -562,8 +562,9 @@
 	                shareWeibo();
 	
 	            });
-	
+				onBridgeReady();
+			
 	        }, false);
-		
+
 		
 	}
