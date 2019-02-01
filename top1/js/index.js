@@ -199,7 +199,7 @@
 		$('img').each(function () {     //对图片进行循环
 			var ownHeight=$(this).offset().top;     //获取当前图片在文档中的位置
 			if(ownHeight<=wHeight){     //如果当前图片位置在屏幕可视范围之内加载此图片
-		$(this).attr('src',$(this).attr('data'));
+		$(this).attr('src',$(this).attr('data-original'));
 		}
 	});
 	
@@ -210,7 +210,7 @@
 	            if(ownHeight<=(hasSorollTop+wHeight+500)){
 	                 //当图片在屏幕滚动时，距离可视区域500像素时加载此图片，
 	                // 以保证查看此图时，下面的一张以提前加载完成
-	                 $(this).attr('src',$(this).attr('data'));
+	                 $(this).attr('src',$(this).attr('data-original'));
 	             }
 	        });
 	    });

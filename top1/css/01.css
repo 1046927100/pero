@@ -9,9 +9,24 @@
 				padding:0;
 			}
 			.one,.two{
-				position: relative;
+				position: absolute;
 				left:0;
-				top:0;
+				top:80px;
+			}
+			img{
+				width:100%;
+			}
+			.a{
+				height:2724px;
+			}
+			.b{
+				height:2256px;
+			}
+			.c{
+				height:2263px;
+			}
+			.d{
+				height:2821px;
 			}
 			.two{
 				display: none;
