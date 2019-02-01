@@ -107,46 +107,46 @@
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=641944247"
 	};
 	lj2[7].onclick = function(){
-		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=648278946"
-	};
-	lj2[8].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=648278854"
 	};
-	lj2[9].onclick = function(){
+	lj2[8].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=651746049"
 	};
-	lj2[10].onclick = function(){
+	lj2[9].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=651914767"
 	};
-	lj2[11].onclick = function(){
+	lj2[10].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=629350172"
 	};
-	lj2[12].onclick = function(){
+	lj2[11].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=645887240"
 	};
-	lj2[13].onclick = function(){
+	lj2[12].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=629220336"
 	};
-	lj2[14].onclick = function(){
+	lj2[13].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=648398063"
 	};
-	lj2[15].onclick = function(){
+	lj2[14].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=627978129"
 	};
-	lj2[16].onclick = function(){
+	lj2[15].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=630064234"
 	};
-	lj2[17].onclick = function(){
+	lj2[16].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=617171584"
 	};
-	lj2[18].onclick = function(){
+	lj2[17].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=649996018"
 	};
-	lj2[19].onclick = function(){
+	lj2[18].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=628289649"
 	};
-	lj2[20].onclick = function(){
+	lj2[19].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=651263288"
+	};
+	lj2[20].onclick = function(){
+		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=652091214"
 	};
 	//返回顶部
 		//封装卷曲的高度
