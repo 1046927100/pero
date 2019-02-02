@@ -22,7 +22,8 @@
 	}
 	//给地址
 	lj[0].onclick=function(){
-		window.location.href = 'https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=627652225&mgdbid='
+//		window.location.href = 'https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=627652225&mgdbid='
+		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=649216969&channelid=90020002012"
 	};
 	lj[1].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=615978408&mgdbid="
@@ -104,49 +105,49 @@
 		window.location.href = "http://wap.js.10086.cn/hyl/CAC/actMGNewSpring/act3.do?isMigu=1&platform=PLATFORM&miguToken=SSOTOKEN&activityId=001&platform=PLATFORMmiguNeedLogin=1"
 	};
 	lj2[6].onclick = function(){
-		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=641944247&mgdbid="
+		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=627087228&mgdbid="
 	};
 	lj2[7].onclick = function(){
-		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=648278854&mgdbid="
+		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=652091176&mgdbid="
 	};
 	lj2[8].onclick = function(){
-		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=651746049&mgdbid="
+		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=648278854&mgdbid="
 	};
 	lj2[9].onclick = function(){
-		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=651914767&mgdbid="
+		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=651746049&mgdbid="
 	};
 	lj2[10].onclick = function(){
-		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=629350172&mgdbid="
+		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=651914767&mgdbid="
 	};
 	lj2[11].onclick = function(){
-		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=645887240&mgdbid="
+		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=629350172&mgdbid="
 	};
 	lj2[12].onclick = function(){
-		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=629220336&mgdbid="
+		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=645887240&mgdbid="
 	};
 	lj2[13].onclick = function(){
-		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=648398063&mgdbid="
+		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=629220336&mgdbid="
 	};
 	lj2[14].onclick = function(){
-		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=627978129&mgdbid="
+		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=648398063&mgdbid="
 	};
 	lj2[15].onclick = function(){
-		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=630064234&mgdbid="
-	};
-	lj2[16].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=617171584&mgdbid="
 	};
-	lj2[17].onclick = function(){
+	lj2[16].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=649996018&mgdbid="
 	};
-	lj2[18].onclick = function(){
+	lj2[17].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=628289649&mgdbid="
 	};
-	lj2[19].onclick = function(){
+	lj2[18].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=651263288&mgdbid="
 	};
+	lj2[19].onclick = function(){
+		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=629241094&mgdbid="
+	};
 	lj2[20].onclick = function(){
-		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=652091214&mgdbid="
+		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=629119970&mgdbid="
 	};
 	//返回顶部
 		//封装卷曲的高度
