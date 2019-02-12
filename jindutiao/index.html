@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			html{
+				background:#ccc;
+			}
+			.one{
+				width:9.8rem;
+				height:0.4rem;
+				border:0.02rem solid black;
+				border-radius: 0.3rem;
+				position: absolute;
+				top:50%;
+				left:50%;
+				transform: translate(-50%,-50%);
+				overflow: hidden;
+			}
+			span{
+				display: block;
+				/*width:100%;*/
+				height:100%;
+				background: linear-gradient(145deg, white 29%,#60d7e3 30%,#60d7e3 59%,white 60%);
+				background-size: 1.2rem auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class='one'>
+			<span class='spc'></span>
+		</div>
+		<div class='two'>
+			<img src="img/1.png"  />
+		</div>
+	</body>
+</html>
+<script>	
+	//	适配移动端页面大小的方法
+		var a = document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+		var scale = 1 / devicePixelRatio;
+		document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+	(function flexible (window, document) {
+		  var docEl = document.documentElement
+		  var dpr = window.devicePixelRatio || 1
+		
+		  // adjust body font size
+		  function setBodyFontSize () {
+		    if (document.body) {
+		      document.body.style.fontSize = (12 * dpr) + 'px'
+		    }
+		    else {
+		      document.addEventListener('DOMContentLoaded', setBodyFontSize)
+		    }
+		  }
+		  setBodyFontSize();
+		
+		  // set 1rem = viewWidth / 10
+		  function setRemUnit () {
+		    var rem = docEl.clientWidth / 10
+		    docEl.style.fontSize = rem + 'px'
+		  }
+		
+		  setRemUnit()
+		
+		  // reset rem unit on page resize
+		  window.addEventListener('resize', setRemUnit)
+		  window.addEventListener('pageshow', function (e){
+		    if (e.persisted) {
+		      setRemUnit()
+		    }
+		  })
+		
+		  // detect 0.5px supports
+		  if (dpr >= 2) {
+		    var fakeBody = document.createElement('body')
+		    var testElement = document.createElement('div')
+		    testElement.style.border = '.5px solid transparent'
+		    fakeBody.appendChild(testElement)
+		    docEl.appendChild(fakeBody)
+		    if (testElement.offsetHeight === 1){
+		      docEl.classList.add('hairlines')
+		    }
+		    docEl.removeChild(fakeBody)
+		  }
+		}(window, document));
+//		进度条
+	(function () {	
+		var spc = document.getElementsByClassName("spc")[0];
+		var random = function(min, max){  
+            return Math.floor(Math.random() * (max - min + 1) + min);  
+        }; 
+	    // 初始进度，1%  
+		var progress = 1;  
+		var onprogress = function () {  
+				// 随机进度  
+				progress = random(1,5)+progress; 	
+				console.log(progress)
+				// 随机进度不能超过 98%，以免页面还没加载完毕，进度已经 100% 了  
+				if(progress > 70){  
+					progress = 98;  
+				}  
+				spc.style.width = progress + '%'; 
+	            setTimeout(function () {  
+	                // 如果页面加载完毕，则直接进度到 100%  
+	                if(window.loaded){  		
+						spc.style.width = '100%'; 
+						return;  
+	                }  
+	                onprogress();  
+	            }, 60);  
+	        };  
+	  
+	        // 开始跑进度  
+	        onprogress();   
+	        
+	        
+			//	        监听是否加载完成
+	        window.onload = function(){
+	        	window.loaded = true;
+	        }
+	})()
+	
+	
+</script>
