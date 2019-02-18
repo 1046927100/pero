@@ -4,7 +4,7 @@
 	for(var i=0;i<lj.length;i++){
 		if(i==0){
 			lj[i].style.top = 586+"px"
-		}else if(i==5){
+		}else if(i==4){
 			lj[i].style.top = 527+451*i+"px"
 		}
 		else{
@@ -22,32 +22,31 @@
 	}
 	//给地址
 	lj[0].onclick=function(){
-//		window.location.href = 'https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=627652225&mgdbid='
-		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=649216969&channelid=90020002012"
+		window.location.href = 'https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=627652225&mgdbid='
 	};
 	lj[1].onclick = function(){
-		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=615978408&mgdbid="
-	};
-	lj[2].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=651293202&mgdbid="
 	};
-	lj[3].onclick = function(){
+	lj[2].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=625948925&mgdbid="
 	};
-	lj[4].onclick = function(){
+	lj[3].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=651514424&mgdbid="
 	};
-	lj[5].onclick = function(){
-		window.location.href = "http://wap.js.10086.cn/hyl/CAC/actMGNewSpring/act3.do?isMigu=1&platform=PLATFORM&miguToken=SSOTOKEN&activityId=001&platform=PLATFORMmiguNeedLogin=1"
+	lj[4].onclick = function(){
+		window.location.href = "http://wap.js.10086.cn/hyl/CAC/actMGNewSpring/act1.do?isMigu=1&platform=PLATFORM&miguToken=SSOTOKEN&activityId=001&platform=PLATFORM&miguNeedLogin=1"
 	};
-	lj[6].onclick = function(){
+	lj[5].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=649359392&mgdbid="
 	};
-	lj[7].onclick = function(){
+	lj[6].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=624311489&mgdbid="
 	};
-	lj[8].onclick = function(){
+	lj[7].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=651233367&mgdbid="
+	};
+	lj[8].onclick = function(){
+		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=624310276&mgdbid="
 	};
 	lj[9].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=621951749&mgdbid="
@@ -71,7 +70,7 @@
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=624994837&mgdbid="
 	};
 	lj[16].onclick = function(){
-		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=621952346&mgdbid="
+		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=621951764&mgdbid="
 	};
 	lj[17].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=623622602&mgdbid="
@@ -108,46 +107,46 @@
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=627087228&mgdbid="
 	};
 	lj2[7].onclick = function(){
-		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=652091176&mgdbid="
-	};
-	lj2[8].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=648278854&mgdbid="
 	};
-	lj2[9].onclick = function(){
+	lj2[8].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=651746049&mgdbid="
 	};
-	lj2[10].onclick = function(){
+	lj2[9].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=651914767&mgdbid="
 	};
-	lj2[11].onclick = function(){
+	lj2[10].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=629350172&mgdbid="
 	};
-	lj2[12].onclick = function(){
+	lj2[11].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=645887240&mgdbid="
 	};
-	lj2[13].onclick = function(){
+	lj2[12].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=629220336&mgdbid="
 	};
-	lj2[14].onclick = function(){
+	lj2[13].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=648398063&mgdbid="
 	};
-	lj2[15].onclick = function(){
-		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=617171584&mgdbid="
+	lj2[14].onclick = function(){
+		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=617172261&mgdbid="
 	};
-	lj2[16].onclick = function(){
+	lj2[15].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=649996018&mgdbid="
 	};
-	lj2[17].onclick = function(){
-		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=628289649&mgdbid="
-	};
-	lj2[18].onclick = function(){
-		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=651263288&mgdbid="
-	};
-	lj2[19].onclick = function(){
+	lj2[16].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=629241094&mgdbid="
 	};
-	lj2[20].onclick = function(){
+	lj2[17].onclick = function(){
 		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=629119970&mgdbid="
+	};
+	lj2[18].onclick = function(){
+		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=628289649&mgdbid="
+	};
+	lj2[19].onclick = function(){
+		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=651263288&mgdbid="
+	};
+	lj2[20].onclick = function(){
+		window.location.href = "https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=652091176&mgdbid="
 	};
 	//返回顶部
 		//封装卷曲的高度
