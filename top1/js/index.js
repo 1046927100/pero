@@ -20,9 +20,10 @@
 			lj2[i].style.top = 586+451*i+"px"
 		}
 	}
+//	http://m.miguvideo.com/wap/resource/migu/miguH5/detail/detail.jsp?cid=627652225
 	//给地址						
 	lj[0].onclick=function(){	
-		window.location.href = 'https://m.miguvideo.com/wap/resource/migu/miguH5/detail/detail.jsp?cid=627652225'
+		window.location.href = 'https://m.miguvideo.com/mgs/msite/prd/detail.html?cid=627652225'
 	};
 	lj[1].onclick = function(){
 		window.location.href = "http://m.miguvideo.com/wap/resource/migu/miguH5/detail/detail.jsp?cid=651293202"
@@ -214,3 +215,5 @@
 	             }
 	        });
 	    });
+	    
+
