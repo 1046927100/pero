@@ -20,10 +20,18 @@
 			lj2[i].style.top = 586+451*i+"px"
 		}
 	}
-
+	//跳转
+	redictSrcId = function(val){
+		if (this.isWebView) {
+			$.playDetail(val, 0)
+		} else {
+		window.location.href = "http://m.miguvideo.com/wap/resource/migu/miguH5/detail/detail.jsp?cid=" + val
+		}
+	}
+	//window.location.href = 'http://m.miguvideo.com/wap/resource/migu/miguH5/detail/detail.jsp?cid=627652225'
 	//给地址						
 	lj[0].onclick=function(){	
-		window.location.href = 'http://m.miguvideo.com/wap/resource/migu/miguH5/detail/detail.jsp?cid=627652225'
+		redictSrcId(627652225)
 	};
 	lj[1].onclick = function(){
 		window.location.href = "http://m.miguvideo.com/wap/resource/migu/miguH5/detail/detail.jsp?cid=651293202"
@@ -214,14 +222,4 @@
 	                 $(this).attr('src',$(this).attr('data-original'));
 	             }
 	        });
-	    });
-	    
-	redictSrcId = function(val){
-		if(this.isWebView) {
-			$.playDetail(val, 0)
-			console.log(val)
-		}else{
-//			window.location.href = "/wap/resource/migu/miguH5/detail/detail.jsp?cid=" + val
-		}
-		}
-	redictSrcId()
+	   });
