@@ -18,30 +18,18 @@ $(function () {
 	for(var i=0;i<lj.length;i++){
 		if(i==0){
 			lj[i].style.top = 586+"px"
-		}else if(i>=10&i<15){
-			lj[i].style.top = 586+453*i+"px"
-		}else if(i==15){
-			lj[i].style.top = 7432+"px"
-		}else if(i==16){
-			lj[i].style.top = 7940+"px"
-		}else if(i==17){
-			lj[i].style.top = 8450+"px"
-		}else if(i==18){
-			lj[i].style.top = 8970+"px"
-		}else if(i==19){
-			lj[i].style.top = 9493+"px"
-		}
-		else{
-			lj[i].style.top = 586+451*i+"px"
+		}else{
+			lj[i].style.top = 586+452.5*i+"px"
 		}
 	}
 	for(var i=0;i<lj2.length;i++){
 		if(i==0){
 			lj2[i].style.top = 586+"px"
-		}else if(i>=10){
+		}else if(i>=20&i<=30){
+			lj2[i].style.top = 586+453.8*i+"px"
+		}
+		else{
 			lj2[i].style.top = 586+453*i+"px"
-		}else{
-			lj2[i].style.top = 586+451*i+"px"
 		}
 	}
        
@@ -180,6 +168,96 @@ redictSrcId(651263288)
 	};
 	lj2[19].onclick = function(){
 redictSrcId(652091176)
+	};
+	lj2[20].onclick = function(){
+redictSrcId(647215228)
+	};
+	lj2[21].onclick = function(){
+redictSrcId(652730954)
+	};
+	lj2[22].onclick = function(){
+redictSrcId(624125005)
+	};
+	lj2[23].onclick = function(){
+redictSrcId(651913658)
+	};
+	lj2[24].onclick = function(){
+redictSrcId(627413519)
+	};
+	lj2[25].onclick = function(){
+redictSrcId(628671826)
+	};
+	lj2[26].onclick = function(){
+redictSrcId(643704802)
+	};
+	lj2[27].onclick = function(){
+redictSrcId(651744371)
+	};
+	lj2[28].onclick = function(){
+redictSrcId(628933886)
+	};
+	lj2[29].onclick = function(){
+redictSrcId(651781642)
+	};
+	lj2[30].onclick = function(){
+redictSrcId(615633793)
+	};
+	lj2[31].onclick = function(){
+redictSrcId(650220807)
+	};
+	lj2[32].onclick = function(){
+redictSrcId(628298267)
+	};
+	lj2[33].onclick = function(){
+redictSrcId(645656380)
+	};
+	lj2[34].onclick = function(){
+redictSrcId(630030370)
+	};
+	lj2[35].onclick = function(){
+redictSrcId(652090666)
+	};
+	lj2[36].onclick = function(){
+redictSrcId(649998776)
+	};
+	lj2[37].onclick = function(){
+redictSrcId(636810877)
+	};
+	lj2[38].onclick = function(){
+redictSrcId(623480639)
+	};
+	lj2[39].onclick = function(){
+redictSrcId(649988119)
+	};
+	lj2[40].onclick = function(){
+redictSrcId(649978915)
+	};
+	lj2[41].onclick = function(){
+redictSrcId(646116829)
+	};
+	lj2[42].onclick = function(){
+redictSrcId(608615359)
+	};
+	lj2[43].onclick = function(){
+redictSrcId(652761572)
+	};
+	lj2[44].onclick = function(){
+redictSrcId(630060864)
+	};
+	lj2[45].onclick = function(){
+redictSrcId(628802080)
+	};
+	lj2[46].onclick = function(){
+redictSrcId(649978707)
+	};
+	lj2[47].onclick = function(){
+redictSrcId(613838386)
+	};
+	lj2[48].onclick = function(){
+redictSrcId(638405158)
+	};
+	lj2[49].onclick = function(){
+redictSrcId(648816715)
 	};
 	//返回顶部
 		//封装卷曲的高度
