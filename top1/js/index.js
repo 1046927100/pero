@@ -27,9 +27,11 @@ $(function () {
 			lj2[i].style.top = 586+"px"
 		}else if(i>=20&i<=30){
 			lj2[i].style.top = 586+453.8*i+"px"
+		}else if(i==40||i==41){
+			lj2[i].style.top = 586+453.5*i+"px"
 		}
 		else{
-			lj2[i].style.top = 586+453*i+"px"
+			lj2[i].style.top = 586+453.1*i+"px"
 		}
 	}
        
@@ -70,13 +72,13 @@ redictSrcId(624311489)
 redictSrcId(651233367)
 	};
 	lj[7].onclick = function(){
-redictSrcId(624310276)
+redictSrcId(651293385)
 	};
 	lj[8].onclick = function(){
-redictSrcId(621951749)
+redictSrcId(624310090)
 	};
 	lj[9].onclick = function(){
-redictSrcId(651293385)
+redictSrcId(630099172)
 	};
 	lj[10].onclick = function(){
 redictSrcId(651090877)
@@ -97,16 +99,106 @@ redictSrcId(624994837)
 redictSrcId(621951764)
 	};
 	lj[16].onclick = function(){
-redictSrcId(623622602)
+redictSrcId(624310276)
 	};
 	lj[17].onclick = function(){
-redictSrcId(636526577)
+redictSrcId(621951749)
 	};
 	lj[18].onclick = function(){
-redictSrcId(649118258)
+redictSrcId(636523269)
 	};
 	lj[19].onclick = function(){
+redictSrcId(623622602)
+	};
+	lj[20].onclick=function(){	
+redictSrcId(636526577)
+	};
+	lj[21].onclick = function(){
+redictSrcId(651597690)
+	};
+	lj[22].onclick = function(){
+redictSrcId(621872972)
+	};
+	lj[23].onclick = function(){
+redictSrcId(615995999)
+	};
+	lj[24].onclick = function(){
+redictSrcId(621952283)
+	};
+	lj[25].onclick = function(){
+redictSrcId(635995587)
+	};
+	lj[26].onclick = function(){
+redictSrcId(649118258)
+	};
+	lj[27].onclick = function(){
 redictSrcId(627102592)
+	};
+	lj[28].onclick = function(){
+redictSrcId(651825301)
+	};
+	lj[29].onclick = function(){
+redictSrcId(627509776)
+	};
+	lj[30].onclick=function(){	
+redictSrcId(645755029)
+	};
+	lj[31].onclick = function(){
+redictSrcId(621395744)
+	};
+	lj[32].onclick = function(){
+redictSrcId(623362318)
+	};
+	lj[33].onclick = function(){
+redictSrcId(608616399)
+	};
+	lj[34].onclick = function(){
+redictSrcId(624310258)
+	};
+	lj[35].onclick = function(){
+redictSrcId(623494616)
+	};
+	lj[36].onclick = function(){
+redictSrcId(621951784)
+	};
+	lj[37].onclick = function(){
+redictSrcId(651583489)
+	};
+	lj[38].onclick = function(){
+redictSrcId(621952304)
+	};
+	lj[39].onclick = function(){
+redictSrcId(624315002)
+	};
+	lj[40].onclick=function(){	
+redictSrcId(624310295)
+	};
+	lj[41].onclick = function(){
+redictSrcId(651546219)
+	};
+	lj[42].onclick = function(){
+redictSrcId(623997496)
+	};
+	lj[43].onclick = function(){
+redictSrcId(646933459)
+	};
+	lj[44].onclick = function(){
+redictSrcId(651590987)
+	};
+	lj[45].onclick = function(){
+redictSrcId(624310284)
+	};
+	lj[46].onclick = function(){
+redictSrcId(636526748)
+	};
+	lj[47].onclick = function(){
+redictSrcId(638650448)
+	};
+	lj[48].onclick = function(){
+redictSrcId(651991547)
+	};
+	lj[49].onclick = function(){
+redictSrcId(651825285)
 	};
 	//top20电视剧
 	lj2[0].onclick = function(){
@@ -251,7 +343,7 @@ redictSrcId(628802080)
 redictSrcId(649978707)
 	};
 	lj2[47].onclick = function(){
-redictSrcId(613838386)
+redictSrcId(652752974)
 	};
 	lj2[48].onclick = function(){
 redictSrcId(638405158)
@@ -318,7 +410,7 @@ redictSrcId(648816715)
 	      $('img').each(function(){
 	            var hasSorollTop=$(window).scrollTop();     //获取屏幕已滚动高度
 	            var ownHeight=$(this).offset().top;
-	            if(ownHeight<=(hasSorollTop+wHeight+500)){
+	            if(ownHeight<=(hasSorollTop+wHeight+800)){
 	                 //当图片在屏幕滚动时，距离可视区域500像素时加载此图片，
 	                // 以保证查看此图时，下面的一张以提前加载完成
 	                 $(this).attr('src',$(this).attr('data-original'));
