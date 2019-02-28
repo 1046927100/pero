@@ -411,7 +411,7 @@ redictSrcId(648816715)
 	      $('img').each(function(){
 	            var hasSorollTop=$(window).scrollTop();     //获取屏幕已滚动高度
 	            var ownHeight=$(this).offset().top;
-	            if(ownHeight<=(hasSorollTop+wHeight+800)){
+	            if(ownHeight<=(hasSorollTop+wHeight+1800)){
 	                 //当图片在屏幕滚动时，距离可视区域500像素时加载此图片，
 	                // 以保证查看此图时，下面的一张以提前加载完成
 	                 $(this).attr('src',$(this).attr('data-original'));
