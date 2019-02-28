@@ -18,6 +18,8 @@ $(function () {
 	for(var i=0;i<lj.length;i++){
 		if(i==0){
 			lj[i].style.top = 586+"px"
+		}else if(i>=46){
+			lj[i].style.top = 586+451.5*i+"px"
 		}else{
 			lj[i].style.top = 586+452.5*i+"px"
 		}
@@ -194,7 +196,7 @@ redictSrcId(626002043)
 redictSrcId(623232622)
 	};
 	lj[48].onclick = function(){
-redictSrcId(651825285)
+redictSrcId(651991547)
 	};
 	lj[49].onclick = function(){
 redictSrcId(651825285)
