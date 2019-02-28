@@ -47,14 +47,13 @@ $(function () {
 		window.location.href = "/wap/resource/migu/miguH5/detail/detail.jsp?platform=PLATFORM&cid=" + val
 		}
 	
-        }
-	//window.location.href = 'http://m.miguvideo.com/wap/resource/migu/miguH5/detail/detail.jsp?cid=627652225'
+       }
 	//给地址						
 	lj[0].onclick=function(){	
-		redictSrcId(627652225)
+redictSrcId(627652225)
 	};
 	lj[1].onclick = function(){
-		redictSrcId(651293202)
+redictSrcId(651293202)
 	};
 	lj[2].onclick = function(){
 redictSrcId(625948925)
@@ -90,112 +89,112 @@ redictSrcId(623953967)
 redictSrcId(608616397)
 	};
 	lj[13].onclick = function(){
-redictSrcId(640123289)
-	};
-	lj[14].onclick = function(){
 redictSrcId(624994837)
 	};
-	lj[15].onclick = function(){
+	lj[14].onclick = function(){
 redictSrcId(621951764)
 	};
-	lj[16].onclick = function(){
+	lj[15].onclick = function(){
 redictSrcId(624310276)
 	};
-	lj[17].onclick = function(){
+	lj[16].onclick = function(){
 redictSrcId(621951749)
 	};
-	lj[18].onclick = function(){
-redictSrcId(636523269)
-	};
-	lj[19].onclick = function(){
+	lj[17].onclick = function(){
 redictSrcId(623622602)
 	};
-	lj[20].onclick=function(){	
+	lj[18].onclick=function(){	
 redictSrcId(636526577)
 	};
-	lj[21].onclick = function(){
+	lj[19].onclick = function(){
 redictSrcId(651597690)
 	};
-	lj[22].onclick = function(){
+	lj[20].onclick = function(){
 redictSrcId(621872972)
 	};
-	lj[23].onclick = function(){
+	lj[21].onclick = function(){
 redictSrcId(615995999)
 	};
-	lj[24].onclick = function(){
+	lj[22].onclick = function(){
 redictSrcId(621952283)
 	};
-	lj[25].onclick = function(){
+	lj[23].onclick = function(){
 redictSrcId(635995587)
 	};
-	lj[26].onclick = function(){
+	lj[24].onclick = function(){
 redictSrcId(649118258)
 	};
-	lj[27].onclick = function(){
+	lj[25].onclick = function(){
 redictSrcId(627102592)
 	};
-	lj[28].onclick = function(){
+	lj[26].onclick = function(){
 redictSrcId(651825301)
 	};
-	lj[29].onclick = function(){
+	lj[27].onclick = function(){
 redictSrcId(627509776)
 	};
-	lj[30].onclick=function(){	
+	lj[28].onclick=function(){	
 redictSrcId(645755029)
 	};
-	lj[31].onclick = function(){
-redictSrcId(621395744)
-	};
-	lj[32].onclick = function(){
+	lj[29].onclick = function(){
 redictSrcId(623362318)
 	};
-	lj[33].onclick = function(){
+	lj[30].onclick = function(){
 redictSrcId(608616399)
 	};
-	lj[34].onclick = function(){
+	lj[31].onclick = function(){
 redictSrcId(624310258)
 	};
-	lj[35].onclick = function(){
+	lj[32].onclick = function(){
 redictSrcId(623494616)
 	};
-	lj[36].onclick = function(){
+	lj[33].onclick = function(){
 redictSrcId(621951784)
 	};
-	lj[37].onclick = function(){
+	lj[34].onclick = function(){
 redictSrcId(651583489)
 	};
-	lj[38].onclick = function(){
+	lj[35].onclick = function(){
 redictSrcId(621952304)
 	};
-	lj[39].onclick = function(){
+	lj[36].onclick = function(){
 redictSrcId(624315002)
 	};
-	lj[40].onclick=function(){	
+	lj[37].onclick = function(){
+redictSrcId(624314538)
+	};
+	lj[38].onclick=function(){	
 redictSrcId(624310295)
 	};
-	lj[41].onclick = function(){
+	lj[39].onclick = function(){
 redictSrcId(651546219)
 	};
-	lj[42].onclick = function(){
+	lj[40].onclick = function(){
 redictSrcId(623997496)
 	};
-	lj[43].onclick = function(){
+	lj[41].onclick = function(){
 redictSrcId(646933459)
 	};
-	lj[44].onclick = function(){
+	lj[42].onclick = function(){
 redictSrcId(651590987)
 	};
-	lj[45].onclick = function(){
+	lj[43].onclick = function(){
 redictSrcId(624310284)
 	};
-	lj[46].onclick = function(){
+	lj[44].onclick = function(){
 redictSrcId(636526748)
 	};
-	lj[47].onclick = function(){
+	lj[45].onclick = function(){
 redictSrcId(638650448)
 	};
+	lj[46].onclick = function(){
+redictSrcId(626002043)
+	};
+	lj[47].onclick = function(){
+redictSrcId(623232622)
+	};
 	lj[48].onclick = function(){
-redictSrcId(651991547)
+redictSrcId(651825285)
 	};
 	lj[49].onclick = function(){
 redictSrcId(651825285)
