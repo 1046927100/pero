@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			video{
+				width:200px;
+				height:200px;
+				display: block;
+			}
+			img{
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				background: transparent no-repeat;
+			    background-size:cover;
+			};
+		</style>
+	</head>
+	<body>
+		<!--<img src="img/10/word-10.png" alt="" />-->
+		<video  class='one'>  
+			<source src='video/1.mp4' type="video/mp4"/>
+		</video>
+	</body>
+</html>
+<script src='js/jquery.js'></script>
+<script>
+	window.onload = function(){
+		var vdo = document.getElementsByTagName("video")[0];
+		$(".one").attr("autoplay","autoplay")
+	}
