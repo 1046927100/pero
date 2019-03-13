@@ -137,5 +137,21 @@
 //	$(".shiping").on('timeupdate',function(){
 //		$(".spc").hide();
 //	})
-
+	
+	//微信自动播放
+	window.onload = function(){
+		var vdo = document.getElementsByTagName("video")[0];
+		vdo.play();
+			function audioAutoPlay(){
+				play =function(){
+					vdo.play();
+					window.removeEventListener("touchstart",play,false);
+				};
+				window.addEventListener('YixinJSBridgeReady',function() {
+					vdo.play();
+				},false);
+				window.addEventListener("touchstart",play,false);
+			}
+			audioAutoPlay();
+	}
 </script>
