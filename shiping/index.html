@@ -70,8 +70,8 @@
 <body>
 	<div>
 		<img src="img/1.jpg" class='one' />
-		<video class="shiping" controls="controls" src="https://1046927100.github.io/pero/shiping/video/22.mp4" webkit-playsinline x5-playsinline playsinline  autoplay="autoplay" muted="muted" loop="loop"></video>
-		<!--<img src="img/2.png" class='start' />-->
+		<video class="shiping" src="https://1046927100.github.io/pero/shiping/video/22.mp4" webkit-playsinline x5-playsinline playsinline  autoplay="autoplay" muted="muted" loop="loop"></video>
+		<img src="img/2.png" class='start' />
 		<a href="http://s.miguvideo.com/QNRNb2v" class='spc'></a>
 		<a href="http://wap.js.10086.cn/hyl/CAC/actMGNewSpring/act2.do?isMigu=1&activityId=002&miguToken=SSOTOKEN&platform=PLATFORM&miguNeedLogin=1" class='no1'></a>
 		<a href="http://wap.js.10086.cn/hyl/CAC/actMGNewSpring/act3.do?isMigu=1&platform=PLATFORM&miguToken=SSOTOKEN&activityId=002&platform=PLATFORM&miguNeedLogin=1" class='no2'></a>
@@ -133,14 +133,16 @@
 	}(window, document));
 	
 	//监听视频是否播放
-//	var vdo = document.getElementsByTagName("video")[0];
-//	$(".shiping").on('timeupdate',function(){
-//		$(".spc").hide();
-//	})
-	
+	var vdo = document.getElementsByTagName("video")[0];
+	$(".shiping").on('timeupdate',function(){
+		$(".start").fadeOut();
+	});
+	//点击播放
+	$(".start").on("click",function(){
+		vdo.play();
+	})
 	//微信自动播放
 	window.onload = function(){
-		var vdo = document.getElementsByTagName("video")[0];
 		vdo.play();
 			function audioAutoPlay(){
 				play =function(){
@@ -151,7 +153,12 @@
 					vdo.play();
 				},false);
 				window.addEventListener("touchstart",play,false);
+				window.addEventListener('WeixinJSBridgeReady',play,false);
 			}
 			audioAutoPlay();
 	}
+	//点击视频跳出控制器
+	$(".shiping").on("click",function(){
+		$(".shiping").attr("controls","controls")
+	})
 </script>
