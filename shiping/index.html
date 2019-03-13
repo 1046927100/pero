@@ -1,48 +1,130 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<style>
-			video{
-				width:750px;
-				height:375px;
-				object-fit: fill;
-			}
-			img{
-				width: 100px;
-				height: 100px;
-				position: absolute;
-				background: transparent no-repeat;
-			    background-size:cover;
-			    z-index: 10;
-			};
-		</style>
-	</head>
-	<body>
-		<!--<img src="img/xx-car-1.png" alt=""  class='two'/>-->
-		<video  class='one' preload="auto" autoplay="autoplay" muted="muted">  
-			<source src='http://117.131.18.44/depository_sjq/asset/zhengshi/1003/177/789/1003177789/media/1003177789_1012180896_91.mp4' type="video/mp4"/>
-		</video>
-	</body>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>咪咕视频</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		div{
+			width:100%;
+			height:100%;
+		}
+		.one{
+			width:100%;
+			height:100%;
+		}
+		.start{
+			width:1.47rem;
+			height:1.47rem;
+			position: absolute;
+			left:50%;
+			top:9rem;
+			transform: translateX(-50%);
+		}
+		video{
+			width:9.16rem;
+			height:5.613rem;
+			position: absolute;
+			left:0.4rem;
+			top:7.16rem;
+			object-fit: fill;
+		}
+		a{
+			display: block;
+			width:2.813rem;
+			height:1.493rem;
+			position: absolute;
+			left:0.42rem;
+			top:14.49rem;
+		}
+		.no2{
+			left:3.52rem;
+		}
+		.no3{
+			left:6.667rem;
+		}
+		.spc{
+			width:100%;
+			height:1rem;
+			position: absolute;
+			left:0;
+			top:12.93rem;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="img/1.jpg" class='one' />
+		<video class="shiping" src="http://117.131.18.44/depository_yf/asset/zhengshi/1002/176/055/1002176055/media/1002176055_1004552708_63.mp4" autoplay="autoplay" muted="muted" loop="loop" controls="controls"></video>
+		<!--<img src="img/2.png" class='start' />-->
+		<a href="http://s.miguvideo.com/QNRNb2v" class='spc'></a>
+		<a href="http://wap.js.10086.cn/hyl/CAC/actMGNewSpring/act2.do?isMigu=1&activityId=002&miguToken=SSOTOKEN&platform=PLATFORM&miguNeedLogin=1" class='no1'></a>
+		<a href="http://wap.js.10086.cn/hyl/CAC/actMGNewSpring/act3.do?isMigu=1&platform=PLATFORM&miguToken=SSOTOKEN&activityId=002&platform=PLATFORM&miguNeedLogin=1" class='no2'></a>
+		<a href="http://wap.js.10086.cn/hyl/CAC/actMGNewSpring/act1.do?isMigu=1&platform=PLATFORM&miguToken=SSOTOKEN&activityId=002&platform=PLATFORM&miguNeedLogin=1" class='no3'></a>
+	</div>
+</body>
 </html>
 <script src='js/jquery.js'></script>
 <script>
-	function sleep (time) {
-		return new Promise((resolve) => setTimeout(resolve, time));
-	};
-	window.onload = function(){
-		var one = document.getElementsByTagName("video")[0];
-		$(".one").attr("autoplay","autoplay");
-//		$(".two").on("click",function(){
-//			console.log(111)
-//			one.play();
-//			$(".two").hide();
-//		});
-		if(one.paused){
-			$(".two").show();
-		}else{
-			$(".two").hide();
-		}
-	}
+	//	适配移动端页面大小的方法
+	
+	var a = document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+	var scale = 1 / devicePixelRatio;
+	document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+	
+	(function flexible (window, document) {
+	  var docEl = document.documentElement
+	  var dpr = window.devicePixelRatio || 1
+	
+	  // adjust body font size
+	  function setBodyFontSize () {
+	    if (document.body) {
+	      document.body.style.fontSize = (12 * dpr) + 'px'
+	    }
+	    else {
+	      document.addEventListener('DOMContentLoaded', setBodyFontSize)
+	    }
+	  }
+	  setBodyFontSize();
+	
+	  // set 1rem = viewWidth / 10
+	  function setRemUnit () {
+	    var rem = docEl.clientWidth / 10
+	    docEl.style.fontSize = rem + 'px'
+	  }
+	
+	  setRemUnit()
+	
+	  // reset rem unit on page resize
+	  window.addEventListener('resize', setRemUnit)
+	  window.addEventListener('pageshow', function (e) {
+	    if (e.persisted) {
+	      setRemUnit()
+	    }
+	  })
+	
+	  // detect 0.5px supports
+	  if (dpr >= 2) {
+	    var fakeBody = document.createElement('body')
+	    var testElement = document.createElement('div')
+	    testElement.style.border = '.5px solid transparent'
+	    fakeBody.appendChild(testElement)
+	    docEl.appendChild(fakeBody)
+	    if (testElement.offsetHeight === 1) {
+	      docEl.classList.add('hairlines')
+	    }
+	    docEl.removeChild(fakeBody)
+	  }
+	}(window, document));
+	
+	//监听视频是否播放
+	var vdo = document.getElementsByTagName("video")[0];
+	$(".shiping").on('timeupdate',function(){
+		$(".spc").hide();
+	})
 </script>
