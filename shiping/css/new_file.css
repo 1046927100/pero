@@ -1,0 +1,59 @@
+	*{
+			margin:0;
+			padding:0;
+		}
+		div{
+			width:100%;
+			height:100%;
+		}
+		.one{
+			width:100%;
+			height:100%;
+		}
+		.start{
+			width:1.47rem;
+			height:1.47rem;
+			position: absolute;
+			left:50%;
+			top:9rem;
+			transform: translateX(-50%);
+		}
+		video{
+			width:9.2rem;
+			height:5.65rem;
+			position: absolute;
+			left:0.4rem;
+			top:7.16rem;
+			object-fit: fill;
+		}
+		a{
+			display: block;
+			width:2.813rem;
+			height:1.493rem;
+			position: absolute;
+			left:0.42rem;
+			top:14.49rem;
+		}
+		.no2{
+			left:3.52rem;
+		}
+		.no3{
+			left:6.667rem;
+		}
+		.spc{
+			display: block;
+			width:100%;
+			height:1rem;
+			position: absolute;
+			left:0;
+			top:12.93rem;
+		}
+		/*video::-webkit-media-controls-fullscreen-button{
+			display: none;
+			}*/
+		video::-webkit-media-controls-enclosure {
+			overflow:hidden;
+		}
+		video::-webkit-media-controls-panel {
+		     width: calc(100% + 30px); 
+		}
