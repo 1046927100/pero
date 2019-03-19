@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+		<title>咪咕视频</title>
+		<link rel="stylesheet" href="css/index.css"/>
+	</head>
+	<body>
+		<div>
+			<img src="img/1.jpg" class='one'/>
+			<video src="https://1046927100.github.io/pero/audio/22.mp4" class="shiping"  controls="controls" webkit-playsinline x5-playsinline playsinline autoplay  muted loop></video>
+			<img src="img/2.png" class='start' />
+			<a href="http://s.miguvideo.com/JfM3yyz" class='spc'></a>
+			<a href="http://s.miguvideo.com/qUzuAfr" class='two'></a>
+			<a href="http://s.miguvideo.com/eY3MZrz" class='three'></a>
+			<a href="http://wap.js.10086.cn/hyl/CAC/actMGNewSpring/act2.do?isMigu=0" class='no1'></a>
+			<a href="http://wap.js.10086.cn/hyl/CAC/actMGNewSpring/act3.do?isMigu=0" class='no2'></a>
+			<a href="http://wap.js.10086.cn/hyl/CAC/actMGNewSpring/act1.do?isMigu=0" class='no3'></a>
+		</div>
+	</body>
+</html>
+<script src='js/jquery.js'></script>
+<script src='js/index.js'></script>
+<script src='http://webcrystal.miguvideo.com/web/script/migusdk.js?v=1.5.20190228'></script>
+<script>
+	// 1.使用 HTTPS 通道上报数据：
+	let _logger = MiGuSDK.Logger.build();
+	//2.上报数据
+	$(".no1").on("click",function(){
+		_logger.submit("pagePositionClickEvent",{
+			//点击
+			positionName:"新人领2元话费",
+			pageName:"今晚全场消费由赵公子买单",
+		});
+	});
+	$(".no2").on("click",function(){
+		_logger.submit("pagePositionClickEvent",{
+			//点击
+			positionName:"达人有礼送话费抽大奖",
+			pageName:"今晚全场消费由赵公子买单"
+		});
+	});
+	$(".no3").on("click",function(){
+		_logger.submit("pagePositionClickEvent",{
+			//点击
+			positionName:"送30GB定向流量30天体验会员",
+			pageName:"今晚全场消费由赵公子买单"
+		});
+	});
+	$(".start").on("click",function(){
+		_logger.submit("pagePositionClickEvent",{
+			//点击
+			positionName:"播放按钮",
+			pageName:"今晚全场消费由赵公子买单"
+		});
+	});
+	$(".spc").on("click",function(){
+		_logger.submit("pagePositionClickEvent",{
+			//点击
+			positionName:"点击观看全集",
+			pageName:"今晚全场消费由赵公子买单"
+		});
+	});
+	$(".two").on("click",function(){
+		_logger.submit("pagePositionClickEvent",{
+			//点击
+			positionName:"胖子行动队",
+			pageName:"今晚全场消费由赵公子买单"
+		});
+	});
+	$(".spc").on("click",function(){
+		_logger.submit("pagePositionClickEvent",{
+			//点击
+			positionName:"武林怪兽",
+			pageName:"今晚全场消费由赵公子买单"
+		});
+	});
+	//3.验证数据
+	//pv
+	window.onload = function(){
+		_logger.submit("pageVisitEvent",{
+			pageName:"今晚全场消费由赵公子买单",
+		})
+	}
+</script>
