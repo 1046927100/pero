@@ -24,8 +24,8 @@
 <script src='js/jquery.js'></script>
 <script src='js/index.js'></script>
 <script src='http://webcrystal.miguvideo.com/web/script/migusdk.js?v=1.5.20190228'></script>
-<!--<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>-->
-<!--<script src="/wap/resource/migu/script/plugins/weixinSecondShare.js"></script>-->
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/wap/resource/migu/script/plugins/weixinSecondShare.js"></script>
 <script>
 	// 1.使用 HTTPS 通道上报数据：
 	let _logger = MiGuSDK.Logger.build();
@@ -86,5 +86,14 @@
 			pageName:"今晚全场消费由赵公子买单",
 		})
 	}
+	
+	//分享样式
+	
+	$(function(){
+		var shareTitle='《大人物》赵公子来买单啦';
+		var shareTips='今晚全场消费由赵公子买单”如果你还不懂现在最火的梗，咪咕视频《大人物》等你来解锁。欢迎登录咪咕视频，一起追大片';
+		var shareWxIcon='img/share.jpg';
+		$.weixinSecondShare(shareTitle,shareTips,shareWxIcon);
+	});
 
 </script>
