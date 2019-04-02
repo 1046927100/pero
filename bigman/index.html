@@ -88,12 +88,24 @@
 	}
 	
 	//分享样式
+	var weChatShare = function(){
+	 $.ajax({
+	        url: "  ",
+	        type: "get",
+	        dataType: "json",
+	        async: true,
+	        success: function(data){
+	            console.log(data.shareInfo);
+	            var title = data.shareInfo.title;
+	            var subTitle = data.shareInfo.subTitle;
+	            var imgUrl = data.shareInfo.img;
+	            var shareUrl = location.href;
+	            $.weixinSecondShare(title,subTitle,imgUrl,shareUrl)
+	                
+	        }
+	 });
+	}
 	
-	$(function(){
-		var shareTitle='《大人物》赵公子来买单啦';
-		var shareTips='今晚全场消费由赵公子买单”如果你还不懂现在最火的梗，咪咕视频《大人物》等你来解锁。欢迎登录咪咕视频，一起追大片';
-		var shareWxIcon='img/share.jpg';
-		$.weixinSecondShare(shareTitle,shareTips,shareWxIcon);
-	});
+weChatShare();
 
 </script>

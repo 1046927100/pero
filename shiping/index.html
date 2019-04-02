@@ -13,9 +13,9 @@
 		<video class="shiping" poster="img/3.jpg" controls="controls" src="https://1046927100.github.io/pero/shiping/video/22.mp4" webkit-playsinline x5-playsinline playsinline autoplay='autoplay'  muted="muted" loop="loop"></video>
 		<img src="img/2.png" class='start' />
 		<a href="http://s.miguvideo.com/QNRNb2v" class='spc'></a>
-		<a href="http://wap.js.10086.cn/hyl/CAC/actMGNewSpring/act2.do?isMigu=1&activityId=002&miguToken=SSOTOKEN&platform=PLATFORM&miguNeedLogin=1" class='no1'></a>
-		<a href="http://wap.js.10086.cn/hyl/CAC/actMGNewSpring/act3.do?isMigu=1&platform=PLATFORM&miguToken=SSOTOKEN&activityId=002&platform=PLATFORM&miguNeedLogin=1" class='no2'></a>
-		<a href="http://wap.js.10086.cn/hyl/CAC/actMGNewSpring/act1.do?isMigu=1&platform=PLATFORM&miguToken=SSOTOKEN&activityId=002&platform=PLATFORM&miguNeedLogin=1" class='no3'></a>
+		<a href="http://wap.js.10086.cn/hyl/CAC/actMGNewSpring/act2.do?isMigu=0" class='no1'></a>
+		<a href="http://wap.js.10086.cn/hyl/CAC/actMGNewSpring/act3.do?isMigu=0" class='no2'></a>
+		<a href="http://wap.js.10086.cn/hyl/CAC/actMGNewSpring/act1.do?isMigu=0" class='no3'></a>
 	</div>
 </body>
 </html>
@@ -25,6 +25,7 @@
 <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script src="/wap/resource/migu/script/plugins/weixinSecondShare.js"></script>
 <script>
+	
 	// 1.使用 HTTPS 通道上报数据：
 	let _logger = MiGuSDK.Logger.build();
 	//2.上报数据
@@ -70,13 +71,31 @@
 			pageName:"高甜来袭只为遇见你",
 		})
 	}
-	
-	//微信分享
-	$(function(){
-		var shareTitle='《大人物》赵公子来买单啦';
-		var shareTips='今晚全场消费由赵公子买单”如果你还不懂现在最火的梗，咪咕视频《大人物》等你来解锁。欢迎登录咪咕视频，一起追大片';
-		var shareWxIcon='img/share.jpg';
-		$.weixinSecondShare(shareTitle,shareTips,shareWxIcon);
-	});
+
+
+
+
+var weChatShare = function(){
+ $.ajax({
+        url: "./data/testtestData.jsp",
+        type: "get",
+        dataType: "json",
+        async: true,
+        success: function (data) {
+            console.log(data.shareInfo);
+            var title = data.shareInfo.title;
+            var subTitle = data.shareInfo.subTitle;
+            var imgUrl = data.shareInfo.img;
+            var shareUrl = location.href;
+            $.weixinSecondShare(title,subTitle,imgUrl,shareUrl)
+                
+        }
+  });
+ 
+}
+
+weChatShare();
+		
+
 		
 </script>

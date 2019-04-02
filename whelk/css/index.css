@@ -1,0 +1,64 @@
+*{
+	margin:0;
+	padding:0;
+}
+div{
+	width:100%;
+	height:100%;
+}
+.one{
+	width:100%;
+	height:100%;
+}
+.start{
+	width:1.47rem;
+	height:1.47rem;
+	position: absolute;
+	left:50%;
+	top:7.7rem;
+	transform: translateX(-50%);
+}
+video{
+	width:9.2rem;
+	height:5.65rem;
+	position: absolute;
+	left:0.38rem;
+	top:5.75rem;
+	object-fit: fill;
+
+}
+.no1,.no2,.no3{
+	display: block;
+	width:2.813rem;
+	height:1.493rem;
+	position: absolute;
+	left:0.49rem;
+	top:17.25rem;
+
+}
+.no2{
+	left:3.65rem;
+}
+.no3{
+	left:6.75rem;
+}
+.two,.three{
+	width:4.3rem;
+	height:2.65rem;
+	position: absolute;
+	left:0.49rem;
+	top:13.34rem;
+
+}
+.three{
+	left:5.24rem;
+}
+.spc{
+	display: block;
+	width:100%;
+	height:1rem;
+	position: absolute;
+	left:0;
+	top:11.8rem;
+}
+
