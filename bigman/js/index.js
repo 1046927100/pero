@@ -68,3 +68,5 @@
 			}
 			audioAutoPlay();
 	})
+	//控制台
+	
