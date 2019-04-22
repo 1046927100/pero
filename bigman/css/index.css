@@ -78,6 +78,9 @@ i img{
 	left:0;
 	top:0;
 }
+.con{
+	opacity: 0.8;
+}
 .con1{
 	left:1.2rem;
 	top:10.7rem;

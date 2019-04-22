@@ -167,6 +167,10 @@
 			vdo.volume = 1;
 		});
 		
+		
+		function sleep (time) {
+			return new Promise((resolve) => setTimeout(resolve, time));
+		};
 		//播放
 		$(".play").on("click",function(){
 			$(".play").hide();
@@ -177,4 +181,16 @@
 			$(".pause").hide();
 			$(".play").show();
 			vdo.play();
+		});
+		$(".shiping").on("click",function(){
+			$(".con").fadeIn();
+			setTimeout(listen,60);
 		})
+		function listen(){
+			if(vdo.play){
+				$(".con").delay(4000).fadeOut();
+			}
+		};
+		listen()
+		
+		
