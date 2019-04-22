@@ -1,75 +1,130 @@
-//	适配移动端页面大小的方法
-	var a = document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
-	var scale = 1 / devicePixelRatio;
-	document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
-	(function flexible (window, document) {
-	  var docEl = document.documentElement
-	  var dpr = window.devicePixelRatio || 1
-	  // adjust body font size
-	  function setBodyFontSize () {
-	    if (document.body) {
-	      document.body.style.fontSize = (12 * dpr) + 'px'
-	    }
-	    else {
-	      document.addEventListener('DOMContentLoaded', setBodyFontSize)
-	    }
-	  }
-	  setBodyFontSize();
-	  // set 1rem = viewWidth / 10
-	  function setRemUnit () {
-	    var rem = docEl.clientWidth / 10
-	    docEl.style.fontSize = rem + 'px'
-	  }
-	  setRemUnit()
-	  // reset rem unit on page resize
-	  window.addEventListener('resize', setRemUnit)
-	  window.addEventListener('pageshow', function (e) {
-	    if (e.persisted) {
-	      setRemUnit()
-	    }
-	  })
-	
-	  // detect 0.5px supports
-	  if (dpr >= 2) {
-	    var fakeBody = document.createElement('body')
-	    var testElement = document.createElement('div')
-	    testElement.style.border = '.5px solid transparent'
-	    fakeBody.appendChild(testElement)
-	    docEl.appendChild(fakeBody)
-	    if (testElement.offsetHeight === 1) {
-	      docEl.classList.add('hairlines')
-	    }
-	    docEl.removeChild(fakeBody)
-	  }
-	}(window, document));
-	
-//监听视频是否播放
-	var vdo = document.getElementsByTagName("video")[0];
-	$(".shiping").on('timeupdate',function(){
-		$(".start").hide();
-	});
-	//点击播放
-	$(".start").on("click",function(){
-		vdo.play();
-	})
-	//微信自动播放
-	$(function(){
-		vdo.play();
-			function audioAutoPlay(){
-				play =function(){
-					vdo.play();
-					window.removeEventListener("touchstart",play,false);
-				};
-				window.addEventListener('YixinJSBridgeReady',function() {
-					vdo.play();
-				},false);
-				window.addEventListener("touchstart",play,false);
-				window.addEventListener('WeixinJSBridgeReady',play,false);
-			}
-			audioAutoPlay();
-	})
-	//控制台
-	//获取视频对象 H5写法
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.body{
+	padding: 0;
+	margin: 0;
+	background-color: #FFF;
+}
+ 
+figcaption{
+	text-align: center;
+	font-size: 24px;
+	margin: 20px;
+}
+ 
+a{
+	text-decoration: none;
+}
+ 
+.player{
+	width: 720px;
+	height: 360px;
+	margin: 0 auto;
+	background-color: #000;
+	position: relative;
+}
+ 
+video{
+	height: 100%;
+	margin: 0 5% 0 5%;
+ 
+}
+ 
+.controls{
+	width: 720px;
+	height: 40px;
+	background-color: #1C192C;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	z-index: 100;
+	border-radius: 4px;
+}
+ 
+.controls .switch{
+	float: left;
+	width: 20px;
+	height: 20px;
+	color:#fff;
+	position: absolute;
+	top:11px;
+	left:11px;
+}
+ 
+.controls .expend{
+	float: right;
+	width: 20px;
+	height: 20px;
+	color:#fff;
+	position: absolute;
+	top:11px;
+	right:11px;
+}
+ 
+.progress{
+	width: 500px;
+	height: 10px;
+	border-radius: 3px;
+	background-color: #999;
+	position: absolute;
+	top:15px;
+	left: 35px;
+}
+ 
+.progress .line{
+	width: 0;
+	height: 100%;
+	background-color:#F7F5F5;
+	left: 0;
+	top: 0;
+	position: absolute;
+}
+ 
+.progress .bar{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+.times{
+	position: absolute;
+	top: 11px;
+	right: 45px;
+	color: #fff;
+	font-size: 14px;
+}
+		</style>
+	</head>
+	<body>
+		<figure>
+		<figcaption></figcaption>
+		<div class="player">
+			<video id="myVideo" src="2.mp4" autoplay="autoplay" muted loop webkit-playsinline x5-playsinline playsinline></video>
+			<div class="controls">
+				<a href="javascript:#" class="switch fa fa-play"></a>
+				<a href="javascript:#" class="expend fa fa-expand"></a>
+				<div class="progress">
+					<div class="line"></div>
+					<div class="bar"></div>
+				</div>
+				<div class="times">
+					<span class="current">00:00:00</span>/
+					<span class="totalTime">00:00:00</span>
+				</div>
+			</div>
+		</div>
+	</figure>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		//获取视频对象 H5写法
 		var myVideo = document.querySelector("#myVideo");
  
 		//播放或暂停
@@ -191,3 +246,5 @@
             var second = parseInt(second % 60);
             return (hour < 10 ? "0" + hour:hour) + ":" + (minute < 10 ? "0" + minute:minute) + ":" + (second < 10 ? "0" + second:second);
 		};
+	</script>
+
