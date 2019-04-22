@@ -51,6 +51,7 @@
 	//点击播放
 	$(".start").on("click",function(){
 		vdo.play();
+		
 	})
 	//微信自动播放
 	$(function(){
@@ -73,17 +74,17 @@
 		var myVideo = document.querySelector("#myVideo");
  
 		//播放或暂停
-		document.querySelector('.switch').addEventListener("click",function(){
-			//切换播放样式 jq写法
-			$('.switch').toggleClass("fa-play fa-pause");
- 
-			//判断当前视频是否暂停
-			if(myVideo.paused){
-				myVideo.play();//播放
-			}else{
-				myVideo.pause();//暂停
-			}
-		});
+//		document.querySelector('.switch').addEventListener("click",function(){
+//			//切换播放样式 jq写法
+//			$('.switch').toggleClass("fa-play fa-pause");
+// 
+//			//判断当前视频是否暂停
+//			if(myVideo.paused){
+//				myVideo.play();//播放
+//			}else{
+//				myVideo.pause();//暂停
+//			}
+//		});
  
 		//全屏
 		function goFullScreen() {
@@ -150,44 +151,30 @@
 				goFullScreen();
 			}
 		});		
- 
-		//拖动进度时
-		$(".bar").on("click",function(e){
-			var time = myVideo.duration*(e.offsetX/$(".bar").width());
-			myVideo.currentTime =  time;
+		
+		//静音
+		$(".shengyin").on("click",function(){
+			$(".shengyin").hide();
+			$(".jingyin").show();
+			$(".shiping").attr("muted","muted");
+			vdo.volume = 0;
 		});
- 
-		//更新播放进度
-		myVideo.addEventListener("timeupdate",function(){
-			//更新进度条
-			var pValue = (myVideo.currentTime/myVideo.duration)*100;
-			$(".line").css("width",pValue+"%");
-			//显示当前播放进度的时间
-			document.querySelector(".current").innerText = getTimeBySecond(myVideo.currentTime);
+		//开启声音
+		$(".jingyin").on("click",function(){
+			$(".jingyin").hide();
+			$(".shengyin").show();
+			$(".shiping").removeAttr("muted")
+			vdo.volume = 1;
 		});
- 
-		//播放结束时
-		myVideo.addEventListener("ended",function(){
-			//播放按钮类样式进行还原
-			$(".switch").removeClass("fa-pause").addClass("fa-play");
-			$(".line").css("width",0);
-			//设置当前播放时间
-			myVideo.currentTime = 0;
-			//视频播放状态为设置为停止
-			myVideo.pause();
+		
+		//播放
+		$(".play").on("click",function(){
+			$(".play").hide();
+			$(".pause").show();
+			vdo.pause();
 		});
- 
-		//当视频元数据加载时运行
-		myVideo.addEventListener("loadedmetadata",function(){
-			//设置总时长
-			document.querySelector(".totalTime").innerText = getTimeBySecond(myVideo.duration);
-		});
- 
- 
-		//讲当前秒数转换为时间
-		function getTimeBySecond(second){
-			var hour = parseInt(second / (60* 60));
-            var minute = parseInt((second/60) % 60);
-            var second = parseInt(second % 60);
-            return (hour < 10 ? "0" + hour:hour) + ":" + (minute < 10 ? "0" + minute:minute) + ":" + (second < 10 ? "0" + second:second);
-		};
+		$(".pause").on("click",function(){
+			$(".pause").hide();
+			$(".play").show();
+			vdo.play();
+		})

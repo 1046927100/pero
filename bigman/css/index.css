@@ -62,4 +62,47 @@ video{
 	left:0;
 	top:11.8rem;
 }
-
+i{
+	display:block;
+	width:0.5rem;
+	height:0.5rem;
+	position: absolute;
+	left:2rem;
+	top:2rem;
+	background: white;
+}
+i img{
+	width:100%;
+	height:100%;
+	position: absolute;
+	left:0;
+	top:0;
+}
+.con1{
+	left:1.2rem;
+	top:10.7rem;
+}
+.con2{
+	left:0.5rem;
+	top:10.7rem;
+}
+.con3{
+	left:9rem;
+	top:10.7rem;
+}
+.progress{
+	width: 5rem;
+	height: 0.2rem;
+	border-radius: 3px;
+	background-color: #999;
+	position: absolute;
+	top:10.9rem;
+	left:2rem;
+}
+.times{
+	position: absolute;
+	top: 10.9rem;
+	left: 7.2rem;
+	color: #fff;
+	font-size: 0.18rem;
+}
