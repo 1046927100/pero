@@ -10,23 +10,13 @@ div{
 	width:100%;
 	height:100%;
 }
-.start{
-	width:1.47rem;
-	height:1.47rem;
-	position: absolute;
-	left:50%;
-	top:7.7rem;
-	transform: translateX(-50%);
-}
 video{
 	width:9.2rem;
-	height:5.65rem;
+	height:5.4rem;
 	position: absolute;
 	left:0.38rem;
 	top:5.75rem;
 	object-fit: fill;
-
-	
 }
 .no1,.no2,.no3{
 	display: block;
@@ -64,12 +54,11 @@ video{
 }
 i{
 	display:block;
-	width:0.5rem;
-	height:0.5rem;
+	width:0.3rem;
+	height:0.3rem;
 	position: absolute;
 	left:2rem;
 	top:2rem;
-	background: white;
 }
 i img{
 	width:100%;
@@ -78,34 +67,64 @@ i img{
 	left:0;
 	top:0;
 }
-.con{
-	opacity: 0.8;
-}
 .con1{
-	left:1.2rem;
-	top:10.7rem;
+	width:1.47rem;
+	height:1.47rem;
+	position: absolute;
+	left:50%;
+	top:7.7rem;
+	transform: translateX(-50%);
 }
 .con2{
-	left:0.5rem;
-	top:10.7rem;
+	left:0.8rem;
+	top:10.88rem;
 }
 .con3{
 	left:9rem;
-	top:10.7rem;
+	top:10.88rem;
 }
 .progress{
-	width: 5rem;
-	height: 0.2rem;
+	width: 6rem;
+	height: 0.04rem;
 	border-radius: 3px;
 	background-color: #999;
 	position: absolute;
-	top:10.9rem;
+	top:11rem;
 	left:2rem;
 }
-.times{
+.times span{
 	position: absolute;
 	top: 10.9rem;
-	left: 7.2rem;
+	left: 8.2rem;
 	color: #fff;
 	font-size: 0.18rem;
+}
+.times .current{
+	left:1.4rem;
+}
+.progress .line{
+	width: 0;
+	height: 100%;
+	background-color:#F7F5F5;
+	left: 0;
+	top: 0;
+	position: absolute;
+}
+.progress .bar{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+.pause{
+	opacity: 0.5;
+}
+.diandian{
+	width:0.15rem;
+	height:0.15rem;
+	position: absolute;
+	left:0rem;;
+	top:-0.05rem;
 }

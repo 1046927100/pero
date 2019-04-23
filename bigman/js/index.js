@@ -46,12 +46,11 @@
 //监听视频是否播放
 	var vdo = document.getElementsByTagName("video")[0];
 	$(".shiping").on('timeupdate',function(){
-		$(".start").hide();
+//		$(".start").hide();
 	});
 	//点击播放
 	$(".start").on("click",function(){
 		vdo.play();
-		
 	})
 	//微信自动播放
 	$(function(){
@@ -182,15 +181,50 @@
 			$(".play").show();
 			vdo.play();
 		});
-		$(".shiping").on("click",function(){
-			$(".con").fadeIn();
-			setTimeout(listen,60);
-		})
-		function listen(){
-			if(vdo.play){
-				$(".con").delay(4000).fadeOut();
-			}
+//		$(".shiping").on("click",function(){
+//			$(".con").fadeIn();
+//			setTimeout(listen,60);
+//		})
+//		function listen(){
+//			if(vdo.play){
+//				$(".con").delay(4000).fadeOut();
+//			}
+//		};
+//		listen()
+		
+		//拖动进度时
+		$(".bar").on("click",function(e){
+			var time = myVideo.duration*(e.offsetX/$(".bar").width());
+			myVideo.currentTime =  time;
+		});
+
+		//更新播放进度
+		myVideo.addEventListener("timeupdate",function(){
+			//更新进度条
+			var pValue = (myVideo.currentTime/myVideo.duration)*100;
+			$(".line").css("width",pValue+"%");
+			$(".diandian").css("left",pValue+"%");
+			//显示当前播放进度的时间
+			document.querySelector(".current").innerText = getTimeBySecond(myVideo.currentTime);
+		});
+ 
+		//播放结束时
+		myVideo.addEventListener("ended",function(){
+			//播放按钮类样式进行还原
+			$(".switch").removeClass("fa-pause").addClass("fa-play");
+			$(".line").css("width",0);
+			//设置当前播放时间
+			myVideo.currentTime = 0;
+			//视频播放状态为设置为停止
+			myVideo.pause();
+		});
+		//当视频元数据加载时运行
+			//设置总时长
+			setTimeout(()=>{
+			document.querySelector(".totalTime").innerText = getTimeBySecond(myVideo.duration)},60)
+		//讲当前秒数转换为时间
+		function getTimeBySecond(second){
+            var minute = parseInt((second/60) % 60);
+            var second = parseInt(second % 60);
+            return  (minute < 10 ? "0" + minute:minute) + ":" + (second < 10 ? "0" + second:second);
 		};
-		listen()
-		
-		
