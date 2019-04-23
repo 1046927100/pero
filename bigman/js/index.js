@@ -141,22 +141,13 @@
 		}
  
 		//全屏和退出全屏
-			function resizeBody() {
-				var bodyHeight = document.documentElement.clientHeight;
-				var bodyWidth = document.documentElement.clientWidth;
-	 
-				$("#myVideo").width((bodyHeight) + "px");
-				$("#myVideo").height((bodyWidth) + "px");
-	//			myVideo.play();
-			}
 		$(".expend").on("click",function(){
 			//切换样式
 			$(".expend").toggleClass("fa-expand fa-compress")
 			if(isFullScreen()){
 				exitFullscreen();
 			}else{
-//				goFullScreen();
-				resizeBody()
+				goFullScreen();
 			}
 		});		
 
