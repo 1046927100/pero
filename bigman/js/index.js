@@ -46,7 +46,7 @@
 //监听视频是否播放
 	var vdo = document.getElementsByTagName("video")[0];
 	$(".shiping").on('timeupdate',function(){
-		$(".start").hide();
+//		$(".start").hide();
 	});
 	//点击播放
 	$(".start").on("click",function(){
@@ -155,15 +155,13 @@
 		$(".shengyin").on("click",function(){
 			$(".shengyin").hide();
 			$(".jingyin").show();
-			$(".shiping").attr("muted","muted");
-			vdo.volume = 0;
+			myVideo.muted = false;
 		});
 		//开启声音
 		$(".jingyin").on("click",function(){
 			$(".jingyin").hide();
 			$(".shengyin").show();
-			$(".shiping").removeAttr("muted")
-			vdo.volume = 1;
+			myVideo.muted = true;
 		});
 		
 		
@@ -181,16 +179,17 @@
 			$(".play").show();
 			vdo.play();
 		});
-		$(".shiping").on("click",function(){
-			$(".con").fadeIn();
-			setTimeout(listen,60);
-		})
-		function listen(){
-			if(vdo.play){
-				$(".con").delay(4000).fadeOut();
-			}
-		};
-		listen()
+		//点击页面控制台出现
+//		$(".shiping").on("click",function(){
+//			$(".con").fadeIn();
+//			setTimeout(listen,60);
+//		})
+//		function listen(){
+//			if(vdo.play){
+//				$(".con").delay(4000).fadeOut();
+//			}
+//		};
+//		listen()
 		
 		//拖动进度时
 		$(".bar").on("click",function(e){
@@ -221,7 +220,7 @@
 		//当视频元数据加载时运行
 			//设置总时长
 			setTimeout(()=>{
-			document.querySelector(".totalTime").innerText = getTimeBySecond(myVideo.duration)},60)
+			document.querySelector(".totalTime").innerText = getTimeBySecond(myVideo.duration)},1000)
 		//讲当前秒数转换为时间
 		function getTimeBySecond(second){
             var minute = parseInt((second/60) % 60);
