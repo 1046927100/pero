@@ -70,7 +70,7 @@
 	})
 	//控制台
 	//获取视频对象 H5写法
-		var myVideo = document.querySelector("#myVideo");
+		var myVideo = document.getElementsByClassName("shiping")[0];
  
 		//播放或暂停
 //		document.querySelector('.switch').addEventListener("click",function(){
@@ -155,13 +155,13 @@
 		$(".shengyin").on("click",function(){
 			$(".shengyin").hide();
 			$(".jingyin").show();
-			myVideo.muted = false;
+			myVideo.muted = true;
 		});
 		//开启声音
 		$(".jingyin").on("click",function(){
 			$(".jingyin").hide();
 			$(".shengyin").show();
-			myVideo.muted = true;
+			myVideo.muted = false;
 		});
 		
 		
@@ -219,8 +219,12 @@
 		});
 		//当视频元数据加载时运行
 			//设置总时长
+		myVideo.addEventListener("loadedmetadata",function(){
+			totalT = this.duration
+			console.log(totalT)
 			setTimeout(()=>{
 			document.querySelector(".totalTime").innerText = getTimeBySecond(myVideo.duration)},1000)
+		})	
 		//讲当前秒数转换为时间
 		function getTimeBySecond(second){
             var minute = parseInt((second/60) % 60);
