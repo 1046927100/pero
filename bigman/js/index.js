@@ -172,17 +172,17 @@
 		$(".play").on("click",function(){
 			$(".play").hide();
 			$(".pause").show();
-			vdo.pause();
+			vdo.play();
 		});
 		$(".pause").on("click",function(){
 			$(".pause").hide();
 			$(".play").show();
-			vdo.play();
+			vdo.pause();
 		});
 		//点击页面控制台出现
 		$(".shiping").on("click",function(){
 			$(".con").fadeIn();
-			myVideo.pause();
+//			myVideo.pause();
 			$(".pause").show();
 			$(".start").hide();
 			setTimeout(listen,60);
