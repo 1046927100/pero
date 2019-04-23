@@ -189,13 +189,13 @@
 		})
 		function listen(){
 			if(vdo.play){
-				$(".con").delay(5000).fadeOut();
+				$(".con").delay(4000).fadeOut();
 			}
 		};
 		listen();
-		if(vdo.play){
-			$(".play").fadeOut();
-		}
+//		if(vdo.play){
+//			$(".play").fadeOut();
+//		}
 		//拖动进度时
 		$(".bar").on("click",function(e){
 			var time = myVideo.duration*(e.offsetX/$(".bar").width());
