@@ -109,6 +109,8 @@ i img{
 	left: 0;
 	top: 0;
 	position: absolute;
+	border-top-left-radius: 0.2rem;
+	border-bottom-left-radius: 0.2rem;
 }
 .progress .bar{
 	width: 100%;
@@ -118,6 +120,7 @@ i img{
 	top: 0;
 	z-index: 1;
 	border-radius: 0.2rem;
+	padding-top: 0.2rem;
 }
 .pause{
 	opacity: 0.5;
@@ -126,6 +129,6 @@ i img{
 	width:0.37rem;
 	height:0.37rem;
 	position: absolute;
-	left:0rem;
+	left:0px;
 	top:-0.13rem;
 }

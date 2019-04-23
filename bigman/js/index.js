@@ -141,15 +141,26 @@
 		}
  
 		//全屏和退出全屏
+			function resizeBody() {
+				var bodyHeight = document.documentElement.clientHeight;
+				var bodyWidth = document.documentElement.clientWidth;
+	 
+				$("#myVideo").width((bodyHeight) + "px");
+				$("#myVideo").height((bodyWidth) + "px");
+	//			myVideo.play();
+			}
 		$(".expend").on("click",function(){
 			//切换样式
 			$(".expend").toggleClass("fa-expand fa-compress")
 			if(isFullScreen()){
 				exitFullscreen();
 			}else{
-				goFullScreen();
+//				goFullScreen();
+				resizeBody()
 			}
 		});		
+
+
 		
 		//静音
 		$(".shengyin").on("click",function(){
@@ -202,7 +213,6 @@
 			//更新进度条
 			var pValue = (myVideo.currentTime/myVideo.duration)*100;
 			$(".line").css("width",pValue+"%");
-			$(".diandian").css("left",pValue+"%");
 			//显示当前播放进度的时间
 			document.querySelector(".current").innerText = getTimeBySecond(myVideo.currentTime);
 		});
@@ -220,8 +230,8 @@
 		//当视频元数据加载时运行
 			//设置总时长
 		myVideo.addEventListener("loadedmetadata",function(){
-			totalT = this.duration
-			console.log(totalT)
+//			totalT = this.duration
+//			console.log(totalT)
 			setTimeout(()=>{
 			document.querySelector(".totalTime").innerText = getTimeBySecond(myVideo.duration)},1000)
 		})	
@@ -231,3 +241,4 @@
             var second = parseInt(second % 60);
             return  (minute < 10 ? "0" + minute:minute) + ":" + (second < 10 ? "0" + second:second);
 		};
+		
