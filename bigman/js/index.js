@@ -150,8 +150,6 @@
 				goFullScreen();
 			}
 		});		
-
-
 		
 		//静音
 		$(".shengyin").on("click",function(){
@@ -182,17 +180,22 @@
 			vdo.play();
 		});
 		//点击页面控制台出现
-//		$(".shiping").on("click",function(){
-//			$(".con").fadeIn();
-//			setTimeout(listen,60);
-//		})
-//		function listen(){
-//			if(vdo.play){
-//				$(".con").delay(4000).fadeOut();
-//			}
-//		};
-//		listen()
-		
+		$(".shiping").on("click",function(){
+			$(".con").fadeIn();
+			myVideo.pause();
+			$(".pause").show();
+			$(".start").hide();
+			setTimeout(listen,60);
+		})
+		function listen(){
+			if(vdo.play){
+				$(".con").delay(5000).fadeOut();
+			}
+		};
+		listen();
+		if(vdo.play){
+			$(".play").fadeOut();
+		}
 		//拖动进度时
 		$(".bar").on("click",function(e){
 			var time = myVideo.duration*(e.offsetX/$(".bar").width());
