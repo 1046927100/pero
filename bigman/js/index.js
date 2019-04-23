@@ -46,7 +46,7 @@
 //监听视频是否播放
 	var vdo = document.getElementsByTagName("video")[0];
 	$(".shiping").on('timeupdate',function(){
-//		$(".start").hide();
+		$(".start").hide();
 	});
 	//点击播放
 	$(".start").on("click",function(){
@@ -181,16 +181,16 @@
 			$(".play").show();
 			vdo.play();
 		});
-//		$(".shiping").on("click",function(){
-//			$(".con").fadeIn();
-//			setTimeout(listen,60);
-//		})
-//		function listen(){
-//			if(vdo.play){
-//				$(".con").delay(4000).fadeOut();
-//			}
-//		};
-//		listen()
+		$(".shiping").on("click",function(){
+			$(".con").fadeIn();
+			setTimeout(listen,60);
+		})
+		function listen(){
+			if(vdo.play){
+				$(".con").delay(4000).fadeOut();
+			}
+		};
+		listen()
 		
 		//拖动进度时
 		$(".bar").on("click",function(e){
