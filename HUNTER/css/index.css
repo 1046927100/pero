@@ -68,6 +68,7 @@ video{
 	position: absolute;
 	left:8.5rem;
 	top:6.8rem;
+	z-index:2;
 }
 .shengyin img{
 	width:100%;
