@@ -123,7 +123,7 @@ if (browser.versions.mobile) {//判断是否是移动设备打开。browser代�
         }
         if (browser.versions.ios) {
                 //是否在IOS浏览器打开
-                $(".shengyin").css("display","none")
+//              $(".shengyin").css("display","none")
         } 
         if (browser.versions.android){
                 //是否在安卓浏览器打开
