@@ -111,7 +111,7 @@ var browser = {
 }
 if (browser.versions.mobile) {//判断是否是移动设备打开。browser代码在下面
         var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
-        if (ua.match(/MicroMessenger/i) == "micromessenger"&&browser.versions.android) {
+        if (ua.match(/MicroMessenger/i) == "micromessenger"||browser.versions.android) {
                 //安卓在微信中打开
                 $(".shengyin").css("display","block")
         }
