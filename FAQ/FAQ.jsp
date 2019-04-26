@@ -1,3 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/common/taglibs-wml.jsp"%>
+<%
+request.setAttribute("userId", session.getAttribute("aaaUserId"));
+request.setAttribute("mobile", session.getAttribute("mobile"));
+%>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -149,7 +155,7 @@
 	
 //跳转事件
 	$(".tiaozhuan1").on("click",function(){
-		window.location.href='1.html'
+		window.location.href='FAQ_1.jsp'
 	})
 	
 	

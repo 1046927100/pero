@@ -1,3 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="/common/taglibs-wml.jsp"%>
+<%
+request.setAttribute("userId", session.getAttribute("aaaUserId"));
+request.setAttribute("mobile", session.getAttribute("mobile"));
+%>
 <!DOCTYPE html>
 <html>
 	<head>
