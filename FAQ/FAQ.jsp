@@ -1,9 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="/common/taglibs-wml.jsp"%>
-<%
-request.setAttribute("userId", session.getAttribute("aaaUserId"));
-request.setAttribute("mobile", session.getAttribute("mobile"));
-%>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -37,9 +32,8 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 				display: block;
 				font-size:0.35rem;
 				white-space:pre-wrap;
-				margin-left:0.5rem;
 				border-bottom:0.01rem black solid ;
-				margin-bottom: 0.5rem;
+				margin:0 0.5rem 0.5rem 0;
 				/*text-overflow:ellipsis;
 				overflow:hidden;*/
 				/*border-bottom: 0.01rem black solid;*/
@@ -47,6 +41,7 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 			.no1,.no2{
 				background: white;
 				overflow: hidden;
+				margin-left:0.5rem;
 			}
 			.right .biaoti{
 				font-weight:600;
@@ -59,14 +54,19 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 			}
 			.left p{
 				height:1rem;
-				/*line-height: 0.6rem;*/
 				font-size: 0.35rem;
-				margin-bottom: 0.5rem;
-				margin-left:0.5rem;
-				border-bottom:0.01rem black solid ;
+				margin:0 0.5rem 0.3rem 0.5rem;
 				white-space:pre-wrap;
 				/*text-overflow:ellipsis;
 				overflow:hidden;*/
+			}
+			.left p i{
+				display: inline-block;
+				width:0.39rem;
+				height:0.39rem;
+				background: url(img/1.png) no-repeat 0 0 ;
+				background-size: contain;
+				transform: translateY(0.07rem);
 			}
 		</style>
 	</head>
@@ -78,8 +78,8 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 			<div class="no1">
 				<div class="right">
 					<p class='biaoti'>使用之前</p>
-					<p class='tiaozhuan1'>一、我是否可使用多屏互动业务？</p>
-					<p>二、扫码绑定入口</p>
+					<p class='tiaozhuan1'>我是否可使用多屏互动业务？</p>
+					<p>扫码绑定入口</p>
 				</div>
 			</div>
 			<div class="no2">
@@ -88,19 +88,19 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 				</div>
 			</div>
 			<div class="left">
-				<p>为什么二维码加载不出来？</p>
-				<p>扫描二维码后手机端为什么提示“绑定失败”？</p>
-				<p>为什么家庭成员选项中没有显示家庭成员列表和主人信息？</p>
-				<p>为什么绑定成功后 手机虚拟遥控器无法操控？</p>
-				<p>为什么语音搜索会提示“暂不支持该功能”、“频道列表不存在”或者“获取不到频道信息”？</p>
-				<p>为什么语音搜索时电视端无任何提示？</p>
-				<p>为什么手机端播放的视频，在电视端的观看记录中显示“已下线”？</p>
-				<p>为什么电视端播放的视频，在手机端观看记录中显示灰色，点击后提示“由于版权原因，请去电视端观看”？</p>
-				<p>为什么有些热播剧语音搜索不出来或语音识别错误？</p>
-				<p>为什么有些节目投屏或拉屏时会提示“投屏失败”或“拉屏失败”？</p>
-				<p>为什么手机端播放的视频在电视端没有留下观看记录，反之，在电视端播放的视频在手机端也没有观看记录？</p>
-				<p>使用手机端如何绑定设备？</p>
-				<p>江苏多屏互动报障模板</p>
+				<p><i></i>&nbsp&nbsp为什么二维码加载不出来？</p>
+				<p><i></i>&nbsp&nbsp扫描二维码后手机端为什么提示“绑定失败”？</p>
+				<p><i></i>&nbsp&nbsp为什么家庭成员选项中没有显示家庭成员列表和主人信息？</p>
+				<p><i></i>&nbsp&nbsp为什么绑定成功后 手机虚拟遥控器无法操控？</p>
+				<p><i></i>&nbsp&nbsp为什么语音搜索会提示“暂不支持该功能”、“频道列表不存在”或者“获取不到频道信息”？</p>
+				<p><i></i>&nbsp&nbsp为什么语音搜索时电视端无任何提示？</p>
+				<p><i></i>&nbsp&nbsp为什么手机端播放的视频，在电视端的观看记录中显示“已下线”？</p>
+				<p><i></i>&nbsp&nbsp为什么电视端播放的视频，在手机端观看记录中显示灰色，点击后提示“由于版权原因，请去电视端观看”？</p>
+				<p><i></i>&nbsp&nbsp为什么有些热播剧语音搜索不出来或语音识别错误？</p>
+				<p><i></i>&nbsp&nbsp为什么有些节目投屏或拉屏时会提示“投屏失败”或“拉屏失败”？</p>
+				<p><i></i>&nbsp&nbsp为什么手机端播放的视频在电视端没有留下观看记录，反之，在电视端播放的视频在手机端也没有观看记录？</p>
+				<p><i></i>&nbsp&nbsp使用手机端如何绑定设备？</p>
+				<p><i></i>&nbsp&nbsp江苏多屏互动报障模板</p>
 			</div>
 		</div>
 	</body>
@@ -157,6 +157,11 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 	$(".tiaozhuan1").on("click",function(){
 		window.location.href='FAQ_1.jsp'
 	})
-	
-	
+
+	var ins = document.getElementsByTagName("i");
+	for(var i = 0;i<ins.length;i++){
+		var j = i+1
+		ins[i].style.background = "url(img/"+ j +".png) no-repeat";
+		ins[i].style.backgroundSize = "contain";
+	}
 </script>
