@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
+		<title>江苏未来多屏互动常见问题</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
 		<style type="text/css">
 			*{
@@ -24,30 +24,28 @@
 			}
 			.right{
 				width:100%;
-				height:1.2rem;
 			}
-			.right span{
-				width:100%;
-				height:1.2rem;
-				/*line-height: 1rem;*/
+			.right p{
+				height:1rem;
+				line-height: 1rem;
 				display: block;
-				font-size:0.32rem;
+				font-size:0.35rem;
 				white-space:pre-wrap;
+				margin-left:0.5rem;
+				border-bottom:0.01rem black solid ;
 				/*text-overflow:ellipsis;
 				overflow:hidden;*/
 				/*border-bottom: 0.01rem black solid;*/
 			}
-			.no1,.no2,.no3{
+			.no1,.no2{
 				background: white;
-				height:1.2rem;
 				overflow: hidden;
 			}
-			.no1 span,.no2 span,.no3 span{
+			.right .biaoti{
 				font-weight:600;
 				font-size: 0.4rem;
-			}
-			.no2{
-				margin:0.4rem 0 0 0;
+				margin-left: 0;
+				border:0 none;
 			}
 			.left{
 				background: white;
@@ -72,17 +70,14 @@
 		<div class='content'>
 			<div class="no1">
 				<div class="right">
-					<span>首先，请确认用户的机顶盒牌照方版本和咪咕视频是否支持多屏业务</span>
+					<p class='biaoti'>使用之前</p>
+					<p class='tiaozhuan1'>一、我是否可使用多用互动业务？</p>
+					<p>二、扫码绑定入口</p>
 				</div>
 			</div>
 			<div class="no2">
 				<div class="right">
-					<span>扫码绑定入口（会定期更新）</span>
-				</div>
-			</div>
-			<div class="no3">
-				<div class="right">
-					<span>常见问题和处理方案</span>
+					<p class='biaoti'>常见问题和处理方案</p>
 				</div>
 			</div>
 			<div class="left">
@@ -101,17 +96,9 @@
 				<p>江苏多屏互动报障模板</p>
 			</div>
 		</div>
-		<div class="banner2" style='display: none;'>
-			<p>·未来牌照方版本：未来6712、未来6714、未来8.0（判断方式 请用户进入家庭成员界面 ，点击添加用户，调出二维码界面，确保界面没有“和TV”字样（如下图），则为未来6712、未来6714或8.0版本，支持多屏功能；如果二维码界面有“和TV”字样，不支持多屏功能）</p>
-			<p>·银河牌照方版本：银河2.0、银河3.0</p>
-			<p>·咪咕视频版本：ios现网最新版本、安卓现网最新版本</p>
-			<img src="img/ques1.png" alt="" />
-		</div>
-		<div class='banner3'>
-			
-		</div>
 	</body>
 </html>
+<script src='js/jquery.js'></script>
 <script type="text/javascript">
 	//	适配移动端页面大小的方法
 	var a = document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
@@ -160,7 +147,9 @@
 	
 	
 //跳转事件
-	
+	$(".tiaozhuan1").on("click",function(){
+		window.location.href='1.html'
+	})
 	
 	
 </script>
