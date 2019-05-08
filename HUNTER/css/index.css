@@ -80,3 +80,6 @@ video{
 .shengyin .shengyin1{
 	display: none;
 }
+video::-webkit-media-controls-play-button{
+	background: url(../img/shengyin.png) no-repeat center;
+}
