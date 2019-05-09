@@ -84,27 +84,23 @@
 				<div class="right">
 					<p class='biaoti'>使用之前</p>
 					<p class='tiaozhuan1'><s></s>&nbsp&nbsp我是否可使用多屏互动业务？</p>
-					<div class="banner2" style='display: none;'>
-						<span>未来牌照方版本：未来6712、未来6714、未来8.0（判断方式 请用户进入家庭成员界面 ，点击添加用户，调出二维码界面，确保界面没有“和TV”字样（如下图），则为未来6712、未来6714或8.0版本，支持多屏功能；如果二维码界面有“和TV”字样，不支持多屏功能）<br>银河牌照方版本：银河2.0、银河3.0<br>咪咕视频版本：ios现网最新版本、安卓现网最新版本</span>
-						<img src="img/FAQ_ques1.png" alt="" />
-					</div>
 					<p class='tiaozhuan2'><s></s>&nbsp&nbsp扫码绑定入口</p>
 					<p class='tiaozhuan3'><s></s>&nbsp&nbsp使用手机端如何绑定设备？</p>
 					<p class='biaoti'>常见问题和处理方案</p>	
 				</div>
 			<div class="left">
-				<p><i></i>&nbsp&nbsp为什么二维码加载不出来？</p>
-				<p><i></i>&nbsp&nbsp扫描二维码后手机端为什么提示“绑定失败”？</p>
-				<p class='sce'><i></i>&nbsp&nbsp为什么家庭成员选项中没有显示家庭成员列表和主人信息？</p>
-				<p><i></i>&nbsp&nbsp为什么绑定成功后 手机虚拟遥控器无法操控？</p>
-				<p class='sce'><i></i>&nbsp&nbsp为什么语音搜索会提示“暂不支持该功能”、“频道列表不存在”或者“获取不到频道信息”？</p>
-				<p><i></i>&nbsp&nbsp为什么语音搜索时电视端无任何提示？</p>
-				<p class='sce'><i></i>&nbsp&nbsp为什么手机端播放的视频，在电视端的观看记录中显示“已下线”？</p>
-				<p class='sce'><i></i>&nbsp&nbsp为什么电视端播放的视频，在手机端观看记录中显示灰色，点击后提示“由于版权原因，请去电视端观看”？</p>
-				<p><i></i>&nbsp&nbsp为什么有些热播剧语音搜索不出来或语音识别错误？</p>
-				<p class='sce'><i></i>&nbsp&nbsp为什么有些节目投屏或拉屏时会提示“投屏失败”或“拉屏失败”？</p>
-				<p class='sce'><i></i>&nbsp&nbsp为什么手机端播放的视频在电视端没有留下观看记录，反之，在电视端播放的视频在手机端也没有观看记录？</p>
-				<p><i></i>&nbsp&nbsp江苏多屏互动报障模板</p>
+				<p class='tiaozhuan4'><i></i>&nbsp&nbsp为什么二维码加载不出来？</p>
+				<p class='tiaozhuan5'><i></i>&nbsp&nbsp扫描二维码后手机端为什么提示“绑定失败”？</p>
+				<p class='sce tiaozhuan6'><i></i>&nbsp&nbsp为什么家庭成员选项中没有显示家庭成员列表和主人信息？</p>
+				<p class='tiaozhuan7'><i></i>&nbsp&nbsp为什么绑定成功后 手机虚拟遥控器无法操控？</p>
+				<p class='sce tiaozhuan8'><i></i>&nbsp&nbsp为什么语音搜索会提示“暂不支持该功能”、“频道列表不存在”或者“获取不到频道信息”？</p>
+				<p class='tiaozhuan9'><i></i>&nbsp&nbsp为什么语音搜索时电视端无任何提示？</p>
+				<p class='sce tiaozhuan10'><i></i>&nbsp&nbsp为什么手机端播放的视频，在电视端的观看记录中显示“已下线”？</p>
+				<p class='sce tiaozhuan11'><i></i>&nbsp&nbsp为什么电视端播放的视频，在手机端观看记录中显示灰色，点击后提示“由于版权原因，请去电视端观看”？</p>
+				<p class='tiaozhuan12'><i></i>&nbsp&nbsp为什么有些热播剧语音搜索不出来或语音识别错误？</p>
+				<p class='sce tiaozhuan13'><i></i>&nbsp&nbsp为什么有些节目投屏或拉屏时会提示“投屏失败”或“拉屏失败”？</p>
+				<p class='sce tiaozhuan14'><i></i>&nbsp&nbsp为什么手机端播放的视频在电视端没有留下观看记录，反之，在电视端播放的视频在手机端也没有观看记录？</p>
+				<p class='sce tiaozhuan15'><i></i>&nbsp&nbsp江苏多屏互动报障模板</p>
 			</div>
 			
 		</div>
@@ -160,14 +156,32 @@
 	
 //跳转事件
 	$(".tiaozhuan1").on("click",function(){
-		$(".banner2").stop().slideToggle("fast");
+		window.location.href = 'FAQ_3.html'
 	});
 	$(".tiaozhuan2").on("click",function(){
-		window.location.href = 'https://1046927100.github.io/pero/FAQ/FAQ_1.html'
+		window.location.href = 'FAQ_1.html'
 	});
 	$(".tiaozhuan3").on("click",function(){
-		window.location.href = 'https://1046927100.github.io/pero/FAQ/FAQ_2.html'
-	})
+		window.location.href = 'FAQ_2.html'
+	});
+	$(".tiaozhuan4").on("click",function(){
+		window.location.href = 'FAQ_4.html'
+	});
+	$(".tiaozhuan5").on("click",function(){
+		window.location.href = 'FAQ_5.html'
+	});
+	$(".tiaozhuan6").on("click",function(){
+		window.location.href = 'FAQ_6.html'
+	});
+	$(".tiaozhuan7").on("click",function(){
+		window.location.href = 'FAQ_7.html'
+	});
+	$(".tiaozhuan8").on("click",function(){
+		window.location.href = 'FAQ_8.html'
+	});
+	$(".tiaozhuan9").on("click",function(){
+		window.location.href = 'FAQ_9.html'
+	});
 	
 	var ins = document.getElementsByTagName("i");
 	var ins2 = document.getElementsByTagName("s");
