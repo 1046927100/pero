@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf8">
+	<meta name="Description" content="" />
+	<meta name="Keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="format-detection" content="telephone=no">
+	<title>互联网电视大神篇</title>
+	<link rel="stylesheet" type="text/css" href="css/comm.css">
+	<link rel="stylesheet" type="text/css" href="css/activity.css">
+	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="./js/comm.js"></script>
+	<script type="text/javascript" src="./js/util.js" ></script>
+	<script type="text/javascript" src="./js/weixinShare.js" ></script>
+	<script src="https://hm.baidu.com/hm.js?fe2d0544b3f8dc961000be779d0d7b65"></script>
+
+	<script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?fe2d0544b3f8dc961000be779d0d7b65";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+	</script>
+
+</head>
+<body>
+
+<div class="wrap wrap-activity">
+	<div class="page-main">
+		<div class="activity-item" data-type="1">
+			<div class="video-item">
+				<div class="video-select">
+					<a href="javascript:" class="btn active" data-type="1">银河用户</a>
+					<a href="javascript:" class="btn" data-type="2">未来用户</a>
+				</div>
+				<div class="video-info">
+					<video id="videoMain" preload="auto" type="application/x-mpegurl" webkit-playsinline="" playsinline="" x-webkit-airplay="allow" x5-playsinline="" src="">Your browser does not support the video tag.</video>
+					<a href="javascript:" class="btn-play"><i class="play-icon"></i></a>
+				</div>
+			</div>
+
+			<div class="video-list">
+				<a href="javascript:" class="btn active" data-id="1" id="1">
+					<div class="icon"><i class="icon01"></i></div>
+					<span>功能按钮</span>
+				</a>
+				<a href="javascript:" class="btn" data-id="2" id="2">
+					<div class="icon"><i class="icon02"></i></div>
+					<span>找电视台</span>
+				</a>
+				<a href="javascript:" class="btn" data-id="3" id="3">
+					<div class="icon"><i class="icon03"></i></div>
+					<span>屏幕界面</span>
+				</a>
+				<a href="javascript:" class="btn" data-id="4" id="4">
+					<div class="icon"><i class="icon04"></i></div>
+					<span>点播节目</span>
+				</a>
+				<a href="javascript:" class="btn" data-id="5" id="5">
+					<div class="icon"><i class="icon05"></i></div>
+					<span>付费节目</span>
+				</a>
+				<a href="javascript:" class="btn" data-id="6" id="6">
+					<div class="icon"><i class="icon06"></i></div>
+					<span>特色节目</span>
+				</a>
+			</div>
+
+			<!--<div class="activity-input">
+				<p class="prompt">如果以上互联网电视界面和您的不同，请留下手机号码给我</p>
+				<div class="item">
+					<input type="tel" name="mobile" id="mobile" placeholder="请输入您的手机号码">
+					<a href="javascript:" class="btn btn-mobile-sibmit sprite sprite_btn_submit">提交</a>
+				</div>
+			</div>-->
+
+
+			<!--<a href="result.html" class="btn-next sprite sprite_btn_next"></a>-->
+		</div>
+	</div>
+	<!--<a href="javascript:" class="btn-rule">活动规则</a>-->
+</div>
+
+<!-- 弹窗-提示 -->
+<div class="pop-mask" id="popPrompt" style="display: none;">
+	<div class="pop-item item02">
+		<p class="pop-prompt-text"></p>
+	</div>
+</div>
+
+<!-- 弹窗-活动规则 -->
+<div class="pop-mask" id="popRule" style="display: none;">
+	<div class="pop-item item01">
+		<h1 class="pop-title">活动规则</h1>
+		<div class="pop-rule-item">
+			<p><b>一、活动时间</b><br>
+				即日起至2019年7月31日<br>
+				<b>二、活动对象</b><br>
+				江苏移动4G及宽带客户（仅限江苏移动三大品牌客户，但非实名制客户、M-Free卡客户、20元封顶、CMWAP免费类客户、金卡快捷通、快捷通、随E行、无线固话、无线通、专业卡、合并付费副号码、号码销户及停机客户除外），具体以实际办理页面为准。<br>
+				<b>三、活动内容</b><br>
+				<b class="imp">活动期间，客户登录活动专区，可获得1次抽奖机会。</b>奖品有100MB/2GB国内通用流量、5元话费等。<b class="imp">非100%中奖，具体需以页面展示为准。</b><br>
+				<b>四、奖品说明</b><br>
+				<b>1、100MB/2GB流量：</b><br>
+				<b>领取：</b>中奖后无需领取,三个工作日内赠送至中奖号码的流量账户中（奖励发放时号码不得更换且必须处于正常状态）,请注意查收到账短信或登“江苏移动掌上营业厅--套餐余量--套餐外优惠流量-流量充值记录”查询。<br>
+				<b>使用：</b>本活动赠送的流量均为套外流量，可在国内2G/3G/4G移动数据网络下使用（不含港澳台地区），月底自动失效。所赠流量不可滚存、兑换、共享或赠送他人使用。非实名制客户、M-Free卡客户、无线通、随E行、移动总机、固话、商话、公话、快捷通和金卡快捷通及wap封顶套餐客户无法享受流量赠送。具体能否享受流量优惠，以实际使用为准。<br>
+				<b>2、5元话费：</b><br>
+				<b>领取：</b>中奖后无需领取,获赠后将在三个工作日内充值至优惠账本，无短信提醒。届时可登录掌上营业厅-充话费-充值记录中查询。<br>
+				<b>使用：</b>此话费不可转赠，不可兑换现金，赠送的话费不提供发票。<br>
+				<b>五、其他注意事项</b><br>
+				1、参与活动的号码状态必须正常，报停的客户须先报开，欠停的客户，须缴清欠费后，才能参加本活动。如用户当月预约变更主体产品，有可能导致无法参与活动。如用户已经参与移动其他活动导致冲突，将导致无法参加活动，具体以办理时页面展示为准。<br>
+				2、活动赠送流量适用于流量三封顶规则。即：从2017年8月1日起，提供“套餐外500元和15GB双封顶，总流量100GB封顶”服务以保证您的使用安全。具体规则如下：（1）当客户套餐外国内移动数据流量在15GB以内，套餐外流量费用500元封顶；（2）套餐外国内移动数据流量超过15GB、且当月总流量没有达到100GB时，暂停当月移动数据流量业务功能，客户可以申请重新开通，后续产生的流量费用按照0.29元／M收取、不再进行封顶；（3）客户当月总流量达到100GB后，停止当月移动数据流量业务功能，次月恢复。请结合自身流量使用情况合理开通套餐及参加营销活动。<br>
+				3、每月最后一天21：30至次日凌晨1：00为系统升级维护时间，可能导致业务无法办理。<br>
+				4、中奖用户在享受活动奖品优惠期间不得办理销户、过户、报停业务。<br>
+				5、凡参与本活动者，即视为接受活动的所有规则，且必须遵守中国移动江苏公司法律声明及其它关于营销活动的相关规定。中国移动江苏公司有权在法律允许的范围内对活动规则作出适当调整。详询10086。<br>
+				6、您通过本软件参加的商业活动与Apple Inc.无关。</p>
+		</div>
+
+		<a href="javascirpt:" class="pop-close pop-hide sprite sprite_pop_close"></a>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+function pageInit() {
+	var videoItems = [
+        [
+            { id: 1, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/1_1.mp4?v=201905201458', default_img: 'images/video_default01.png' },
+            { id: 2, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/1_2.mp4?v=201905201458', default_img: 'images/video_default01.png' },
+            { id: 3, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/1_3.mp4?v=201905201458', default_img: 'images/video_default01.png' },
+            { id: 4, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/1_4.mp4?v=201905201458', default_img: 'images/video_default01.png' },
+            { id: 5, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/1_5.mp4?v=201905201458', default_img: 'images/video_default01.png' },
+            { id: 6, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/1_6.mp4?v=201905201458', default_img: 'images/video_default01.png' },
+        ],
+        [
+            { id: 1, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/2_1.mp4?v=201905201458', default_img: 'images/video_default02.png' },
+            { id: 2, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/2_2.mp4?v=201905201458', default_img: 'images/video_default02.png' },
+            { id: 3, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/2_3.mp4?v=201905201458', default_img: 'images/video_default02.png' },
+            { id: 4, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/2_4.mp4?v=201905201458', default_img: 'images/video_default02.png' },
+            { id: 5, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/2_5.mp4?v=201905201458', default_img: 'images/video_default02.png' },
+            { id: 6, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/2_6.mp4?v=201905201458', default_img: 'images/video_default02.png' },
+        ],
+	];
+	var videoItem = videoItems[0];
+	var videoObj = document.getElementsByTagName('video');
+	var mainVideoObj = $('#videoMain');
+
+	// 页面适配
+	pageSize({
+		width: 750,
+		height: 1218,
+		success(res) {
+			pageScale = res.scaleX;
+
+			var pageMainObj = document.getElementsByClassName('page-main');
+			for(var i=0; i<pageMainObj.length; i++) {
+				pageMainObj[i].style[cssPrefix() + 'Transform'] = 'scale('+ pageScale +')';
+			}
+
+			var popitemObj = document.getElementsByClassName('pop-item');
+			for(var i=0; i<popitemObj.length; i++) {
+				popitemObj[i].style[cssPrefix() + 'Transform'] = 'scale('+ pageScale +')';
+			}
+		}
+	});
+
+	activityInit();
+	// 页面初始化
+	function activityInit(index) {
+		index = index ? index : 0;
+		$('.activity-item').attr('data-type', index + 1);
+		$('.video-select .btn').eq(index).addClass('active').siblings('.btn').removeClass('active');
+		$('.video-list .btn').eq(0).addClass('active').siblings('.btn').removeClass('active');
+		mainVideoObj[0].load();
+		mainVideoObj[0].src = videoItem[0].src;
+        mainVideoObj[0].poster = videoItem[0].default_img;
+		mainVideoObj.siblings('.btn-play').show();
+	}
+
+	
+	if (system().iPhone || system().iPad) {
+        $('body').off().on('touchend', function (el) {
+            if (el.target.tagName != 'INPUT') {
+                $('input').off().on('blur',function () {
+
+                    document.body.scrollTop = document.body.scrollHeight;
+                })
+            }
+        })
+    }
+
+
+	// 播放视频
+	
+	$('.btn-play').off().on('click', function() {
+		var _this = $(this);
+		mainVideoObj = _this.siblings('video');
+
+		if(mainVideoObj[0].paused) {
+			for(var i=0; i<videoObj.length; i++) {
+				videoObj[i].pause();
+			}
+
+			mainVideoObj[0].play();
+
+		} else {
+			mainVideoObj[0].pause();
+		}
+	});
+
+	// 视频播放暂停状态
+	mainVideoObj.off();
+	mainVideoObj.on('play', function() {
+        $(this).attr('controls', 'controls');
+		$('.btn-play').hide();
+	});
+    mainVideoObj.on('pause', function() {
+        $(this).removeAttr('controls');
+        $('.btn-play').show();
+    });
+
+	// 选择用户
+	$('.video-select .btn').off().on('click', function() {
+		var _this = $(this);
+		var _index = _this.index();
+
+		if(_this.hasClass('active')) return;
+
+		videoItem = videoItems[_index];
+
+		activityInit(_index);
+	});
+
+	// 切换视频
+	$('.video-list .btn').off().on('click', function() {
+		var _this = $(this);
+		var _index = _this.index();
+
+        if(videoItem[_index]) {
+            if(_this.hasClass('active')) {
+                mainVideoObj[0].play();
+            } else {
+                _this.addClass('active').siblings('.btn').removeClass('active');
+                mainVideoObj[0].load();
+                mainVideoObj[0].src = videoItem[_index].src;
+                mainVideoObj[0].poster = videoItem[_index].default_img;
+                mainVideoObj[0].play();
+                // $('.btn-play').show();
+            }
+        }
+
+		var page = '201', desc = '';
+        var type = 6;
+        if($('.video-select .btn')[0].className == 'btn active'){
+            if(_this[0].id == '1') page='201', desc='银河视频按钮1';
+            if(_this[0].id == '2') page='202', desc='银河视频按钮2';
+            if(_this[0].id == '3') page='203', desc='银河视频按钮3';
+            if(_this[0].id == '4') page='204', desc='银河视频按钮4';
+            if(_this[0].id == '5') page='205', desc='银河视频按钮5';
+            if(_this[0].id == '6') page='206', desc='银河视频按钮6';
+        }else{
+            type = 8;
+            if(_this[0].id == '1') page='301', desc='未来视频按钮1';
+            if(_this[0].id == '2') page='302', desc='未来视频按钮2';
+            if(_this[0].id == '3') page='303', desc='未来视频按钮3';
+            if(_this[0].id == '4') page='304', desc='未来视频按钮4';
+            if(_this[0].id == '5') page='305', desc='未来视频按钮5';
+            if(_this[0].id == '6') page='306', desc='未来视频按钮6';
+		}
+
+        _hmt.push(['_trackEvent', '视频页', '播放', desc]);
+        $.get('pageLog.do?r=' + Math.random() + '&page=' +page);
+	});
+
+	// 提交手机号码
+	$('.btn-mobile-sibmit').off().on('click', function() {
+		var mobile = $('input#mobile').val();
+		if(mobile.trim() == '') {
+			popPromptShow('很抱歉，手机号码不能为空~~');
+		} else if(!isMobile(mobile)) {
+			popPromptShow('很抱歉，请输入11位江苏移动手机号码~~');
+		} else {
+		    var type = 6;
+		    var typeStr = '银河类型';
+            if($('.video-select .btn')[1].className == 'btn active'){
+                type = 8;
+                typeStr = '未来类型';
+			}
+
+            $.ajax({
+                type: 'POST',
+                url: 'isJsMobile.do',
+                dataType: 'text',
+                data: {
+                    mobile : mobile,
+                    type : type
+                },
+                success: function(result){
+                    result = eval("(" + result + ")");
+                    if(result.code == 0){
+                        popPromptShow('提交成功，非常感谢您的反馈~~');
+                        $('input#mobile').val('');
+                        _hmt.push(['_trackEvent', '视频页', '提交', typeStr]);
+                    }else{
+                        popPromptShow('很抱歉，本次活动仅限江苏移动手机号码参与~~');
+					}
+                },
+                error: function(result){
+                    popPromptShow('提交异常');
+                }
+            });
+		}
+	});
+
+	// 显示活动规则
+	$('.btn-rule').off().on('click', function() {
+		popShow('popRule');
+	});
+
+}
+
+pageInit();
+
+</script>
+</body>
+</html>

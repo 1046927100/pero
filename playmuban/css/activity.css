@@ -1,0 +1,315 @@
+.wrap-activity {
+	background: url('../images/bg_activity.jpg') no-repeat center center;
+	background-size: cover;
+}
+.activity-item {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.activity-item .video-item {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 7.1rem;
+	height: 5.22rem;
+	margin-left: -3.55rem;
+	margin-top: -5.54rem;
+	box-sizing: border-box;
+	padding: 1.03rem .4rem .6rem .4rem;
+}
+.activity-item .video-item .video-select {
+	position: absolute;
+	top: 0;
+	left: .78rem;
+	width: 4.57rem;
+	height: .67rem;
+	display: -webkit-box;
+	display: flex;
+	display: -webkit-flex;
+}
+.activity-item .video-item .video-select .btn {
+	display: block;
+	width: 1.87rem;
+	height: 100%;
+}
+.activity-item .video-item .video-select .btn.active {
+	width: 2.7rem;
+}
+.activity-item .video-item .video-info {
+	width: 100%;
+	height: 100%;
+	border-radius: .1rem;
+	overflow: hidden;
+	position: relative;
+}
+.activity-item .video-item .video-info video {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.activity-item .video-item .video-info .btn-play {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+.activity-item .video-item .video-info .btn-play .play-icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 1rem;
+	height: 1rem;
+	margin-top: -.5rem;
+	margin-left: -.5rem;
+}
+.activity-item .video-list {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	box-sizing: border-box;
+	padding-left: .4rem;
+	margin-top: -.1rem;
+}
+.activity-item .video-list .btn {
+	float: left;
+	width: 3.37rem;
+	height: 1.02rem;
+	margin-right: .1rem;
+	margin-bottom: .1rem;
+	box-sizing: border-box;
+	padding-left: 1.4rem;
+	padding-top: .2rem;
+	position: relative;
+}
+.activity-item .video-list .btn .icon {
+	position: absolute;
+	top: .13rem;
+	left: .09rem;
+	width: .95rem;
+	height: .91rem;
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: -webkit-flex;
+	-webkit-justify-content: center;
+	-webkit-align-items: center;
+}
+.activity-item .video-list .btn .icon i {
+	display: block;
+}
+.activity-item .video-list .btn .icon i.icon01 {
+	width: .6rem;
+	height: .6rem;
+}
+.activity-item .video-list .btn .icon i.icon02 {
+	width: .64rem;
+	height: .49rem;
+}
+.activity-item .video-list .btn .icon i.icon03 {
+	width: .56rem;
+	height: .52rem;
+}
+.activity-item .video-list .btn .icon i.icon04 {
+	width: .49rem;
+	height: .61rem;
+}
+.activity-item .video-list .btn .icon i.icon05 {
+	width: .6rem;
+	height: .6rem;
+}
+.activity-item .video-list .btn .icon i.icon06 {
+	width: .54rem;
+	height: .54rem;
+}
+.activity-item .video-list .btn span {
+	display: block;
+	line-height: .5rem;
+	font-size: .30rem;
+	color: #fff;
+}
+.activity-item .activity-input {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 6.72rem;
+	height: 1.66rem;
+	margin-left: -3.36rem;
+	margin-top: 3.44rem;
+	box-sizing: border-box;
+	padding-top: .1rem;
+}
+.activity-item .activity-input .prompt {
+	width: 100%;
+	height: .6rem;
+	line-height: .6rem;
+	text-align: center;
+	font-size: .2rem;
+	color: #c5cefa;
+}
+.activity-item .activity-input .item {
+	width: 6.2rem;
+	margin: 0 auto;
+	box-sizing: border-box;
+	position: relative;
+	padding-right: 2.2rem;
+}
+.activity-item .activity-input .item input {
+	display: block;
+	width: 100%;
+	height: .62rem;
+	border: none;
+	border-radius: .31rem;
+	box-sizing: border-box;
+	padding: 0 .3rem;
+	font-size: .2rem;
+	color: #dee8fc;
+	box-shadow: 0 0 .04rem rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 0 .04rem rgba(0,0,0,.3);
+}
+.activity-item .activity-input .item input::-webkit-input-placeholder {
+	color: #dee8fc;
+}
+.activity-item .activity-input .item .btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	line-height: .59rem;
+	text-align: center;
+	font-size: .24rem;
+	color: #40399d;
+}
+
+.activity-item .btn-next {
+	position: absolute;
+	bottom: .3rem;
+	left: 50%;
+	margin-left: -.2rem;
+	animation: btnNext .5s linear infinite;
+	-webkit-animation: btnNext .5s linear infinite;
+}
+.activity-item .btn-next:after {
+	content: 'ä¸‹ä¸€é¡µ';
+	position: absolute;
+	top: -.4rem;
+	left: 50%;
+	width: 1rem;
+	line-height: .4rem;
+	text-align: center;
+	font-size: .24rem;
+	color: #efc739;
+	margin-left: -.5rem;
+}
+@keyframes btnNext {
+	from { margin-bottom: 0 }
+	to { margin-bottom: -2% }
+}
+@-webkit-keyframes btnNext {
+	from { margin-bottom: 0 }
+	to { margin-bottom: -2% }
+}
+
+
+.activity-item[data-type="1"] .video-item {
+	background: url('../images/activity_video_item01.png') no-repeat;
+	background-size: cover;
+}
+.activity-item[data-type="1"] .video-info .btn-play .play-icon {
+	background: url('../images/activity_btn_play01.png') no-repeat;
+	background-size: cover;
+}
+.activity-item[data-type="1"] .video-list .btn {
+	background: url('../images/activity_video_list01.png') no-repeat;
+	background-size: cover;
+}
+.activity-item[data-type="1"] .video-list .btn.active {
+	background: url('../images/activity_video_list_active01.png') no-repeat;
+	background-size: cover;
+}
+.activity-item[data-type="1"] .video-list .btn .icon i.icon01 {
+	background: url('../images/activity_video_icon0101.png') no-repeat;
+	background-size: cover;
+}
+.activity-item[data-type="1"] .video-list .btn .icon i.icon02 {
+	background: url('../images/activity_video_icon0102.png') no-repeat;
+	background-size: cover;
+}
+.activity-item[data-type="1"] .video-list .btn .icon i.icon03 {
+	background: url('../images/activity_video_icon0103.png') no-repeat;
+	background-size: cover;
+}
+.activity-item[data-type="1"] .video-list .btn .icon i.icon04 {
+	background: url('../images/activity_video_icon0104.png') no-repeat;
+	background-size: cover;
+}
+.activity-item[data-type="1"] .video-list .btn .icon i.icon05 {
+	background: url('../images/activity_video_icon0105.png') no-repeat;
+	background-size: cover;
+}
+.activity-item[data-type="1"] .video-list .btn .icon i.icon06 {
+	background: url('../images/activity_video_icon0106.png') no-repeat;
+	background-size: cover;
+}
+.activity-item[data-type="1"] .activity-input {
+	background: url('../images/activity_input_item01.png') no-repeat;
+	background-size: cover;
+}
+.activity-item[data-type="1"] .activity-input .item input {
+	background-color: #243787;
+}
+
+
+.activity-item[data-type="2"] .video-item {
+	background: url('../images/activity_video_item02.png') no-repeat;
+	background-size: cover;
+}
+.activity-item[data-type="2"] .video-info .btn-play .play-icon {
+	background: url('../images/activity_btn_play02.png') no-repeat;
+	background-size: cover;
+}
+.activity-item[data-type="2"] .video-list .btn {
+	background: url('../images/activity_video_list02.png') no-repeat;
+	background-size: cover;
+}
+.activity-item[data-type="2"] .video-list .btn.active {
+	background: url('../images/activity_video_list_active02.png') no-repeat;
+	background-size: cover;
+}
+.activity-item[data-type="2"] .video-list .btn .icon i.icon01 {
+	background: url('../images/activity_video_icon0201.png') no-repeat;
+	background-size: cover;
+}
+.activity-item[data-type="2"] .video-list .btn .icon i.icon02 {
+	background: url('../images/activity_video_icon0202.png') no-repeat;
+	background-size: cover;
+}
+.activity-item[data-type="2"] .video-list .btn .icon i.icon03 {
+	background: url('../images/activity_video_icon0203.png') no-repeat;
+	background-size: cover;
+}
+.activity-item[data-type="2"] .video-list .btn .icon i.icon04 {
+	background: url('../images/activity_video_icon0204.png') no-repeat;
+	background-size: cover;
+}
+.activity-item[data-type="2"] .video-list .btn .icon i.icon05 {
+	background: url('../images/activity_video_icon0205.png') no-repeat;
+	background-size: cover;
+}
+.activity-item[data-type="2"] .video-list .btn .icon i.icon06 {
+	background: url('../images/activity_video_icon0206.png') no-repeat;
+	background-size: cover;
+}
+.activity-item[data-type="2"] .activity-input {
+	background: url('../images/activity_input_item02.png') no-repeat;
+	background-size: cover;
+}
+.activity-item[data-type="2"] .activity-input .item input {
+	background-color: #382b85;
+}
