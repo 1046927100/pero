@@ -32,7 +32,7 @@ function handleResult(code) {
 }
 
 function toErrorPage() {
-    window.location.href = "http://gddqres.richworks.cn/dqtg/wap/1511/451106/congestion/index.html";
+//  window.location.href = "http://gddqres.richworks.cn/dqtg/wap/1511/451106/congestion/index.html";
 }
 
 var parserDate = function (date) {
