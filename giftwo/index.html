@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		img{
+			border:0 none;
+		}
+		body,html{
+			width:100%;
+			font-family: PingFangSC-Light,'helvetica neue','hiragino sans gb',tahoma,'microsoft yahei ui','microsoft yahei',simsun,sans-serif;
+		}
+		.banner{
+			width:100%;
+			height:100%;
+			position: absolute;
+			left:0;
+			top:0;
+		}
+		.ship{
+			width:7.28rem;
+			height:4.907rem;
+			position: absolute;
+			left:1.413rem;
+			top:5.06rem;
+			border-radius: 0.2rem;
+			background: blue;
+		}
+		.ship video{
+			width:100%;
+			height:100%;
+			display: block;
+			object-fit:fill;
+		}
+		.no{
+			width:2.9rem;
+			height:0.81rem;
+			position: absolute;
+			left:1.77rem;
+			top:10.5rem;
+			background: red;
+			opacity: 0.1;
+		}
+		.no2{
+			left:5.4rem;
+		}
+		.no3{
+			top:11.7rem;
+		}
+		.no4{
+			left:5.4rem;
+			top:11.7rem;
+		}
+		.no5{
+			top:12.95rem;
+		}
+		.no6{
+			left:5.4rem;
+			top:12.95rem;
+		}
+		.qiehuan{
+			width:3rem;
+			height:0.9rem;
+			position: absolute;
+			left:1.5rem;
+			top:3.93rem;
+		}
+		.qiehuan2{
+			left:5.65rem;
+		}
+		.play{
+			width:1.853rem;
+			height:1.853rem;
+			position: absolute;
+			left:50%;
+			top:50%;
+			transform: translate(-50%,-50%);
+		}
+		.play img{
+			width:100%;
+		}
+		.active{
+			
+		}
+		.light{
+			display: block;
+			width:0.2rem;
+			height:0.2rem;
+			background:url(img/black.png) no-repeat 0 0;
+			background-size: 100%;
+			top:0.3rem;
+			left:0.21rem;
+			position: absolute;
+		}
+		.black{
+			display: block;
+			width:0.2rem;
+			height:0.2rem;
+			background:url(img/light.png) no-repeat 0 0;
+			background-size: 100%;
+			top:0.3rem;
+			left:0.21rem;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<div class="con">
+		<img src="img/yinhe.png" alt="" class='banner banner1'/>
+		<img src="img/weilai.png" alt="" class='banner banner2' style='display: none;'/>
+		<div class="ship">
+			<video id="videoMain" preload="auto" type="application/x-mpegurl" webkit-playsinline="" playsinline="" x-webkit-airplay="allow" x5-playsinline="" ></video>
+			<div class='play'>
+				<img src="img/play.png" alt="" />
+			</div>
+		</div>
+		<div class="anniu">
+			<div class='no no1' id='1'>
+				<i class='light'></i>
+			</div>
+			<div class='no no2' id='2'>
+				<i class='light'></i>
+			</div>
+			<div class='no no3' id='3'>
+				<i class='light'></i>
+			</div>
+			<div class='no no4' id='4'>
+				<i class='light'></i>
+			</div>
+			<div class='no no5' id='5'>
+				<i class='light'></i>
+			</div>
+			<div class='no no6' id='6'>
+				<i class='light'></i>
+			</div>	
+		</div>
+		<div class="spc">
+			<div class='qiehuan qiehuan1'></div>
+			<div class='qiehuan qiehuan2'></div>
+		</div>
+	</div>
+</body>
+</html>
+<script src='js/jquery.js'></script>
+<script>
+	//	适配移动端页面大小的方法
+	var a = document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+	var scale = 1 / devicePixelRatio;
+	document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + 1 + ', maximum-scale=' + 1 + ', minimum-scale=' + 1 + ', user-scalable=no');
+	(function flexible (window, document) {
+	  var docEl = document.documentElement
+	  var dpr = window.devicePixelRatio || 1
+	  // adjust body font size
+	  function setBodyFontSize () {
+	    if (document.body) {
+	      document.body.style.fontSize = (12 * dpr) + 'px'
+	    }
+	    else {
+	      document.addEventListener('DOMContentLoaded', setBodyFontSize)
+	    }
+	  }
+	  setBodyFontSize();
+	  // set 1rem = viewWidth / 10
+	  function setRemUnit () {
+	    var rem = docEl.clientWidth / 10
+	    docEl.style.fontSize = rem + 'px'
+	  }
+	  setRemUnit()
+	  // reset rem unit on page resize
+	  window.addEventListener('resize', setRemUnit)
+	  window.addEventListener('pageshow', function (e) {
+	    if (e.persisted) {
+	      setRemUnit()
+	    }
+	  })
+	
+	  // detect 0.5px supports
+	  if (dpr >= 2) {
+	    var fakeBody = document.createElement('body')
+	    var testElement = document.createElement('div')
+	    testElement.style.border = '.5px solid transparent'
+	    fakeBody.appendChild(testElement)
+	    docEl.appendChild(fakeBody)
+	    if (testElement.offsetHeight === 1) {
+	      docEl.classList.add('hairlines')
+	    }
+	    docEl.removeChild(fakeBody)
+	  }
+	}(window, document));
+	
+	//
+	var videoItems = [
+        [
+            { id: 1, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/1_1.mp4?v=201905201458'},
+            { id: 2, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/1_2.mp4?v=201905201458'},
+            { id: 3, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/1_3.mp4?v=201905201458'},
+            { id: 4, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/1_4.mp4?v=201905201458'},
+            { id: 5, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/1_5.mp4?v=201905201458'},
+            { id: 6, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/1_6.mp4?v=201905201458'},
+        ],
+        [
+            { id: 1, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/2_1.mp4?v=201905201458'},
+            { id: 2, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/2_2.mp4?v=201905201458'},
+            { id: 3, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/2_3.mp4?v=201905201458'},
+            { id: 4, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/2_4.mp4?v=201905201458'},
+            { id: 5, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/2_5.mp4?v=201905201458'},
+            { id: 6, src: 'https://gddqres.richworks.cn/dqtg/wap/1905/850515/video/2_6.mp4?v=201905201458'},
+        ],
+	];
+	var videoItem = videoItems[0];
+	var videoObj = document.getElementsByTagName('video');
+	var mainVideoObj = $('#videoMain');
+	console.log(videoItem)
+	activityInit();
+	// 页面初始化
+	function activityInit(index) {
+		index = index ? index : 0;
+		$('.activity-item').attr('data-type', index + 1);
+		$('.light').removeClass("black");
+		$('.light').eq(0).addClass('black');
+		$('.qiehuan').eq(index).addClass('active').siblings().removeClass('active');
+		mainVideoObj[0].load();
+		mainVideoObj[0].src = videoItem[0].src;
+		$('.play').show();
+	}
+	
+	// 选择用户
+	$('.qiehuan').off().on('click', function() {
+		var _this = $(this);
+		var _index = _this.index();
+		videoItem = videoItems[_index];
+		if(_this.hasClass('active')) return;
+		if(_index == 0){
+			$(".banner2").hide();
+			$(".banner1").show();
+		}else{
+			$(".banner1").hide();
+			$(".banner2").show();
+		}
+		activityInit(_index);
+	});
+	//起播
+	var mainVideoObj = $('#videoMain');
+	$(".play").on("click",function(){
+		mainVideoObj[0].play();
+	})
+	
+	//控制台消失展现
+	mainVideoObj.on('play', function(){
+        $(this).attr('controls', 'controls');
+		$('.play').hide();
+	});
+    mainVideoObj.on('pause', function(){
+        $(this).removeAttr('controls');
+        $('.play').show();
+    });
+    
+    //点击按钮切换节目
+    $('.no').off().on('click', function(){
+		var _this = $(this);
+		var _index = _this.index();
+		
+        if(videoItem[_index]) {
+//          if(_this.hasClass('active')) {
+//              mainVideoObj[0].play();
+//          } else {
+//              _this.addClass('active').siblings('.btn').removeClass('active');
+                mainVideoObj[0].load();
+                mainVideoObj[0].src = videoItem[_index].src;
+                mainVideoObj[0].play();
+            }
+        _this.children().addClass("black");
+		_this.siblings().children().removeClass("black");
+      });
+</script>
