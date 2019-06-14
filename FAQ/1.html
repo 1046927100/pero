@@ -15,7 +15,8 @@
 		<div></div>
 	</body>
 </html>
-<script src='https://github.com/lzyzsd/JsBridge'></script>
+<!--<script src='js/1.js'></script>-->
+<script src='js/3.js'></script>
 <script>
 	window.onload = function(){
 		function connectWebViewJavascriptBridge(callback) {
@@ -47,16 +48,12 @@
 			});
 		})
 	}
-	
-	var div = document.getElementsByTagName("div")[0];
-	div.addEventListener("click",function(){
-		window.WebViewJavascriptBridge.callHandler(
-		'CallNative',{'param': '中文测试'}
-		, function(responseData) {
-		 alert(responseData);
-		})
-		console.log(1)
-	})
-	
-    
+//	window.WebViewJavascriptBridge.callHandler('CallNative',{
+//		type: "JUMP_H5_BY_WEB_VIEW"
+//	}, function(responseData) {
+//		 alert(responseData);
+//		}
+//	)
+	var a = window.WebViewJavascriptBridge
+    console.log(a)
 </script>
