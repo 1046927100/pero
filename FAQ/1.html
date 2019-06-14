@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width:750px;
+				height:375px;
+				background: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>
+<script src='https://github.com/lzyzsd/JsBridge'></script>
+<script>
+	window.onload = function(){
+		function connectWebViewJavascriptBridge(callback) {
+				if (window.WebViewJavascriptBridge) {
+				callback(WebViewJavascriptBridge)
+				} else {
+				document.addEventListener(
+				'WebViewJavascriptBridgeReady'
+				, function() {
+				callback(WebViewJavascriptBridge)
+				},
+				false
+				);
+				}
+			}
+		connectWebViewJavascriptBridge(function(bridge) {
+			bridge.init(function(message, responseCallback) {
+			console.log('JS got a message', message);
+			var data = {
+			'Javascript Responds': '测试中文!'
+			};
+			console.log('JS responding with', data);
+			responseCallback(data);
+			});
+			bridge.registerHandler("functionInJs", function(data, responseCallback) {
+			document.getElementById("show").innerHTML = ("data from Java: = " + data);
+			var responseData = "Javascript Says Right back aka!";
+			responseCallback(responseData);
+			});
+		})
+	}
+	
+	var div = document.getElementsByTagName("div")[0];
+	div.addEventListener("click",function(){
+		window.WebViewJavascriptBridge.callHandler(
+		'CallNative',{'param': '中文测试'}
+		, function(responseData) {
+		 alert(responseData);
+		})
+		console.log(1)
+	})
+	
+    
+</script>
