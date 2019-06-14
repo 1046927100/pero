@@ -15,8 +15,15 @@
 		<div></div>
 	</body>
 </html>
-<!--<script src='js/1.js'></script>-->
+<script src='js/1.js'></script>
+<script src='js/2.js'></script>
 <script src='js/3.js'></script>
+<script src='js/4.js'></script>
+<script src='js/5.js'></script>
+<script src='js/6.js'></script>
+<script src='js/7.js'></script>
+<script src='js/8.js'></script>
+<script src='js/index.js'></script>
 <script>
 	window.onload = function(){
 		function connectWebViewJavascriptBridge(callback) {
@@ -48,12 +55,21 @@
 			});
 		})
 	}
-//	window.WebViewJavascriptBridge.callHandler('CallNative',{
-//		type: "JUMP_H5_BY_WEB_VIEW"
-//	}, function(responseData) {
-//		 alert(responseData);
-//		}
-//	)
-	var a = window.WebViewJavascriptBridge
-    console.log(a)
+	var div = document.getElementsByTagNameNS("div")[0];
+	div.addEventListener("click",function(){
+		window.WebViewJavascriptBridge.callHandler('CallNative',{
+		"name" : "TOPIC_ITEM_CLICK",
+		 "type" : "JUMP_INNER_NEW_PAGE",
+		"params" : {
+		 "path" : "",
+		 "frameID" : "",
+		"contentID" : "",
+		"location" : "WEB_VIEW_H5",
+		"pageID" : "MY_REMOTE_CONTROL",
+		 "url" : "url" 
+}}, function(responseData) {
+		 alert(responseData);
+		}
+	)
+	})
 </script>
