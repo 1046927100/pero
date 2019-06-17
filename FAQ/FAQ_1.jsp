@@ -81,10 +81,17 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 				display: none;
 			}
 			.spc{
+				display: inline-block;
+				text-align: center;
+				line-height: 30px;
+				width:100px;
+				height:30px;
+				background: #626666;
 				position: fixed;
 				right:10%;
-				color:blue;
-				transform: translateY(31.125px);
+				color:white;
+				transform: translateY(29px);
+				/*font-family: "宋体";*/
 			}
 			.spc1{
 				width:45%;
@@ -98,7 +105,7 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 	<body>
 		<div class="banner3">
 			
-			<h2 class='biaoti'><a class='return'></a>扫码绑定入口 <a class='spc'>前往绑定</a> </h2>
+			<h2 class='biaoti'><a class='return'></a>扫码绑定入口 <a class='spc'>前往绑定>></a> </h2>
 			<h3>未来</h3>
 			<span>
 				1、首页顶部菜单栏，打有“用户”角标，进入到用户中心。<br>2、选择“家庭成员”，点击“+”添加成员。<br>3、展示二维码，使用咪咕视频客户端扫码绑定。
@@ -180,4 +187,62 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 		$(".max").hide();
 		$(".zhezhao").hide();
 	}
+</script>
+<script type="text/javascript" src="//m.miguvideo.com/mgs/common/miguvendor/prd/vue_mgvendor.js"></script>
+<script type="text/javascript" src="//m.miguvideo.com/mgs/common/migugeneral/prd/general.js"></script>
+<script type="text/javascript" src="//m.miguvideo.com/mgs/common/migujsbridge/prd/mgv-jsbridge.js"></script>
+<script type="text/javascript" src="//res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script type="text/javascript" src="//webcrystal.miguvideo.com/web/script/migusdk.js?v=0.1.20180911"></script>
+<script type="text/javascript" src="//m.miguvideo.com/mgs/common/miguplayer/prd/commonPlayer.js"></script>
+<script type="text/javascript" src="//m.miguvideo.com/mgs/common/migu_udbac/prd/dist/mg_sdc_load.js"></script>
+<script type="text/javascript" charset="UTF-8" src="http://m.miguvideo.com/mgs/player/prd/v_20190613174427_3c9bdd9d/dist/pcPlayer.js"></script>
+<script type="text/javascript" src="v_20190615141336_8378d644/dist/index.js"></script>
+<script>
+	window.onload = function(){
+		function connectWebViewJavascriptBridge(callback) {
+				if (window.WebViewJavascriptBridge) {
+				callback(WebViewJavascriptBridge)
+				} else {
+				document.addEventListener(
+				'WebViewJavascriptBridgeReady'
+				, function() {
+				callback(WebViewJavascriptBridge)
+				},
+				false
+				);
+				}
+			}
+		connectWebViewJavascriptBridge(function(bridge) {
+			bridge.init(function(message, responseCallback) {
+			console.log('JS got a message', message);
+			var data = {
+			'Javascript Responds': '测试中文!'
+			};
+			console.log('JS responding with', data);
+			responseCallback(data);
+			});
+			bridge.registerHandler("functionInJs", function(data, responseCallback) {
+			document.getElementById("show").innerHTML = ("data from Java: = " + data);
+			var responseData = "Javascript Says Right back aka!";
+			responseCallback(responseData);
+			});
+		})
+	}
+	
+	var action={
+		"name": "TOPIC_ITEM_CLICK",
+		"type": "JUMP_INNER_NEW_PAGE",
+		"params": {
+			"path": "",
+			"frameID": "default-frame",
+			"location": "WEB_VIEW_H5",
+			"pageID": "MY_REMOTE_CONTROL", //电影、电视剧、综艺pageId
+			}
+		}
+	var div = document.getElementsByClassName("spc")[0];
+	div.addEventListener("click",function(){
+		window.MGBridge.jumpActivityView(action,function(res){
+			console.log(res);
+		});
+	})
 </script>

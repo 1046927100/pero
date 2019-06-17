@@ -115,9 +115,9 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 				<div class="right right1">
 					<p class='tiaozhuan1'>我是否可使用多屏互动业务？</p>
 					<p class='tiaozhuan2'>扫码绑定入口</p>
-					<div class="slide slide1">
+					<!--<div class="slide slide1">
 						<p class='tiaozhuan3'>使用手机端如何绑定设备？</p>
-					</div>
+					</div>-->
 				</div>
 			</div>
 			<div class='br'></div>
@@ -283,16 +283,23 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 		$(".icon4").css("height",hei44);
 	}
 	$(".left1").on("click",function(){
-		$(".slide1").toggle();
-		var hei1 = $(".right1").height()-1+"px";
-		$(".icon1").css("height",hei1);
-		if($(".slide1")[0].style.display == "none"){
-			$(".s1").css("background","url(img/down.png) no-repeat");
-			$(".s1").css("backgroundSize","100%");
-		}else{
+//		$(".slide1").toggle();
+//		var hei1 = $(".right1").height()-1+"px";
+//		$(".icon1").css("height",hei1);
+//		if($(".slide1")[0].style.display == "none"){
+//			$(".s1").css("background","url(img/down.png) no-repeat");
+//			$(".s1").css("backgroundSize","100%");
+//		}else{
+//			$(".s1").css("background","url(img/up.png) no-repeat");
+//			$(".s1").css("backgroundSize","100%");
+//		}	
+		if($(".s1")[0].style.background == 'url("img/down.png") 0% 0% / 100% no-repeat'){
 			$(".s1").css("background","url(img/up.png) no-repeat");
 			$(".s1").css("backgroundSize","100%");
-		}	
+		}else{
+			$(".s1").css("background","url(img/down.png) no-repeat");
+			$(".s1").css("backgroundSize","100%");
+		}
 	});
 	$(".left2").on("click",function(){
 		$(".slide2").toggle();
