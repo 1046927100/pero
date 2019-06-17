@@ -55,21 +55,21 @@
 			});
 		})
 	}
-	var div = document.getElementsByTagNameNS("div")[0];
-	div.addEventListener("click",function(){
-		window.WebViewJavascriptBridge.callHandler('CallNative',{
-		"name" : "TOPIC_ITEM_CLICK",
-		 "type" : "JUMP_INNER_NEW_PAGE",
-		"params" : {
-		 "path" : "",
-		 "frameID" : "",
-		"contentID" : "",
-		"location" : "WEB_VIEW_H5",
-		"pageID" : "MY_REMOTE_CONTROL",
-		 "url" : "url" 
-}}, function(responseData) {
-		 alert(responseData);
+	
+	var action={
+		"name": "TOPIC_ITEM_CLICK",
+		"type": "JUMP_INNER_NEW_PAGE",
+		"params": {
+			"path": "",
+			"frameID": "default-frame",
+			"location": "WEB_VIEW_H5",
+			"pageID": "MY_REMOTE_CONTROL", //电影、电视剧、综艺pageId
+			}
 		}
-	)
+	var div = document.getElementsByTagName("div")[0];
+	div.addEventListener("click",function(){
+		window.MGBridge.jumpActivityView(action,function(res){
+			console.log(res);
+		});
 	})
 </script>
