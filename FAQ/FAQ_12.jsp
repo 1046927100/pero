@@ -35,6 +35,7 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 				padding-bottom: 10px;
 				border-bottom: 1px solid #ccc;
 				font-size: 16px;
+				margin-top:30px;
 			}
 			span{
 				display: block;
@@ -54,15 +55,10 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 	</head>
 	<body>
 		<div class="banner3">
-			<h2><a class='return'></a>为什么有些热播剧语音搜索不出来或语音识别错误？</h2>
+			<h2>为什么有些热播剧语音搜索不出来或语音识别错误？</h2>
 			<span>原因是热门关键词没有及时更新，如遇此情况请联系技术进行处理。</span>
 		</div>
 	</body>
 </html>
 <script src='js/jquery.js'></script>
-<script>
-	$(".return").on("click",function(){
-		window.location.href = 'FAQ_index.jsp#go2'
-	})
-	
-</script>
+

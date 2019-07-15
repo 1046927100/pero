@@ -35,6 +35,7 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 				padding-bottom: 10px;
 				border-bottom: 1px solid #ccc;
 				font-size: 16px;
+				margin-top:30px;
 			}
 			span{
 				display: block;
@@ -54,15 +55,10 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 	</head>
 	<body>
 		<div class="banner3">
-			<h2><a class='return'></a>为什么绑定成功后 手机虚拟遥控器无法操控？</h2>
+			<h2>为什么绑定成功后 手机虚拟遥控器无法操控？</h2>
 			<span>1、请确认手机端是否已经弹出“绑定成功”的提示；<br>2、确认家庭成员中是否有绑定成功的用户头像；<br>如果以上两点都确认无误，请关闭咪咕视频app并关闭机顶盒，再次重启app和机顶盒，重新绑定，并尝试遥控器是否可用。</span>
 		</div>
 	</body>
 </html>
 <script src='js/jquery.js'></script>
-<script>
-	$(".return").on("click",function(){
-		window.location.href = 'FAQ_index.jsp'
-	})
-	
-</script>
+

@@ -35,6 +35,7 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 				padding-bottom: 10px;
 				border-bottom: 1px solid #ccc;
 				font-size: 16px;
+				margin-top:30px;
 			}
 			span{
 				display: block;
@@ -54,16 +55,11 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 	</head>
 	<body>
 		<div class="banner3">
-			<h3><a class='return'></a>为什么手机端播放的视频在电视端没有留下观看记录，反之，在电视端播放的视频在手机端也没有观看记录？</h3>
+			<h3>为什么手机端播放的视频在电视端没有留下观看记录，反之，在电视端播放的视频在手机端也没有观看记录？</h3>
 			<span>请确保您的咪咕视频登陆账号和机顶盒登录账号一致，如果不是同一手机账号登陆，则跨屏续播功能无法使用。</span>
 		</div>
 	</body>
 </html>
 <script src='js/jquery.js'></script>
-<script>
-	$(".return").on("click",function(){
-		window.location.href = 'FAQ_index.jsp#go1'
-	})
-	
-</script>
+
 

@@ -35,6 +35,7 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 				padding-bottom: 10px;
 				border-bottom: 1px solid #ccc;
 				font-size: 16px;
+				margin-top:30px;
 			}
 			span{
 				display: block;
@@ -54,15 +55,12 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 	</head>
 	<body>
 		<div class="banner3">
-			<h3><a class='return'></a>为什么语音搜索会提示“暂不支持该功能”、“频道列表不存在”或者“获取不到频道信息”？</h3>
-			<span>初次登陆机顶盒需要对搜索和视频点播功能进行下载激活，语音搜索功能才可以正常使用，具体方法：分别点击首页中的【电视台】【电影】【搜索】完成电视台、点播节目和搜索功能的下载。<br>请重启机顶盒，再次尝试，如问题依然存在，请报给相关技术人员进行处理。</span>
+			<h3>为什么语音搜索会提示“暂不支持该功能”、“频道列表不存在”或者“获取不到频道信息”？</h3>
+			<span>初次登陆机顶盒需要对搜索和视频点播功能进行下载激活，语音搜索功能才可以正常使用，具体方法：分别点击首页中的【电视台】【电影】【搜索】完成电视台、点播节目和搜索功能的下载。</span>
+			<img src="img/FAQ_ques8_1.png" alt="" />
+			<span>若未能解决，请重启机顶盒再次尝试，如问题依然存在，请报给相关技术人员进行处理。</span>
 		</div>
 	</body>
 </html>
 <script src='js/jquery.js'></script>
-<script>
-	$(".return").on("click",function(){
-		window.location.href = 'FAQ_index.jsp#go2'
-	})
-	
-</script>
+

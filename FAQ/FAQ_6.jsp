@@ -35,6 +35,7 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 				padding-bottom: 10px;
 				border-bottom: 1px solid #ccc;
 				font-size: 16px;
+				margin-top:30px;
 			}
 			span{
 				display: block;
@@ -58,16 +59,10 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 	</head>
 	<body>
 		<div class="banner3">
-			<h2><a class='return'></a>为什么家庭成员选项中没有显示家庭成员列表和主人信息？</h2>
+			<h2>为什么家庭成员选项中没有显示家庭成员列表和主人信息？</h2>
 			<h3>一般有两种原因：</h3>
 			<span>1、您的账号在另一台机顶盒中被使用<br>2、系统会不定时自动刷新成员列表，刷新超时成员列表和主人信息会消失，此时请关掉机顶盒开关，再次打开尝试。</span>
 		</div>
 	</body>
 </html>
 <script src='js/jquery.js'></script>
-<script>
-	$(".return").on("click",function(){
-		window.location.href = 'FAQ_index.jsp'
-	})
-	
-</script>

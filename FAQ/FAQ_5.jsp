@@ -35,6 +35,7 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 				padding-bottom: 10px;
 				border-bottom: 1px solid #ccc;
 				font-size: 16px;
+				margin-top:30px;
 			}
 			span{
 				display: block;
@@ -54,7 +55,7 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 	</head>
 	<body>
 		<div class="banner3">
-			<h2><a class='return'></a>扫描二维码后手机端为什么提示“绑定失败”？</h2>
+			<h2>扫描二维码后手机端为什么提示“绑定失败”？</h2>
 			<span>建议您确认手机和机顶盒的网络环境是否稳定，例如：手机端是否链接WIFI或4G网络，WIFI和4G功能不要同时打开；在机顶盒的【设置】中，查看机顶盒是否连接宽带或移动网络。</span>
 			<img src="img/FAQ_ques4.png" alt="" />
 		</div>
@@ -62,8 +63,8 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 </html>
 <script src='js/jquery.js'></script>
 <script>
-	$(".return").on("click",function(){
-		window.location.href = 'FAQ_index.jsp'
-	})
+//	$(".return").on("click",function(){
+//		window.location.href = 'FAQ_index.jsp'
+//	})
 	
 </script>

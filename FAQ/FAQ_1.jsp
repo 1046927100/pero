@@ -9,7 +9,7 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-		<title>多屏互动常见问题</title>
+		<title>如何绑定魔百和</title>
 		<style>
 			*{
 				margin:0;
@@ -40,6 +40,7 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 				padding-bottom: 10px;
 				border-bottom: 1px solid #ccc;
 				position: relative;
+				margin-top:30px;
 			}
 			h2{
 				margin: 10px 0;
@@ -90,7 +91,7 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 				position: fixed;
 				right:10%;
 				color:white;
-				transform: translateY(29px);
+				transform: translateY(-2px);
 				/*font-family: "宋体";*/
 			}
 			.spc1{
@@ -105,7 +106,7 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 	<body>
 		<div class="banner3">
 			
-			<h2 class='biaoti'><a class='return'></a>扫码绑定入口 <a class='spc'>前往绑定>></a> </h2>
+			<h2 class='biaoti'>扫码绑定入口 <a class='spc'>前往绑定>></a> </h2>
 			<h3>未来</h3>
 			<span>
 				1、首页顶部菜单栏，打有“用户”角标，进入到用户中心。<br>2、选择“家庭成员”，点击“+”添加成员。<br>3、展示二维码，使用咪咕视频客户端扫码绑定。
@@ -117,7 +118,7 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 			</div>
 			<h3>银河</h3>
 			<span>
-				1、首页右上角位置，打有“双屏专区”角标图片，图片会不定期更换。<br>2、进入到双屏专区，点击“扫码绑定”按钮。如用户第一次使用，会提示安装“咪视通”，安装完成后需退出首页再次从首页-双屏专区入口进入。<br>3、选择“+”图标添加用户，展示二维码，使用咪咕视频客户端扫码绑定。
+				1、首页右上角位置，打有“用户”入口。<br>2、进入用户页面，点击“家庭成员”按钮，点击“+”<br>3、展示二维码，使用咪咕视频客户端扫码绑定。
 			</span>
 			<div class="one">
 				<img src="img/FAQ_ques2_4.png" alt="" class='no1 no44'/>
@@ -149,9 +150,9 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 </html>
 <script src='js/jquery.js'></script>
 <script>
-	$(".return").on("click",function(){
-		window.location.href = 'FAQ_index.jsp'
-	});
+//	$(".return").on("click",function(){
+//		window.location.href = 'FAQ_index.jsp'
+//	});
 	$(".no11").on("click",function(){
 		$(".zhezhao").show();
 		$(".max1").show();
@@ -240,9 +241,12 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 			}
 		}
 	var div = document.getElementsByClassName("spc")[0];
+//	div.addEventListener("click",function(){
+//		window.MGBridge.jumpActivityView(action,function(res){
+//			console.log(res);
+//		});
+//	})
 	div.addEventListener("click",function(){
-		window.MGBridge.jumpActivityView(action,function(res){
-			console.log(res);
-		});
+		window.location.href = 'http://m.miguvideo.com/mgs/share/yyb/prd/message.html?deeplink=miguvideo%3a%2f%2fmiguvideo%3faction%3d%257B%2522params%2522%253A%257B%2522frameID%2522%253A%2522default-frame%2522%252C%2522location%2522%253A%2522OTHER%252320190621151242931%2522%252C%2522pageID%2522%253A%2522MY_REMOTE_CONTROL%2522%257D%252C%2522type%2522%253A%2522JUMP_INNER_NEW_PAGE%2522%257D&jumpurl=http%3a%2f%2fm.miguvideo.com%2fwap%2fresource%2fmigu%2ffile%2findex.html%3fpath%3dtopic%26nodeId%3d'
 	})
 </script>

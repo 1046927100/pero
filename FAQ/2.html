@@ -34,6 +34,7 @@
 				padding-bottom: 10px;
 				border-bottom: 1px solid #ccc;
 				position: relative;
+				margin-top:30px;
 			}
 			h2{
 				margin: 10px 0;
@@ -84,7 +85,8 @@
 				position: fixed;
 				right:10%;
 				color:white;
-				transform: translateY(29px);
+				transform: translateY(-2px);
+				/*font-family: "宋体";*/
 			}
 			.spc1{
 				width:45%;
@@ -98,7 +100,7 @@
 	<body>
 		<div class="banner3">
 			
-			<h2 class='biaoti'><a class='return'></a>扫码绑定入口 <a class='spc'>前往绑定>></a> </h2>
+			<h2 class='biaoti'>扫码绑定入口 <a class='spc'>前往绑定>></a> </h2>
 			<h3>未来</h3>
 			<span>
 				1、首页顶部菜单栏，打有“用户”角标，进入到用户中心。<br>2、选择“家庭成员”，点击“+”添加成员。<br>3、展示二维码，使用咪咕视频客户端扫码绑定。
@@ -142,9 +144,9 @@
 </html>
 <script src='js/jquery.js'></script>
 <script>
-	$(".return").on("click",function(){
-		window.location.href = 'FAQ_index.jsp'
-	});
+//	$(".return").on("click",function(){
+//		window.location.href = 'FAQ_index.jsp'
+//	});
 	$(".no11").on("click",function(){
 		$(".zhezhao").show();
 		$(".max1").show();

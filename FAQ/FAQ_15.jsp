@@ -35,6 +35,7 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 				padding-bottom: 10px;
 				border-bottom: 1px solid #ccc;
 				font-size: 16px;
+				margin-top:30px;
 			}
 			span{
 				display: block;
@@ -54,15 +55,10 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 	</head>
 	<body>
 		<div class="banner3">
-			<h2><a class='return'></a>为江苏多屏互动报障模板：</h2>
+			<h2>为江苏多屏互动报障模板：</h2>
 			<span>【故障发生时间】：2018年10月20日12：00<br>【影响范围】：江苏南京<br>【盒子牌照方】：未来电视/银河<br>【网络环境】：移动宽带有线/无线/4G/热点<br>【故障终端】：MGV2000<br>【机顶盒STBID】：ABCD1234EFGH5678IJKL90<br>【机顶盒账号】：139xxxxxxx<br>【手机型号】：IPHONE X<br>【手机客户端版本号】：咪咕视频V5.4.3<br>【手机客户端登录账号】：139xxxxxxxxx<br>【故障节目类型】：点播/直播/回看<br>【故障节目名称】：cctv1直播<br>【故障现象】：直播投屏失败<br>【手机遥控器界面截屏】：xx</span>
 		</div>
 	</body>
 </html>
 <script src='js/jquery.js'></script>
-<script>
-	$(".return").on("click",function(){
-		window.location.href = 'FAQ_index.jsp#go1'
-	})
-	
-</script>
+

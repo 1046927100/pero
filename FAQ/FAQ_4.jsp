@@ -35,6 +35,7 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 				padding-bottom: 10px;
 				border-bottom: 1px solid #ccc;
 				font-size: 16px;
+				margin-top:30px;
 			}
 			p{
 				display: block;
@@ -54,15 +55,15 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 	</head>
 	<body>
 		<div class="banner3">
-			<h2><a class='return'></a>为什么二维码加载不出来？</h2>
+			<h2>为什么二维码加载不出来？</h2>
 			<p>原因可能是网络不稳定，造成访问超时，如果您使用的是无线网络，请尝试使用有线网络，重启盒子再次尝试。</p>
 		</div>
 	</body>
 </html>
 <script src='js/jquery.js'></script>
 <script>
-	$(".return").on("click",function(){
-		window.location.href = 'FAQ_index.jsp'
-	})
+//	$(".return").on("click",function(){
+//		window.location.href = 'FAQ_index.jsp'
+//	})
 	
 </script>

@@ -61,7 +61,7 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 	</head>
 	<body>
 		<div class="banner3">
-			<h2><a class='return'></a>使用手机端如何绑定设备</h2>
+			<h2>使用手机端如何绑定设备</h2>
 			<h3>有三种方式可以绑定设备：</h3>
 			<span>1.点击首页右上角的TV按钮，点击设备下拉菜单，选择扫码添加云端设备即可绑定。</span>
 			<img src="img/FAQ_ques3_1.png" alt="" />
@@ -75,8 +75,8 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 </html>
 <script src='js/jquery.js'></script>
 <script>
-	$(".return").on("click",function(){
-		window.location.href = 'FAQ_index.jsp'
-	})
+//	$(".return").on("click",function(){
+//		window.location.href = 'FAQ_index.jsp'
+//	})
 	
 </script>

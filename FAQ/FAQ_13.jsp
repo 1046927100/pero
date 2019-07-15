@@ -35,6 +35,7 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 				padding-bottom: 10px;
 				border-bottom: 1px solid #ccc;
 				font-size: 16px;
+				margin-top:30px;
 			}
 			span{
 				display: block;
@@ -54,15 +55,10 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 	</head>
 	<body>
 		<div class="banner3">
-			<h2><a class='return'></a>为什么有些节目投屏或拉屏时会提示“投屏失败”或“拉屏失败”？</h2>
+			<h2>为什么有些节目投屏或拉屏时会提示“投屏失败”或“拉屏失败”？</h2>
 			<span>出于版权保护的原因，客户端对一些特定节目做了投屏和拉屏的功能限制。</span>
 		</div>
 	</body>
 </html>
 <script src='js/jquery.js'></script>
-<script>
-	$(".return").on("click",function(){
-		window.location.href = 'FAQ_index.jsp#go1'
-	})
-	
-</script>
+

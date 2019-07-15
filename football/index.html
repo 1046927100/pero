@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+		<title></title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			body{
+				width:100%;
+			}
+			html{
+				width:100%;
+			}
+			img{
+				width:100%;
+			}
+			video{
+				width:8.2rem;
+				height:4.8rem;
+				position: absolute;
+				left:0.88rem;
+				top:1.8rem;
+				object-fit: fill;
+			}
+			.huodong{
+				width:100%;
+				position: absolute;
+				left:0;
+				top:13.5rem;
+			}
+			span{
+				display: block;
+				width:100%;
+				height:1.2rem;
+				line-height: 1.2rem;
+				text-align: center;
+				background: blue;
+				color:white;
+			}
+			.span2{
+				margin:0.2rem 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img src="img/banner.jpg" alt="" />
+			<video src="" x5-playsinline playsinline controls="controls" webkit-playsinline x-webkit-airplay="allow" preload="true" loop autoplay poster="img/1.png"></video>
+			<div class='huodong'>
+				<span>30GB+7天会员</span>
+				<span class='span2'>新人领话费</span>
+				<span>流量达标送大礼</span>
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+	//	适配移动端页面大小的方法
+	var a = document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+	var scale = 1 / devicePixelRatio;
+	document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+	(function flexible (window, document) {
+	  var docEl = document.documentElement
+	  var dpr = window.devicePixelRatio || 1
+	  // adjust body font size
+	  function setBodyFontSize () {
+	    if (document.body) {
+	      document.body.style.fontSize = (12 * dpr) + 'px'
+	    }
+	    else {
+	      document.addEventListener('DOMContentLoaded', setBodyFontSize)
+	    }
+	  }
+	  setBodyFontSize();
+	  // set 1rem = viewWidth / 10
+	  function setRemUnit () {
+	    var rem = docEl.clientWidth / 10
+	    docEl.style.fontSize = rem + 'px'
+	  }
+	  setRemUnit()
+	  // reset rem unit on page resize
+	  window.addEventListener('resize', setRemUnit)
+	  window.addEventListener('pageshow', function (e) {
+	    if (e.persisted) {
+	      setRemUnit()
+	    }
+	  })
+	
+	  // detect 0.5px supports
+	  if (dpr >= 2) {
+	    var fakeBody = document.createElement('body')
+	    var testElement = document.createElement('div')
+	    testElement.style.border = '.5px solid transparent'
+	    fakeBody.appendChild(testElement)
+	    docEl.appendChild(fakeBody)
+	    if (testElement.offsetHeight === 1) {
+	      docEl.classList.add('hairlines')
+	    }
+	    docEl.removeChild(fakeBody)
+	  }
+	}(window, document));
+</script>

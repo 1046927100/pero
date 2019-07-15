@@ -99,6 +99,9 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 			.slide{
 				display: block;
 			}
+			.open{
+				
+			}
 		</style>
 	</head>
 	<body>
@@ -110,11 +113,11 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 				<div class="left left1" id='go3' data-to='go3'>
 					<i class='i1' data-to='go3'></i>
 					<span data-to='go3'>使用之前</span>
-					<s class='s1' data-to='go3'></s>
+					<s class='s1 open' data-to='go3'></s>
 				</div>
 				<div class="right right1">
 					<p class='tiaozhuan1'>我是否可使用多屏互动业务？</p>
-					<p class='tiaozhuan2'>扫码绑定入口</p>
+					<p class='tiaozhuan2'>如何绑定魔百和</p>
 					<!--<div class="slide slide1">
 						<p class='tiaozhuan3'>使用手机端如何绑定设备？</p>
 					</div>-->
@@ -293,16 +296,18 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 //			$(".s1").css("background","url(img/up.png) no-repeat");
 //			$(".s1").css("backgroundSize","100%");
 //		}	
-		if($(".s1")[0].style.background == 'url("img/down.png") 0% 0% / 100% no-repeat'){
-			$(".s1").css("background","url(img/up.png) no-repeat");
-			$(".s1").css("backgroundSize","100%");
-		}else{
+		if($(".s1").hasClass("open")){
 			$(".s1").css("background","url(img/down.png) no-repeat");
 			$(".s1").css("backgroundSize","100%");
+			$(".s1").removeClass("open")
+		}else{
+			$(".s1").css("background","url(img/up.png) no-repeat");
+			$(".s1").css("backgroundSize","100%");
+			$(".s1").addClass("open")
 		}
 	});
 	$(".left2").on("click",function(){
-		$(".slide2").toggle();
+		$(".slide2").slideToggle();
 		var hei2 = $(".right2").height()-1+"px";
 		$(".icon2").css("height",hei2);
 		if($(".slide2")[0].style.display == "none"){
@@ -348,4 +353,7 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
         $('html,body').animate({scrollTop:$('#'+id).offset().top}, 800);
 		
 	});
+	$(".banner1").on("click",function(){
+		window.location.href = 'http://m.miguvideo.com/mgs/share/multi_screen/prd/home.html'
+	})
 </script>

@@ -35,6 +35,7 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 				padding-bottom: 10px;
 				border-bottom: 1px solid #ccc;
 				font-size: 16px;
+				margin-top:30px;
 			}
 			span{
 				display: block;
@@ -59,17 +60,12 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 	</head>
 	<body>
 		<div class="banner3">
-			<h3 class='spc'><a class='return'></a>为什么手机端播放的视频，在电视端的观看记录中显示“已下线”？</h3>
+			<h3 class='spc'>为什么手机端播放的视频，在电视端的观看记录中显示“已下线”？</h3>
 			<h3>此时，请您在电视端用电视遥控器搜索该片：</h3>
 			<span>1、如您在电视端搜索不到该片，说明此片不在电视端的内容库中，无法跨屏观看，如您想在电视端观看，请尝试投屏功能。<br>2、如果您可以在电视端搜索到该片，说明该片还没有完成手机端和电视端的内容兑换，请联系技术做进一步处理。</span>
 		</div>
 	</body>
 </html>
 <script src='js/jquery.js'></script>
-<script>
-	$(".return").on("click",function(){
-		window.location.href = 'FAQ_index.jsp#go1'
-	})
-	
-</script>
+
 

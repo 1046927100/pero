@@ -35,6 +35,7 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 				padding-bottom: 10px;
 				border-bottom: 1px solid #ccc;
 				font-size: 16px;
+				margin-top:30px;
 			}
 			span{
 				display: block;
@@ -54,16 +55,10 @@ request.setAttribute("mobile", session.getAttribute("mobile"));
 	</head>
 	<body>
 		<div class="banner3">
-			<h2><a class='return'></a>为什么语音搜索时电视端无任何提示？</h2>
+			<h2>为什么语音搜索时电视端无任何提示？</h2>
 			<span>中兴厂家的盒子需要在【设置】中将智能语音功能开启，进入盒子【设置】页面-【语言和输入法】开启智能语音功能。</span>
 			<img src='img/FAQ_ques8.png'></img>
 		</div>
 	</body>
 </html>
 <script src='js/jquery.js'></script>
-<script>
-	$(".return").on("click",function(){
-		window.location.href = 'FAQ_index.jsp#go2'
-	})
-	
-</script>
