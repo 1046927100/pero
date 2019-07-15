@@ -22,12 +22,18 @@
 				width:100%;
 				border:0 none;
 			}
-			video{
+			.shiping{
 				width:8.2rem;
 				height:4.8rem;
 				position: absolute;
 				left:0.88rem;
 				top:1.8rem;
+				
+			}
+			.shiping video{		
+				width:100%;
+				height:100%;
+				display: block;
 				object-fit: fill;
 			}
 			.huodong{
@@ -36,7 +42,7 @@
 				left:0;
 				top:13.5rem;
 			}
-			span{
+			.huodong span{
 				display: block;
 				width:100%;
 				height:1.2rem;
@@ -48,20 +54,52 @@
 			.span2{
 				margin:0.2rem 0;
 			}
+			.play{
+				width:1.2rem;
+				height:1.2rem;
+				position: absolute;
+				left:50%;
+				top:50%;
+				transform: translate(-50%,-50%);
+			}
+			.yuyue span{
+				display: block;
+				width: 2.3rem;
+				height:0.5rem;
+				text-align: center;
+				line-height: 0.5rem;
+				color:white;
+				font-size: 14px;
+			}
+			.yuyue{
+				position: absolute;
+				right:0;
+				top:7.6rem;
+			}
 		</style>
 	</head>
 	<body>
 		<div class='toutu'>
 			<img src="img/banner.jpg" alt="" />
-			<video src="" x5-playsinline playsinline controls="controls" webkit-playsinline x-webkit-airplay="allow" preload="true" loop poster="img/1.png"></video>
+			<div class="shiping">
+				<video src="https://1046927100.github.io/pero/football/1.mp4" x5-playsinline playsinline  webkit-playsinline x-webkit-airplay="allow" preload="true" loop poster="img/1.png" id='videoMain'></video>
+				<div class='play'>
+					<img src="img/play.png" alt="" />
+				</div>
+			</div>
 			<div class='huodong'>
-				<span>30GB+7天会员</span>
+				<span class='seven'>30GB+7天会员</span>
 				<span class='span2'>新人领话费</span>
-				<span>流量达标送大礼</span>
+				<span class='more'>流量达标送大礼</span>
+			</div>
+			<div class='yuyue'>
+				<span class='wolf'>去预约>>></span>
+				<span class='mancheng'>去预约>>></span>
 			</div>
 		</div>
 	</body>
 </html>
+<script src='js/jquery.js'></script>
 <script>
 	//	适配移动端页面大小的方法
 	var a = document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
@@ -107,4 +145,39 @@
 	    docEl.removeChild(fakeBody)
 	  }
 	}(window, document));
+	
+	//起播
+	var mainVideoObj = $('#videoMain');
+	$(".play").on("click",function(){
+		mainVideoObj[0].play();
+	})
+	
+	//控制台消失展现
+	mainVideoObj.on('play', function(){
+        $(this).attr('controls', 'controls');
+		$('.play').hide();
+	});
+    mainVideoObj.on('pause', function(){
+        $(this).removeAttr('controls');
+        $('.play').show();
+    });
+    
+    //预约
+    $(".wolf").on("click",function(){
+    	window.location.href = 'https://m.miguvideo.com/mgs/share/living_share/prd/home.html?channelid=10010001004&mgdbid=120000085587'
+    });
+    $(".mancheng").on("click",function(){
+    	window.location.href = 'https://m.miguvideo.com/mgs/share/living_share/prd/home.html?channelid=10010001004&mgdbid=120000085586'
+    });
+    
+    //活动
+    $(".seven").on("click",function(){
+    	window.location.href = 'http://wap.js.10086.cn/hyl/CAC/actMGNewSpring/act4.do?isMigu=0&platform=PLATFORM'
+    });
+    $(".span2").on("click",function(){
+    	window.location.href = 'http://m.miguvideo.com/mgs/common/miguPromotion/prd/provinceRouter.html?pageId=df7aaf7945ed4e8b88f81d76fec676c0&mver=stable_version&platform=PLATFORM#/'
+    });
+    $(".more").on("click",function(){
+    	window.location.href = 'http://wap.js.10086.cn/hyl/CAC/actMGNewSpring/act5.do?isMigu=0&platform=PLATFORM'
+    });
 </script>
