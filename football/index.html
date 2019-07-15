@@ -9,7 +9,15 @@
 				margin:0;
 				padding:0;
 			}
-			
+			body{
+				width:100%;
+			}
+			html{
+				width:100%;
+			}
+			.toutu{
+				width:100%;
+			}
 			img{
 				width:100%;
 				border:0 none;
@@ -43,9 +51,9 @@
 		</style>
 	</head>
 	<body>
-		<div>
+		<div class='toutu'>
 			<img src="img/banner.jpg" alt="" />
-			<video src="" x5-playsinline playsinline controls="controls" webkit-playsinline x-webkit-airplay="allow" preload="true" loop autoplay poster="img/1.png"></video>
+			<video src="" x5-playsinline playsinline controls="controls" webkit-playsinline x-webkit-airplay="allow" preload="true" loop poster="img/1.png"></video>
 			<div class='huodong'>
 				<span>30GB+7天会员</span>
 				<span class='span2'>新人领话费</span>
@@ -58,7 +66,7 @@
 	//	适配移动端页面大小的方法
 	var a = document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
 	var scale = 1 / devicePixelRatio;
-	document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+	document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + 1 + ', maximum-scale=' + 1 + ', minimum-scale=' + 1 + ', user-scalable=no');
 	(function flexible (window, document) {
 	  var docEl = document.documentElement
 	  var dpr = window.devicePixelRatio || 1
