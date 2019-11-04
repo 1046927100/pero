@@ -63,8 +63,8 @@
 					// 这里写sleep之后需要去做的事情
 					window.loaded = true;
 					sleep(1500).then(()=>{
-//						$('.container').hide();
-//		    		    $('.content').show();
+						$('.container').hide();
+		    		    $('.content').show();
 					})
 				}) 
         };  
