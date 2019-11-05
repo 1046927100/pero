@@ -4,39 +4,78 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<style>
+			img{
+				width:100%;
+				margin:0 auto;
+			}
+			.one{
+				width:500px;
+				height:500px;
+			}
+			div{
+				width:100%;
+			}
 			button{
-				width:45%;
+				width:30%;
+				margin:0 5%; 
+				height:80px;
+				line-height:80px;
 				font-size:40px;
+				background: bisque;
+				text-align: center;
+			}
+			i{
+				display: inline-block;
+				width:75px;
+				height:80px;
 			}
 		</style>
 	</head>
 	<body>
-		<button>好</button>
-		<button>不好</button>
+		<h1>我观察你很久了~</h1>
+		<img src="img/11111.jpg" alt="" class='one'/>
+		<div>
+			<button>
+				嗯<i><img src="img/3434.gif"/></i>
+			</button>
+			<button>
+				嗯~<i><img src="img/1212.gif"/></i>
+			</button>
+		</div>
 	</body>
 </html>
 <script>
-	var btn = document.getElementsByTagName("button")[1];
-	btn.onclick = function(){
-		alert("工资全上交");
-		btn.onclick = function(){
-			alert("家务全包");
-			btn.onclick = function(){
-				alert("房产证写你的名字");
-				btn.onclick = function(){
-					alert("保大");
-					btn.onclick = function(){
-						alert("我妈会游泳");
-						btn.onclick = function(){
-							alert("不吵不闹会撒娇");
-							btn.onclick = function(){
-							alert("答应我吧");
+var btn = document.getElementsByTagName("button")[0];
+var btn1 = document.getElementsByTagName("button")[1];
+
+btn1.onclick = function() {
+	alert("工资上交");
+	btn1.onclick = function() {
+		alert("家务全包");
+		btn1.onclick = function() {
+			alert("难产保大");
+			btn1.onclick = function() {
+				alert("妈会游泳");
+				btn1.onclick = function() {
+					alert("房写你名");
+					btn1.onclick = function() {
+						alert("我刚枪，你舔包");
+						btn1.onclick = function() {
+							alert("不跟你吵架还会撒娇");
+							btn1.onclick = function() {
+								alert("快答应我");
+								btn1.onclick = function() {
+									alert("答应我吧");
+								}
 							}
 						}
 					}
 				}
 			}
-		};
-		
-	}
+		}
+	};
+}
+btn.onclick = function(){
+	window.location.href = "2.html"
+}
 </script>
