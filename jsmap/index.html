@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+		<title></title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			img{
+				border:0 none;
+			}
+			.toutu{
+				width:100%;
+				position: relative;
+			}
+			.head{
+				width:100%;
+			}
+			.xuzhou,.changzhou{
+				width:2rem;
+				height:2rem;
+				position: absolute;
+				left:2rem;
+				top:2rem;
+				background: red;
+			}
+			.changzhou{
+				left:5rem;
+			}
+			.light{
+				display: none;
+				width:100%;
+				height:100%;
+				position: absolute;
+				left:0;
+				top:0;
+				background: black;
+				opacity: 0.4;
+			}
+			.tanchuan{
+				width:100%;
+				height:100%;
+				position: absolute;
+				left:0;
+				top:0;
+				background: #000000;
+				opacity: 0.9;
+			}
+			.tanchuantu{
+				width:100%;
+				position: absolute;
+				left:50%;
+				top:50%;
+				transform: translate(-50%,-50%);
+			}
+			i{
+				display: block;
+				width:1.5rem;
+				height:1.5rem;
+				border-radius: 50%;
+				background: white;
+				color:black;
+				text-align: center;
+				line-height:1.5rem;
+				font-size: 1rem;
+				position: absolute;
+				left:50%;
+				top:86%;
+				transform: translate(-50%,-50%);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="toutu">
+			<img src="img/Maphead.png" alt="" class='head'/>
+			<div class='finsh'>
+				<div class='xuzhou'>
+					<div class='light'></div>
+				</div>
+				<div class='huaian'></div>
+				<div class='yancheng'></div>
+				<div class='nanjing'></div>
+				<div class='gaoxiao'></div>
+				<div class='nanjing'></div>
+				<div class='changzhou'></div>
+				<div class='suzhou'></div>
+			</div>
+			<div class='readying'>
+				<div class='lianyungang'></div>
+				<div class='suqian'></div>
+				<div class='yangzhou'></div>
+				<div class='taizhou'></div>
+				<div class='zhenjiang'></div>
+				<div class='nantong'></div>
+				<div class='wuxi'></div>		
+			</div>
+		</div>
+		<div class='tanchuan' style="display:none;">
+			<img src="img/889.jpg" alt="" class='tanchuantu'/>
+			<i class='close'>X</i>
+		</div>
+	</body>
+</html>
+<script src='js/jquery.js'></script>
+<script>
+	//	适配移动端页面大小的方法
+	var a = document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+	var scale = 1 / devicePixelRatio;
+	document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+	(function flexible (window, document) {
+	  var docEl = document.documentElement
+	  var dpr = window.devicePixelRatio || 1
+	  // adjust body font size
+	  function setBodyFontSize () {
+	    if (document.body) {
+	      document.body.style.fontSize = (12 * dpr) + 'px'
+	    }
+	    else {
+	      document.addEventListener('DOMContentLoaded', setBodyFontSize)
+	    }
+	  }
+	  setBodyFontSize();
+	  // set 1rem = viewWidth / 10
+	  function setRemUnit () {
+	    var rem = docEl.clientWidth / 10
+	    docEl.style.fontSize = rem + 'px'
+	  }
+	  setRemUnit()
+	  // reset rem unit on page resize
+	  window.addEventListener('resize', setRemUnit)
+	  window.addEventListener('pageshow', function (e) {
+	    if (e.persisted) {
+	      setRemUnit()
+	    }
+	  })
+	
+	  // detect 0.5px supports
+	  if (dpr >= 2) {
+	    var fakeBody = document.createElement('body')
+	    var testElement = document.createElement('div')
+	    testElement.style.border = '.5px solid transparent'
+	    fakeBody.appendChild(testElement)
+	    docEl.appendChild(fakeBody)
+	    if (testElement.offsetHeight === 1) {
+	      docEl.classList.add('hairlines')
+	    }
+	    docEl.removeChild(fakeBody)
+	  }
+	}(window, document));
+	
+	//等待方法
+	function sleep (time) {
+					return new Promise((resolve) => setTimeout(resolve, time));
+				}
+	//实现元素的点击效果
+	$(".xuzhou").on("click",function(){
+		$(".light").show();
+		
+		// 用法
+		sleep(500).then(() => {
+			window.location.href = 'http://m.miguvideo.com/mgs/msite/prd/index.html?pageId=13092b711c834694b787e7aa3d9695db&plt=sub'
+		})
+	})
+	
+	//点击跳转弹窗
+	$(".changzhou").on("click",function(){
+		$(".tanchuan").show();
+	});
+	$(".close").on("click",function(){
+		$(".tanchuan").hide();
+	});
+</script>
