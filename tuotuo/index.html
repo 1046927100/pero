@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0033)http://www.duocoo.com/love/0o6o0/ -->
 <html>
-<audio src="milk.mp3" autoplay muted class="one"></audio>
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
    <style type="text/css">
       .words {
@@ -88,20 +87,16 @@ document.ready = function() {
     $(window).resize();
     updateNumbers();
 };
-	var one = document.getElementsByClassName("one")[0]
-	window.onload = function(){
-		one.play()
-	}
-	
 	
 
 function updateNumbers() {
     //var start_time = 1253980800;
-    var beginTime = "2019-11-31 20:00:00";  
+    var date = new Date();
+    var sec = date.getTime();
+    var beginTime = "Dec 1, 2019";  
     var start_time = Date.parse(beginTime)
    // var start_time =  new Date("2014-11-11 10:10:10").Format("yyyy-MM-dd hh:mm:ss");
-    var duration = parseInt(Date.now()- start_time)/1000;
-
+    var duration = parseInt(sec- start_time)/1000;
     var seconds = parseInt( duration % 60);
     if (seconds < 10)
         seconds = "0" + seconds;
@@ -125,6 +120,7 @@ function updateNumbers() {
     <![endif]--> 
   </head> 
   <body style="background-color: #e7a3c1"> 
+  	<audio src="milk.mp3" autoplay preload='auto' loop class="one" style="display: none;"></audio>
     <div class="container" style="position: absolute; left: 482px; top: 181.5px;">
       <div class="words">我爱你，托托</div>
       <div class="days">
@@ -171,6 +167,11 @@ function updateNumbers() {
 				}
 			}
 			setInterval('for(i=0;i<1e4;i++)if(s=p(R(),R(),i%46/.74)){z=s[2];x=~~(s[0]*f/z-h);y=~~(s[1]*f/z-h);if(!m[q=y*f+x]|m[q]>z)m[q]=z,a.fillStyle="rgb("+~(s[3]*h)+","+~(s[4]*h)+","+~(s[3]*s[3]*-80)+")",a.fillRect(x,y,1,1)}', 0)
+				
+			document.addEventListener("WeixinJSBridgeReady", function() {
+			    var one = $(".one").get(0);
+				one.play();
+			}, false);
 		</script>
-
+	
 </body></html>
