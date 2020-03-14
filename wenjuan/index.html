@@ -23,12 +23,12 @@
 				height:100%;
 				position: relative;
 				background: url(img/green.jpg) no-repeat 0 0;
+				background-size: cover;
 			}
-			.first,.sec,.thr{
+			.first,.sec,.thr,.sec2,.sec3,.sec4,.sec5,.thr2,.thr3,.last{
 				width:100%;
-				height:100%;		
 			}
-			.sec,.thr{
+			.sec,.thr,.sec2,.sec3,.sec4,.sec5,.thr2,.thr3,.last{
 				display: none;
 			}
 			.first,.sec{
@@ -79,6 +79,19 @@
 				left:50%;
 				transform: translateX(-50%);
 			}
+			.last{
+				overflow: hidden;
+			}
+			.dui{
+				width:2rem;
+				height:2rem;
+				background: url(img/bg.png) no-repeat 0 0;
+				margin:1.5rem auto;
+				background-size: 100%;
+			}
+			.thank{
+				text-align: center;
+			}
 		</style>
 	</head>
 	<body>
@@ -102,96 +115,107 @@
 			<div class='sec'>
 				<h3>您的职业是？</h3>			
 		        <ul>
-		            <li><input type="radio" name="radio1"><span>事业单位</span></li>
-		            <li><input type="radio" name="radio1"><span>公务员</span></li>
-		            <li><input type="radio" name="radio1"><span>政府工作人员互联网公司职员工人</span></li>
-		            <li><input type="radio" name="radio1"><span>服务业人员自由职业待业</span></li>
-		            <li><input type="radio" name="radio1"><span>其他</span></li>
+		            <li><input type="radio" name="radio1" class='big1'><span>事业单位</span></li>
+		            <li><input type="radio" name="radio1" class='big1'><span>公务员</span></li>
+		            <li><input type="radio" name="radio1" class='big1'><span>政府工作人员互联网公司职员工人</span></li>
+		            <li><input type="radio" name="radio1" class='big1'><span>服务业人员自由职业待业</span></li>
+		            <li><input type="radio" name="radio1" class='big1'><span>其他</span></li>
 		        </ul>
 			</div>
+			<div class='sec2'>
+				<h3>您孩子的年级是？</h3>			
+		        <ul>
+		            <li><input type="radio" name="radio2" class='big2'><span>3-6岁幼儿</span></li>
+		            <li><input type="radio" name="radio2" class='big2'><span>一至三年级</span></li>
+		            <li><input type="radio" name="radio2" class='big2'><span>四至六年级</span></li>
+		            <li><input type="radio" name="radio2" class='big2'><span>初一至初三</span></li>
+		            <li><input type="radio" name="radio2" class='big2'><span>高一至高三</span></li>
+		            <li><input type="radio" name="radio2" class='big2'><span>大学</span></li>
+		        </ul>
+			</div>
+			<div class='sec3'>
+				<h3>您为孩子报名哪些课程？</h3>			
+		        <ul>
+		            <li><input type="radio" name="radio3" class='big3'><span>为孩子报名线上辅导班</span></li>
+		            <li><input type="radio" name="radio3" class='big3'><span>为孩子报名线下辅导班</span></li>
+		            <li><input type="radio" name="radio3" class='big3'><span>为孩子报名兴趣班</span></li>
+		            <li><input type="radio" name="radio3" class='big3'><span>报名心理、教育学、家庭教育类等课程</span></li>
+		            <li><input type="radio" name="radio3" class='big3'><span>以上都没报过</span></li>
+		        </ul>
+			</div>
+			<div class='sec4'>
+				<h3>您的孩子使用过以下哪些APP进行课外辅导？</h3>			
+		        <ul>
+		            <li><input type="radio" name="radio4" class='big4'><span>作业帮</span></li>
+		            <li><input type="radio" name="radio4" class='big4'><span>猿辅导</span></li>
+		            <li><input type="radio" name="radio4" class='big4'><span>学而思</span></li>
+		            <li><input type="radio" name="radio4" class='big4'><span>新东方</span></li>
+		            <li><input type="radio" name="radio4" class='big4'><span>腾迅课堂</span></li>
+		            <li><input type="radio" name="radio4" class='big4'><span>掌门1对1</span></li>
+		            <li><input type="radio" name="radio4" class='big4'><span>小猿搜题</span></li>
+		            <li><input type="radio" name="radio4" class='big4'><span>以上都不用</span></li>
+		        </ul>
+			</div>
+			<div class='sec5'>
+				<h3>您孩子使用以上选择APP的频次？</h3>			
+		        <ul>
+		            <li><input type="radio" name="radio5" class='big5'><span>一天多次</span></li>
+		            <li><input type="radio" name="radio5" class='big5'><span>随时查看</span></li>
+		            <li><input type="radio" name="radio5" class='big5'><span>一天两三次</span></li>
+		            <li><input type="radio" name="radio5" class='big5'><span>一周几次</span></li>
+		            <li><input type="radio" name="radio5" class='big5'><span>偶尔使用</span></li>
+		        </ul>
+			</div>
+			
+			
 			<div class='thr'>
 				<h3>您会比较想阅读哪种形式的内容?</h3>			
 		        <ul>
-		            <li><input type="radio" name="radio2"><span>文章提问与专家回答</span></li>
-		            <li><input type="radio" name="radio2"><span>专家课程(直播、音频形式)</span></li>
-		            <li><input type="radio" name="radio2"><span>交流社区</span></li>
-		            <li><input type="radio" name="radio2"><span>可参与讨论的热门话题</span></li>
-		            <li><input type="radio" name="radio2"><span>其他</span></li>
+		            <li><input type="radio" name="radio6" class='son1'><span>文章提问与专家回答</span></li>
+		            <li><input type="radio" name="radio6" class='son1'><span>专家课程(直播、音频形式)</span></li>
+		            <li><input type="radio" name="radio6" class='son1'><span>交流社区</span></li>
+		            <li><input type="radio" name="radio6" class='son1'><span>可参与讨论的热门话题</span></li>
+		            <li><input type="radio" name="radio6" class='son1'><span>其他</span></li>
 		        </ul>
-		        <input type="submit" value="提交"/>
 			</div>
 			
+			<div class='thr2'>
+				<h3>您认为哪些人或机构写的教育内容，对您来说有用??</h3>			
+		        <ul>
+		            <li><input type="radio" name="radio7" class='son2'><span>权威教育专家</span></li>
+		            <li><input type="radio" name="radio7" class='son2'><span>教授</span></li>
+		            <li><input type="radio" name="radio7" class='son2'><span>学者</span></li>
+		            <li><input type="radio" name="radio7" class='son2'><span>知名教师</span></li>
+		            <li><input type="radio" name="radio7" class='son2'><span>教育达人</span></li>
+		            <li><input type="radio" name="radio7" class='son2'><span>明星爸妈</span></li>
+		            <li><input type="radio" name="radio7" class='son2'><span>知名教育机构</span></li>
+		            <li><input type="radio" name="radio7" class='son2'><span>其他</span></li>
+		        </ul>
+			</div>
 			
+			<div class='thr3'>
+				<h3>您对哪些教育内容感兴趣</h3>			
+		        <ul>
+		            <li><input type="radio" name="radio8" class='son3'><span>学习辅导(学习方法、学习习惯)</span></li>
+		            <li><input type="radio" name="radio8" class='son3'><span>择校升学(学校选择、志愿填报等)</span></li>
+		            <li><input type="radio" name="radio8" class='son3'><span>生理健康知识(智力、视力、营养等)</span></li>
+		            <li><input type="radio" name="radio8" class='son3'><span>性格人格(情绪管理、道德品质、性格养成、情商等)</span></li>
+		            <li><input type="radio" name="radio8" class='son3'><span>心理健康(心理疾病、抗压能力、自信乐观等)</span></li>
+		            <li><input type="radio" name="radio8" class='son3'><span>亲子关系(亲子沟通、高质量陪伴等)</span></li>
+		            <li><input type="radio" name="radio8" class='son3'><span>行为习惯(生活习惯、拖延症等)</span></li>
+		            <li><input type="radio" name="radio8" class='son3'><span>安全教育(人身安全、校园霸凌等)</span></li>
+		        </ul>
+			</div>	
+		        <!--<input type="submit" value="提交"/>-->
+		        
+		    <div class='last'>
+		    	<div class='dui'></div>
+		    	<div class='thank'>您的答卷已经提交，感谢您的参与！</div>
+		    </div>
+		        
 		</form>
         
 	</body>
 </html>
 <script src='js/jquery.js'></script>
-<script type="text/javascript">
-	//	适配移动端页面大小的方法
-	var a = document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
-	var scale = 1 / devicePixelRatio;
-	document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + 1 + ', maximum-scale=' + 1 + ', minimum-scale=' + 1 + ', user-scalable=no');
-	(function flexible (window, document) {
-	  var docEl = document.documentElement
-	  var dpr = window.devicePixelRatio || 1
-	  // adjust body font size
-	  function setBodyFontSize () {
-	    if (document.body) {
-	      document.body.style.fontSize = (12 * dpr) + 'px'
-	    }
-	    else {
-	      document.addEventListener('DOMContentLoaded', setBodyFontSize)
-	    }
-	  }
-	  setBodyFontSize();
-	  // set 1rem = viewWidth / 10
-	  function setRemUnit () {
-	    var rem = docEl.clientWidth / 10
-	    docEl.style.fontSize = rem + 'px'
-	  }
-	  setRemUnit()
-	  // reset rem unit on page resize
-	  window.addEventListener('resize', setRemUnit)
-	  window.addEventListener('pageshow', function (e) {
-	    if (e.persisted) {
-	      setRemUnit()
-	    }
-	  })
-	
-	  // detect 0.5px supports
-	  if (dpr >= 2) {
-	    var fakeBody = document.createElement('body')
-	    var testElement = document.createElement('div')
-	    testElement.style.border = '.5px solid transparent'
-	    fakeBody.appendChild(testElement)
-	    docEl.appendChild(fakeBody)
-	    if (testElement.offsetHeight === 1) {
-	      docEl.classList.add('hairlines')
-	    }
-	    docEl.removeChild(fakeBody)
-	  }
-	}(window, document));
-	
-	
-	//用户选定事件
-	var aInput = document.getElementsByClassName("one");
-	var arry = [];
-	var nowIndex = null;
-	for (var i = 0; i < aInput.length-1; i++) {
-	  arry[i] = aInput[i];
-	  aInput[i].onclick = function () {
-	    nowIndex = arry.indexOf(this)+1 ;
-	    console.log("点击了第" + nowIndex + "个选项。");
-	    if(nowIndex==1||nowIndex==2){
-	    	$(".first").hide();
-	    	$(".sec").addClass("animated fadeInUp").show();
-	    }
-	    if(nowIndex==5){
-	    	$(".first").hide();
-	    	$(".thr").addClass("animated fadeInUp").show();
-	    }
-	  }
-	}
-	
-</script>
+<script src='js/index.js'></script>
