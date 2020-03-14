@@ -24,12 +24,19 @@
 				position: relative;
 				background: url(img/green.jpg) no-repeat 0 0;
 				background-size: cover;
+				overflow: hidden;
 			}
 			.first,.sec,.thr,.sec2,.sec3,.sec4,.sec5,.thr2,.thr3,.last{
-				width:100%;
+				/*width:100%;*/
 			}
 			.sec,.thr,.sec2,.sec3,.sec4,.sec5,.thr2,.thr3,.last{
 				display: none;
+			}
+			.first{
+				margin:0 0.5rem;
+			}
+			.sec,.thr,.sec2,.sec3,.sec4,.sec5,.thr2,.thr3{
+				margin:1.5rem 0 0 0.5rem;
 			}
 			.first,.sec{
 				position: absolute;
@@ -42,7 +49,7 @@
 			}		
 			input[type="radio"], input[type="checkbox"]{display:block;float:left;}
 			input[type="radio"]{border:1px solid #999;border-radius:50%;width:0.5rem;height:0.5rem;margin:0.37rem 0.2rem 0 0;}
-			li{float:left;width:100%;height:1.2rem;line-height:1.2rem;}
+			li{width:100%;height:1.2rem;line-height:1.2rem;}
 			ul{overflow:hidden;}
 			input[type="radio"]:checked{background:url(img/black.jpg) no-repeat center top / 1.2rem 1.2rem;}
 			span{
@@ -83,14 +90,15 @@
 				overflow: hidden;
 			}
 			.dui{
-				width:2rem;
-				height:2rem;
+				width:1.5rem;
+				height:1.5rem;
 				background: url(img/bg.png) no-repeat 0 0;
-				margin:1.5rem auto;
+				margin:2.2rem auto 1rem;
 				background-size: 100%;
 			}
 			.thank{
 				text-align: center;
+				font-size: 0.42rem;
 			}
 		</style>
 	</head>
