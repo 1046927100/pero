@@ -26,16 +26,13 @@
 				background-size: cover;
 				overflow: hidden;
 			}
-			.first,.sec,.thr,.sec2,.sec3,.sec4,.sec5,.thr2,.thr3,.last{
-				/*width:100%;*/
-			}
-			.sec,.thr,.sec2,.sec3,.sec4,.sec5,.thr2,.thr3,.last{
+			.sec,.thr,.sec2,.sec3,.sec4,.sec5,.sec6,.sec7,.sec8,.thr2,.thr3,.last,.thr4,.thr5,.thr6{
 				display: none;
 			}
 			.first{
 				margin:0 0.5rem;
 			}
-			.sec,.thr,.sec2,.sec3,.sec4,.sec5,.thr2,.thr3{
+			.sec,.thr,.sec2,.sec3,.sec4,.sec5,.sec6,.sec7,.sec8,.thr2,.thr3,.thr4,.thr5,.thr6{
 				margin:1.5rem 0 0 0.5rem;
 			}
 			.first,.sec{
@@ -70,6 +67,7 @@
 			p{
 				font-size: 0.42rem;
 				margin-bottom: 0.5rem;
+				text-indent:2em
 			}
 			i{
 				width:100%;
@@ -121,7 +119,7 @@
 		        </ul>
 			</div>
 			<div class='sec'>
-				<h3>您的职业是？</h3>			
+				<h3>2.您的职业是？</h3>			
 		        <ul>
 		            <li><input type="radio" name="radio1" class='big1'><span>事业单位</span></li>
 		            <li><input type="radio" name="radio1" class='big1'><span>公务员</span></li>
@@ -131,7 +129,7 @@
 		        </ul>
 			</div>
 			<div class='sec2'>
-				<h3>您孩子的年级是？</h3>			
+				<h3 class='nianji'>3.您孩子的年级是？</h3>			
 		        <ul>
 		            <li><input type="radio" name="radio2" class='big2'><span>3-6岁幼儿</span></li>
 		            <li><input type="radio" name="radio2" class='big2'><span>一至三年级</span></li>
@@ -142,7 +140,7 @@
 		        </ul>
 			</div>
 			<div class='sec3'>
-				<h3>您为孩子报名哪些课程？</h3>			
+				<h3>4.您为孩子报名哪些课程？</h3>			
 		        <ul>
 		            <li><input type="radio" name="radio3" class='big3'><span>为孩子报名线上辅导班</span></li>
 		            <li><input type="radio" name="radio3" class='big3'><span>为孩子报名线下辅导班</span></li>
@@ -152,7 +150,7 @@
 		        </ul>
 			</div>
 			<div class='sec4'>
-				<h3>您的孩子使用过以下哪些APP进行课外辅导？</h3>			
+				<h3>5.您的孩子使用过以下哪些APP进行课外辅导？</h3>			
 		        <ul>
 		            <li><input type="radio" name="radio4" class='big4'><span>作业帮</span></li>
 		            <li><input type="radio" name="radio4" class='big4'><span>猿辅导</span></li>
@@ -161,11 +159,11 @@
 		            <li><input type="radio" name="radio4" class='big4'><span>腾迅课堂</span></li>
 		            <li><input type="radio" name="radio4" class='big4'><span>掌门1对1</span></li>
 		            <li><input type="radio" name="radio4" class='big4'><span>小猿搜题</span></li>
-		            <li><input type="radio" name="radio4" class='big4'><span>以上都不用</span></li>
+		            <li><input type="radio" name="radio4" class='big4'><span>其他</span></li>
 		        </ul>
 			</div>
 			<div class='sec5'>
-				<h3>您孩子使用以上选择APP的频次？</h3>			
+				<h3>6.您孩子使用以上选择APP的频次？</h3>			
 		        <ul>
 		            <li><input type="radio" name="radio5" class='big5'><span>一天多次</span></li>
 		            <li><input type="radio" name="radio5" class='big5'><span>随时查看</span></li>
@@ -174,10 +172,45 @@
 		            <li><input type="radio" name="radio5" class='big5'><span>偶尔使用</span></li>
 		        </ul>
 			</div>
-			
+			<div class='sec6'>
+				<h3>7.您孩子喜欢阅读哪种形式的内容?</h3>			
+		        <ul>
+		            <li><input type="radio" name="radio6" class='big6'><span>文章提问与专家回答</span></li>
+		            <li><input type="radio" name="radio6" class='big6'><span>专家课程(直播、音频形式)</span></li>
+		            <li><input type="radio" name="radio6" class='big6'><span>交流社区</span></li>
+		            <li><input type="radio" name="radio6" class='big6'><span>可参与讨论的热门话题</span></li>
+		            <li><input type="radio" name="radio6" class='big6'><span>其他</span></li>
+		        </ul>
+			</div>
+			<div class='sec7'>
+				<h3>8.您认为哪些人或机构写的教育内容，对您孩子来说有用??</h3>			
+		        <ul>
+		            <li><input type="radio" name="radio7" class='big7'><span>权威教育专家</span></li>
+		            <li><input type="radio" name="radio7" class='big7'><span>教授</span></li>
+		            <li><input type="radio" name="radio7" class='big7'><span>学者</span></li>
+		            <li><input type="radio" name="radio7" class='big7'><span>知名教师</span></li>
+		            <li><input type="radio" name="radio7" class='big7'><span>教育达人</span></li>
+		            <li><input type="radio" name="radio7" class='big7'><span>明星爸妈</span></li>
+		            <li><input type="radio" name="radio7" class='big7'><span>知名教育机构</span></li>
+		            <li><input type="radio" name="radio7" class='big7'><span>其他</span></li>
+		        </ul>
+			</div>
+			<div class='sec8'>
+				<h3>9.您孩子对哪些教育内容感兴趣</h3>			
+		        <ul>
+		            <li><input type="radio" name="radio8" class='big8'><span>学习辅导(学习方法、学习习惯)</span></li>
+		            <li><input type="radio" name="radio8" class='big8'><span>择校升学(学校选择、志愿填报等)</span></li>
+		            <li><input type="radio" name="radio8" class='big8'><span>生理健康知识(智力、视力、营养等)</span></li>
+		            <li><input type="radio" name="radio8" class='big8'><span>性格人格(情绪管理、道德品质、情商等)</span></li>
+		            <li><input type="radio" name="radio8" class='big8'><span>心理健康(心理疾病、抗压能力、自信乐观等)</span></li>
+		            <li><input type="radio" name="radio8" class='big8'><span>亲子关系(亲子沟通、高质量陪伴等)</span></li>
+		            <li><input type="radio" name="radio8" class='big8'><span>行为习惯(生活习惯、拖延症等)</span></li>
+		            <li><input type="radio" name="radio8" class='big8'><span>安全教育(人身安全、校园霸凌等)</span></li>
+		        </ul>
+			</div>	
 			
 			<div class='thr'>
-				<h3>您会比较想阅读哪种形式的内容?</h3>			
+				<h3>5.您会比较想阅读哪种形式的内容?</h3>			
 		        <ul>
 		            <li><input type="radio" name="radio6" class='son1'><span>文章提问与专家回答</span></li>
 		            <li><input type="radio" name="radio6" class='son1'><span>专家课程(直播、音频形式)</span></li>
@@ -188,7 +221,7 @@
 			</div>
 			
 			<div class='thr2'>
-				<h3>您认为哪些人或机构写的教育内容，对您来说有用??</h3>			
+				<h3>6.您认为哪些人或机构写的教育内容，对您来说有用??</h3>			
 		        <ul>
 		            <li><input type="radio" name="radio7" class='son2'><span>权威教育专家</span></li>
 		            <li><input type="radio" name="radio7" class='son2'><span>教授</span></li>
@@ -202,18 +235,56 @@
 			</div>
 			
 			<div class='thr3'>
-				<h3>您对哪些教育内容感兴趣</h3>			
+				<h3>7.您对哪些教育内容感兴趣</h3>			
 		        <ul>
 		            <li><input type="radio" name="radio8" class='son3'><span>学习辅导(学习方法、学习习惯)</span></li>
 		            <li><input type="radio" name="radio8" class='son3'><span>择校升学(学校选择、志愿填报等)</span></li>
 		            <li><input type="radio" name="radio8" class='son3'><span>生理健康知识(智力、视力、营养等)</span></li>
-		            <li><input type="radio" name="radio8" class='son3'><span>性格人格(情绪管理、道德品质、性格养成、情商等)</span></li>
+		            <li><input type="radio" name="radio8" class='son3'><span>性格人格(情绪管理、道德品质、情商等)</span></li>
 		            <li><input type="radio" name="radio8" class='son3'><span>心理健康(心理疾病、抗压能力、自信乐观等)</span></li>
 		            <li><input type="radio" name="radio8" class='son3'><span>亲子关系(亲子沟通、高质量陪伴等)</span></li>
 		            <li><input type="radio" name="radio8" class='son3'><span>行为习惯(生活习惯、拖延症等)</span></li>
 		            <li><input type="radio" name="radio8" class='son3'><span>安全教育(人身安全、校园霸凌等)</span></li>
 		        </ul>
 			</div>	
+			
+			<div class='thr4'>
+				<h3 class='nianji'>2.您的年级是？</h3>			
+		        <ul>
+		            <li><input type="radio" name="radio2" class='son4'><span>3-6岁幼儿</span></li>
+		            <li><input type="radio" name="radio2" class='son4'><span>一至三年级</span></li>
+		            <li><input type="radio" name="radio2" class='son4'><span>四至六年级</span></li>
+		            <li><input type="radio" name="radio2" class='son4'><span>初一至初三</span></li>
+		            <li><input type="radio" name="radio2" class='son4'><span>高一至高三</span></li>
+		            <li><input type="radio" name="radio2" class='son4'><span>大学</span></li>
+		        </ul>
+			</div>
+			
+			<div class='thr5'>
+				<h3>3.您使用过以下哪些APP进行课外辅导？</h3>			
+		        <ul>
+		            <li><input type="radio" name="radio4" class='son5'><span>作业帮</span></li>
+		            <li><input type="radio" name="radio4" class='son5'><span>猿辅导</span></li>
+		            <li><input type="radio" name="radio4" class='son5'><span>学而思</span></li>
+		            <li><input type="radio" name="radio4" class='son5'><span>新东方</span></li>
+		            <li><input type="radio" name="radio4" class='son5'><span>腾迅课堂</span></li>
+		            <li><input type="radio" name="radio4" class='son5'><span>掌门1对1</span></li>
+		            <li><input type="radio" name="radio4" class='son5'><span>小猿搜题</span></li>
+		            <li><input type="radio" name="radio4" class='son5'><span>其他</span></li>
+		        </ul>
+			</div>
+			
+			<div class='thr6'>
+				<h3>4.您使用以上选择APP的频次？</h3>			
+		        <ul>
+		            <li><input type="radio" name="radio5" class='son6'><span>一天多次</span></li>
+		            <li><input type="radio" name="radio5" class='son6'><span>随时查看</span></li>
+		            <li><input type="radio" name="radio5" class='son6'><span>一天两三次</span></li>
+		            <li><input type="radio" name="radio5" class='son6'><span>一周几次</span></li>
+		            <li><input type="radio" name="radio5" class='son6'><span>偶尔使用</span></li>
+		        </ul>
+			</div>
+			
 		        <!--<input type="submit" value="提交"/>-->
 		        
 		    <div class='last'>

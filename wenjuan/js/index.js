@@ -51,10 +51,15 @@
 	var big3 = document.getElementsByClassName("big3");
 	var big4 = document.getElementsByClassName("big4");
 	var big5 = document.getElementsByClassName("big5");
+	var big6 = document.getElementsByClassName("big6");
+	var big7 = document.getElementsByClassName("big7");
+	var big8 = document.getElementsByClassName("big8");
 	var son1 = document.getElementsByClassName("son1");
 	var son2 = document.getElementsByClassName("son2");
 	var son3 = document.getElementsByClassName("son3");
-	
+	var son4 = document.getElementsByClassName("son4");
+	var son5 = document.getElementsByClassName("son5");
+	var son6 = document.getElementsByClassName("son6");
 	
 //	问题1
 	var arry = [];
@@ -70,7 +75,7 @@
 	    	$(".sec").addClass("animated fadeInUp").show();
 	    }else if(nowIndex==3){
 	    	$(".first").hide();
-	    	$(".thr").addClass("animated fadeInUp").show();
+	    	$(".thr4").addClass("animated fadeInUp").show();
 //	    }else{
 //	    	$(".first").hide();
 //	    	$(".last").addClass("animated fadeInUp").show();
@@ -139,11 +144,53 @@
 	    b4 = a4.indexOf(this)+1 ;
 	    console.log("点击了第" + b4 + "个选项。");
 	    	$(".sec5").hide();
+			$(".sec6").addClass("animated fadeInUp").show();
+	  }
+	}
+	
+	//大人问题6
+	var a41 = [];
+	var b41 = null;
+	for (var i = 0; i <= big6.length-1; i++) {
+	  a41[i] = big6[i];
+	  big6[i].onclick = function () {
+	    b41 = a41.indexOf(this)+1 ;
+	    console.log("点击了第" + b41 + "个选项。");
+	    	$(".sec6").hide();
+			$(".sec7").addClass("animated fadeInUp").show();
+	  }
+	}
+	
+	//大人问题7
+	var a42 = [];
+	var b42 = null;
+	for (var i = 0; i <= big7.length-1; i++) {
+	  a42[i] = big7[i];
+	  big7[i].onclick = function () {
+	    b42 = a42.indexOf(this)+1 ;
+	    console.log("点击了第" + b42 + "个选项。");
+	    	$(".sec7").hide();
+			$(".sec8").addClass("animated fadeInUp").show();
+	  }
+	}
+	
+	//大人问题8
+	var a43 = [];
+	var b43 = null;
+	for (var i = 0; i <= big8.length-1; i++) {
+	  a43[i] = big8[i];
+	  big8[i].onclick = function () {
+	    b43 = a43.indexOf(this)+1 ;
+	    console.log("点击了第" + b43 + "个选项。");
+	    	$(".sec8").hide();
 			$(".last").addClass("animated fadeInUp").show();
 	  }
 	}
 	
-	//小孩问题1
+	
+	
+	
+	//小孩问题4
 	var a5 = [];
 	var b5 = null;
 	for (var i = 0; i <= son1.length-1; i++) {
@@ -156,7 +203,7 @@
 	  }
 	}
 	
-	//小孩问题2
+	//小孩问题5
 	var a6 = [];
 	var b6 = null;
 	for (var i = 0; i <= son2.length-1; i++) {
@@ -170,7 +217,7 @@
 	  }
 	}
 	
-	//小孩问题3
+	//小孩问题6
 	var a7 = [];
 	var b7 = null;
 	for (var i = 0; i <= son3.length-1; i++) {
@@ -180,5 +227,44 @@
 	    console.log("点击了第" + b7 + "个选项。");
 	    	$(".thr3").hide();
 			$(".last").addClass("animated fadeInUp").show();  	
+	  }
+	}
+	
+//小孩问题1
+	var a8 = [];
+	var b8 = null;
+	for (var i = 0; i <= son4.length-1; i++) {
+	  a8[i] = son4[i];
+	  son4[i].onclick = function () {
+	    b8 = a8.indexOf(this)+1 ;
+	    console.log("点击了第" + b8 + "个选项。");
+	    	$(".thr4").hide();
+			$(".thr5").addClass("animated fadeInUp").show();  	
+	  }
+	}
+	
+//小孩问题2
+	var a9 = [];
+	var b9 = null;
+	for (var i = 0; i <= son5.length-1; i++) {
+	  a9[i] = son5[i];
+	  son5[i].onclick = function () {
+	    b9 = a9.indexOf(this)+1 ;
+	    console.log("点击了第" + b9 + "个选项。");
+	    	$(".thr5").hide();
+			$(".thr6").addClass("animated fadeInUp").show();  	
+	  }
+	}
+	
+//小孩问题3
+	var a10 = [];
+	var b10 = null;
+	for (var i = 0; i <= son6.length-1; i++) {
+	  a10[i] = son6[i];
+	  son6[i].onclick = function () {
+	    b10 = a10.indexOf(this)+1 ;
+	    console.log("点击了第" + b10 + "个选项。");
+	    	$(".thr6").hide();
+			$(".thr").addClass("animated fadeInUp").show();  	
 	  }
 	}
