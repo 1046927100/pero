@@ -65,15 +65,15 @@
 	    nowIndex = arry.indexOf(this)+1 ;
 	    console.log(this)
 	    console.log("点击了第" + nowIndex + "个选项。");
-	    if(nowIndex==1||nowIndex==2||nowIndex==6){
+	    if(nowIndex==1||nowIndex==2||nowIndex==4){
 	    	$(".first").hide();
 	    	$(".sec").addClass("animated fadeInUp").show();
-	    }else if(nowIndex==5){
+	    }else if(nowIndex==3){
 	    	$(".first").hide();
 	    	$(".thr").addClass("animated fadeInUp").show();
-	    }else{
-	    	$(".first").hide();
-	    	$(".last").addClass("animated fadeInUp").show();
+//	    }else{
+//	    	$(".first").hide();
+//	    	$(".last").addClass("animated fadeInUp").show();
 	    }
 	  }
 	}
