@@ -61,6 +61,49 @@
 	var son5 = document.getElementsByClassName("son5");
 	var son6 = document.getElementsByClassName("son6");
 	
+	//其它按钮点击出现文本框
+	
+	var a11 = [];
+	var b11 = null;
+	for (var i = 0; i <= big4.length-1; i++) {	
+	  a11[i] = big4[i];	
+	  big4[i].onclick = function () {
+	    b11 = a11.indexOf(this)+1 ;
+	    $(".list2").hide();
+	    console.log("点击了第" + b11 + "个选项。");
+		var bbq = $(".big41").prop("checked");
+	    	if(bbq==true){
+	    		console.log("2")
+				$(".alone").addClass("animated fadeInRight").show();
+			}else{
+				$(".alone").hide();
+				$('.danger').hide();
+			}
+	    }
+	  }
+	
+	var a12 = [];
+	var b12 = null;
+	for (var i = 0; i <= son5.length-1; i++) {	
+	  a12[i] = son5[i];	
+	  son5[i].onclick = function () {
+	    b12 = a12.indexOf(this)+1 ;
+	    $(".list5").hide();
+	    console.log("点击了第" + b12 + "个选项。");
+		var bbq = $(".son55").prop("checked");
+	    	if(bbq==true){
+	    		console.log("2")
+				$(".alone").addClass("animated fadeInRight").show();
+			}else{
+				$(".alone").hide();
+				$('.danger').hide();
+			}
+	    }
+	  }
+	
+
+	
+	
 //	问题1
 	var arry = [];
 	var nowIndex = null;
@@ -68,7 +111,6 @@
 	  arry[i] = ques[i];	
 	  ques[i].onclick = function () {
 	    nowIndex = arry.indexOf(this)+1 ;
-	    console.log(this)
 	    console.log("点击了第" + nowIndex + "个选项。");
 	    if(nowIndex==1||nowIndex==2||nowIndex==4){
 	    	$(".first").hide();
@@ -82,6 +124,8 @@
 	    }
 	  }
 	}
+	
+	
 	
 //	大人问题1
 	var a = [];
@@ -141,10 +185,23 @@
    							$(".sec3").hide();
 		    				$(".sec4").addClass("animated fadeInUp").show();
 						}else{
-							
+							$(".list1").addClass("animated fadeInRight").show();
 						}		
 					}                
            }
+	
+		var a2 = [];
+		var b2 = null;
+		for (var i = 0; i <= big3.length-1; i++) {
+		  a2[i] = big3[i];
+		  big3[i].onclick = function () {
+		    b2 = a2.indexOf(this)+1 ;
+		    console.log("点击了第" + b2 + "个选项。");
+		    	$(".list1").hide();
+		  }
+		}
+	
+	
 	document.getElementsByClassName("sec3")[0].addEventListener('touchstart',touchStart,false);
 	document.getElementsByClassName("sec3")[0].addEventListener('touchmove',touchMove,false);
 	
@@ -156,13 +213,26 @@
 	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
 					if(y<=-50){
 						if(len5.length>0){
-   							$(".sec4").hide();
-		    				$(".sec7").addClass("animated fadeInUp").show();
+							var bbq = $(".big41").prop("checked")
+							if(bbq == true){
+								if($(".alone")[0].value ==''){
+									$(".danger").addClass("animated fadeInRight").show();
+								}else{
+									$(".danger").hide();
+									$(".sec4").hide();
+		    						$(".sec7").addClass("animated fadeInUp").show();
+								}
+							}else if(bbq == false){
+								$(".sec4").hide();
+		    					$(".sec7").addClass("animated fadeInUp").show();
+							}	
 						}else{
-							
+							$(".list2").addClass("animated fadeInRight").show();
 						}		
 					}                 
-           }
+          }
+	
+	
 	document.getElementsByClassName("sec4")[0].addEventListener('touchstart',touchStart,false);
 	document.getElementsByClassName("sec4")[0].addEventListener('touchmove',touchMove1,false);
 	
@@ -207,10 +277,21 @@
    							$(".sec7").hide();
 		    				$(".sec8").addClass("animated fadeInUp").show();
 						}else{
-							
+							$(".list3").addClass("animated fadeInRight").show();
 						}		
 					}                  
 	           }
+	
+		var a4 = [];
+		var b4 = null;
+		for (var i = 0; i <= big7.length-1; i++) {
+		  a4[i] = big7[i];
+		  big7[i].onclick = function () {
+		    b4= a4.indexOf(this)+1 ;
+		    console.log("点击了第" + b4 + "个选项。");
+		    	$(".list3").hide();
+		  }
+		}
 		document.getElementsByClassName("sec7")[0].addEventListener('touchstart',touchStart,false);
 		document.getElementsByClassName("sec7")[0].addEventListener('touchmove',touchMove2,false);
 		
@@ -225,10 +306,21 @@
    							$(".sec8").hide();
 		    				$(".last").addClass("animated fadeInUp").show();
 						}else{
-							
+							$(".list4").addClass("animated fadeInRight").show();
 						}		
 					}                  
 	           }
+	
+		var a7 = [];
+		var b7 = null;
+		for (var i = 0; i <= big8.length-1; i++) {
+		  a7[i] = big8[i];
+		  big8[i].onclick = function () {
+		    b7= a7.indexOf(this)+1 ;
+		    console.log("点击了第" + b7 + "个选项。");
+		    	$(".list4").hide();
+		  }
+		}
 		document.getElementsByClassName("sec8")[0].addEventListener('touchstart',touchStart,false);
 		document.getElementsByClassName("sec8")[0].addEventListener('touchmove',touchMove3,false);
 	
@@ -268,16 +360,28 @@
 	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
 					if(y<=-50){
 						if(len3.length>0){
-   							$(".thr5").hide();
-		    				$(".thr6").addClass("animated fadeInUp").show();
+							var bbq = $(".son55").prop("checked")
+							console.log(bbq)
+							if(bbq == true){
+								if($(".alone")[0].value ==''){
+									$(".danger").addClass("animated fadeInRight").show();
+								}else{
+									$(".danger").hide();
+									$(".thr5").hide();
+		    						$(".thr6").addClass("animated fadeInUp").show();
+								}
+							}else if(bbq == false){
+								$(".thr5").hide();
+		    					$(".thr6").addClass("animated fadeInUp").show();
+							}	
 						}else{
-							
+							$(".list5").addClass("animated fadeInRight").show();
 						}		
-					}                
+					}                   
 	           }
 		document.getElementsByClassName("thr5")[0].addEventListener('touchstart',touchStart,false);
 		document.getElementsByClassName("thr5")[0].addEventListener('touchmove',touchMove4,false);
-	
+		
 //小孩问题2.1
 	
 	
@@ -320,12 +424,22 @@
    							$(".thr2").hide();
 		    				$(".thr3").addClass("animated fadeInUp").show();
 						}else{
-							
+							$(".list6").addClass("animated fadeInRight").show();
 						}		
 					}                 
 	           }
 		document.getElementsByClassName("thr2")[0].addEventListener('touchstart',touchStart,false);
 		document.getElementsByClassName("thr2")[0].addEventListener('touchmove',touchMove5,false);
+		var a9 = [];
+		var b9 = null;
+		for (var i = 0; i <= son2.length-1; i++) {
+		  a9[i] = son2[i];
+		  son2[i].onclick = function () {
+		    b9= a9.indexOf(this)+1 ;
+		    console.log("点击了第" + b9 + "个选项。");
+		    	$(".list6").hide();
+		  }
+		}
 	
 	//小孩问题6
 	
@@ -338,9 +452,27 @@
 						if(len2.length>0){
    							$(".thr3").hide();
 		    				$(".last").addClass("animated fadeInUp").show();
-						}else{			
+						}else{		
+							$(".list7").addClass("animated fadeInRight").show();
 						}					
 					}                 
 	           }
 		document.getElementsByClassName("thr3")[0].addEventListener('touchstart',touchStart,false);
 		document.getElementsByClassName("thr3")[0].addEventListener('touchmove',touchMove6,false);
+		var a10 = [];
+		var b10 = null;
+		for (var i = 0; i <= son3.length-1; i++) {
+		  a10[i] = son3[i];
+		  son3[i].onclick = function () {
+		    b10= a10.indexOf(this)+1 ;
+		    console.log("点击了第" + b10 + "个选项。");
+		    	$(".list7").hide();
+		  }
+		}
+		
+		
+//文本框点击值消失
+	$(".alone").on("click",function(){
+		$(".danger").hide();
+	})
+	

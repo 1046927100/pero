@@ -143,7 +143,42 @@
 				bottom: 1.4rem;
 			}
 			.alone{
-				
+				width:90%;
+				height:0.64rem;
+				border:0 none;
+				outline: none;
+				border-bottom: 1px solid #ccc;
+				line-height: 0.64rem;
+				font-size: 0.42rem;
+				color:black;
+				padding-left:0.42rem;
+				display: none;
+			}
+			::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+			    color:    black;
+			    opacity: 0.7;
+			}
+			:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+			   color:    black;
+			    opacity: 0.7;
+			}
+			::-moz-placeholder { /* Mozilla Firefox 19+ */
+			   color:    black;
+			    opacity: 0.7;
+			}
+			:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			   color:    black;
+			    opacity: 0.7;
+			}
+			.danger{
+				color:red;
+				font-size: 0.42rem;
+				display: none;
+			}
+			.list1,.list2,.list3,.list4,.list5,.list6,.list7{
+				color:red;
+				font-size: 0.42rem;
+				display: none;
 			}
 		</style>
 	</head>
@@ -187,19 +222,21 @@
 		        </ul>
 			</div>
 			<div class='sec3'>
-				<h3>4.您为孩子报名哪些课程？</h3>			
+				<h3>4.您为孩子报名哪些课程？</h3>		
+				<div class='list1'>至少选择一个选项</div>
 		        <ul>
 		            <li><input type="checkbox" name="radio3" class='big3'><span>为孩子报名线上辅导班</span></li>
 		            <li><input type="checkbox" name="radio3" class='big3'><span>为孩子报名线下辅导班</span></li>
 		            <li><input type="checkbox" name="radio3" class='big3'><span>为孩子报名兴趣班</span></li>
 		            <li><input type="checkbox" name="radio3" class='big3'><span>报名心理、教育学、家庭教育类等课程</span></li>
 		            <li><input type="checkbox" name="radio3" class='big3'><span>以上都没报过</span></li>
-		        </ul>
+		        </ul>   
 		        <div class='jiantou'></div>
 		        <div class='jiantou2'></div>
 			</div>
 			<div class='sec4'>
-				<h3>5.您的孩子使用过以下哪些APP进行课外辅导？</h3>			
+				<h3>5.您的孩子使用过以下哪些APP进行课外辅导？</h3>		
+				 <div class='list2'>至少选择一个选项</div>
 		        <ul>
 		            <li><input type="checkbox" name="radio4" class='big4'><span class='app1'>作业帮</span></li>
 		            <li><input type="checkbox" name="radio4" class='big4'><span class='app2'>猿辅导</span></li>
@@ -208,12 +245,14 @@
 		            <li><input type="checkbox" name="radio4" class='big4'><span class='app5'>腾迅课堂</span></li>
 		            <li><input type="checkbox" name="radio4" class='big4'><span class='app6'>掌门1对1</span></li>
 		            <li><input type="checkbox" name="radio4" class='big4'><span class='app7'>小猿搜题</span></li>
-		            <li><input type="checkbox" name="radio4" class='big4'>
-		            <span>其他</span>
-		            <!--<input type="text" class='alone'/>-->
+		            <li><input type="checkbox" name="radio4" class='big4 big41'>
+		            <span>其他(请注明)</span>   
+		           	 <input type="text" class='alone' placeholder="请输入APP名称"/>
+		           	 <div class='danger' >请输入填空项的内容</div>
 		            </li>
-		        </ul>
-		         <div class='jiantou'></div>
+		        	</ul>
+		        	
+		        <div class='jiantou'></div>
 		        <div class='jiantou2'></div>
 			</div>
 			<!--<div class='sec41'>
@@ -224,7 +263,8 @@
 			</div>-->
 			
 			<div class='sec7'>
-				<h3>6.您认为哪些人或机构写的教育内容，对您孩子来说有用?</h3>			
+				<h3>6.您认为哪些人或机构写的教育内容，对您孩子来说有用?</h3>
+				<div class='list3'>至少选择一个选项</div>
 		        <ul>
 		            <li><input type="checkbox" name="radio7" class='big7'><span>权威教育专家</span></li>
 		            <li><input type="checkbox" name="radio7" class='big7'><span>教授</span></li>
@@ -234,12 +274,13 @@
 		            <li><input type="checkbox" name="radio7" class='big7'><span>明星爸妈</span></li>
 		            <li><input type="checkbox" name="radio7" class='big7'><span>知名教育机构</span></li>
 		            <li><input type="checkbox" name="radio7" class='big7'><span>其他</span></li>
-		        </ul>
+		        </ul>		        
 		         <div class='jiantou'></div>
 		        <div class='jiantou2'></div>
 			</div>
 			<div class='sec8'>
-				<h3>7.您孩子对哪些教育内容感兴趣?</h3>			
+				<h3>7.您孩子对哪些教育内容感兴趣?</h3>	
+				 <div class='list4'>至少选择一个选项</div>
 		        <ul>
 		            <li><input type="checkbox" name="radio8" class='big8'><span>学习辅导(学习方法、学习习惯)</span></li>
 		            <li><input type="checkbox" name="radio8" class='big8'><span>择校升学(学校选择、志愿填报等)</span></li>
@@ -249,7 +290,7 @@
 		            <li><input type="checkbox" name="radio8" class='big8'><span>亲子关系(亲子沟通、高质量陪伴等)</span></li>
 		            <li><input type="checkbox" name="radio8" class='big8'><span>行为习惯(生活习惯、拖延症等)</span></li>
 		            <li><input type="checkbox" name="radio8" class='big8'><span>安全教育(人身安全、校园霸凌等)</span></li>
-		        </ul>
+		        </ul>		       
 		         <div class='jiantou'></div>
 		        <div class='jiantou2'></div>
 			</div>	
@@ -267,7 +308,8 @@
 			</div>
 			
 			<div class='thr2'>
-				<h3>6.您认为哪些人或机构写的教育内容，对您来说有用?</h3>			
+				<h3>6.您认为哪些人或机构写的教育内容，对您来说有用?</h3>	
+				 <div class='list6'>至少选择一个选项</div>
 		        <ul>
 		            <li><input type="checkbox" name="radio71" class='son2'><span>权威教育专家</span></li>
 		            <li><input type="checkbox" name="radio71" class='son2'><span>教授</span></li>
@@ -277,13 +319,14 @@
 		            <li><input type="checkbox" name="radio71" class='son2'><span>明星爸妈</span></li>
 		            <li><input type="checkbox" name="radio71" class='son2'><span>知名教育机构</span></li>
 		            <li><input type="checkbox" name="radio71" class='son2'><span>其他</span></li>
-		        </ul>
-		         <div class='jiantou'></div>
+		        </ul>		       
+		        <div class='jiantou'></div>
 		        <div class='jiantou2'></div>
 			</div>
 			
 			<div class='thr3'>
-				<h3>7.您对哪些教育内容感兴趣?</h3>			
+				<h3>7.您对哪些教育内容感兴趣?</h3>	
+				<div class='list7'>至少选择一个选项</div>
 		        <ul>
 		            <li><input type="checkbox" name="radio8" class='son3'><span>学习辅导(学习方法、学习习惯)</span></li>
 		            <li><input type="checkbox" name="radio8" class='son3'><span>择校升学(学校选择、志愿填报等)</span></li>
@@ -293,7 +336,7 @@
 		            <li><input type="checkbox" name="radio8" class='son3'><span>亲子关系(亲子沟通、高质量陪伴等)</span></li>
 		            <li><input type="checkbox" name="radio8" class='son3'><span>行为习惯(生活习惯、拖延症等)</span></li>
 		            <li><input type="checkbox" name="radio8" class='son3'><span>安全教育(人身安全、校园霸凌等)</span></li>
-		        </ul>
+		        </ul>        
 		         <div class='jiantou'></div>
 		        <div class='jiantou2'></div>
 			</div>	
@@ -311,17 +354,22 @@
 			</div>
 			
 			<div class='thr5'>
-				<h3>3.您使用过以下哪些APP进行课外辅导？</h3>			
+				<h3>3.您使用过以下哪些APP进行课外辅导？</h3>
+				<div class='list5'>至少选择一个选项</div>
 		        <ul>
 		            <li><input type="checkbox" name="radio4" class='son5'><span class='app1'>作业帮</span></li>
 		            <li><input type="checkbox" name="radio4" class='son5'><span class='app2'>猿辅导</span></li>
 		            <li><input type="checkbox" name="radio4" class='son5'><span class='app3'>学而思</span></li>
-		            <li><input type="checkbox" name="radio4" class='son5'><span>新东方</span></li>
-		            <li><input type="checkbox" name="radio4" class='son5'><span>腾迅课堂</span></li>
-		            <li><input type="checkbox" name="radio4" class='son5'><span class='app4'>掌门1对1</span></li>
-		            <li><input type="checkbox" name="radio4" class='son5'><span>小猿搜题</span></li>
-		            <li><input type="checkbox" name="radio4" class='son5'><span>其他</span></li>
-		        </ul>
+		            <li><input type="checkbox" name="radio4" class='son5'><span class='app4'>新东方</span></li>
+		            <li><input type="checkbox" name="radio4" class='son5'><span class='app5'>腾迅课堂</span></li>
+		            <li><input type="checkbox" name="radio4" class='son5'><span class='app6'>掌门1对1</span></li>
+		            <li><input type="checkbox" name="radio4" class='son5'><span class='app7'>小猿搜题</span></li>
+		           <li><input type="checkbox" name="radio4" class='son5 son55'>
+		            <span>其他(请注明)</span>   
+		           	 <input type="text" class='alone' placeholder="请输入APP名称"/>
+		           	 <div class='danger' >请输入填空项的内容</div>
+		            </li>
+		        </ul>       
 		         <div class='jiantou'></div>
 		        <div class='jiantou2'></div>
 			</div>	
