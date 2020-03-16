@@ -136,7 +136,7 @@
 	                var  touch = e.touches[0];               
 	                 y = touch.pageY - startY;//滑动的距离
 	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
-					if(y<=-20){
+					if(y<=-50){
 						if(len4.length>0){
    							$(".sec3").hide();
 		    				$(".sec4").addClass("animated fadeInUp").show();
@@ -154,7 +154,7 @@
 	                var  touch = e.touches[0];               
 	                 y = touch.pageY - startY;//滑动的距离
 	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
-					if(y<=-20){
+					if(y<=-50){
 						if(len5.length>0){
    							$(".sec4").hide();
 		    				$(".sec7").addClass("animated fadeInUp").show();
@@ -202,7 +202,7 @@
 	                var  touch = e.touches[0];               
 	                 y = touch.pageY - startY;//滑动的距离
 	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
-					if(y<=-20){
+					if(y<=-50){
 						if(len6.length>0){
    							$(".sec7").hide();
 		    				$(".sec8").addClass("animated fadeInUp").show();
@@ -220,7 +220,7 @@
 	                var  touch = e.touches[0];               
 	                 y = touch.pageY - startY;//滑动的距离
 	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
-					if(y<=-20){
+					if(y<=-50){
 						if(len8.length>0){
    							$(".sec8").hide();
 		    				$(".last").addClass("animated fadeInUp").show();
@@ -266,7 +266,7 @@
 	                var  touch = e.touches[0];               
 	                 y = touch.pageY - startY;//滑动的距离
 	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
-					if(y<=-20){
+					if(y<=-50){
 						if(len3.length>0){
    							$(".thr5").hide();
 		    				$(".thr6").addClass("animated fadeInUp").show();
@@ -315,7 +315,7 @@
 	                 var  touch = e.touches[0];               
 	                 y = touch.pageY - startY;//滑动的距离
 	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
-					if(y<=-20){
+					if(y<=-50){
 						if(len.length>0){
    							$(".thr2").hide();
 		    				$(".thr3").addClass("animated fadeInUp").show();
@@ -334,7 +334,7 @@
 	                 var  touch = e.touches[0];               
 	                 y = touch.pageY - startY;//滑动的距离
 	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
-					if(y<=-20){
+					if(y<=-50){
 						if(len2.length>0){
    							$(".thr3").hide();
 		    				$(".last").addClass("animated fadeInUp").show();
