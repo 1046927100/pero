@@ -108,105 +108,191 @@
 	    	$(".sec3").addClass("animated fadeInUp").show();
 	    	//如果选大学
 	    	if(b1==4){
-	    		$(".app1").html('知乎');
-	    		$(".app2").html('哔哩哔哩');
-	    		$(".app3").html('喜马拉雅');
-	    		$(".app4").html('得到');
+	    		$(".app1").html('网易公开课');
+	    		$(".app2").html('腾讯课堂');
+	    		$(".app3").html('小猿搜题');
+	    		$(".app4").html('喜马拉雅');
+	    		$(".app5").html('新东方');
+	    		$(".app6").html('得到');
+	    		$(".app7").html('知乎');
 	    	} 	
 	  }
 	}
 	
 	//大人问题3
-	var a2 = [];
-	var b2 = null;
-	for (var i = 0; i <= big3.length-1; i++) {
-	  a2[i] = big3[i];
-	  big3[i].onclick = function () {
-	    b2 = a2.indexOf(this)+1 ;
-	    console.log("点击了第" + b2 + "个选项。");
-	    	$(".sec3").hide();
-	    	$(".sec4").addClass("animated fadeInUp").show();
-	  }
-	}
+	var startX,//触摸时的坐标
+	    startY,
+	    x, //滑动的距离
+	    y,
+	    aboveY=0; //设一个全局变量记录上一次内部块滑动的位置 
+	 function touchStart(e){//触摸
+//              e.preventDefault();
+                var touch=e.touches[0];
+                startY = touch.pageY;   //刚触摸时的坐标            
+            }
+	
+	function touchMove(e){//滑动          
+                 var len4=$("input[name='radio3']:checked()");		
+	                var  touch = e.touches[0];               
+	                 y = touch.pageY - startY;//滑动的距离
+	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
+					if(y<=-20){
+						if(len4.length>0){
+   							$(".sec3").hide();
+		    				$(".sec4").addClass("animated fadeInUp").show();
+						}else{
+							
+						}		
+					}                
+           }
+	document.getElementsByClassName("sec3")[0].addEventListener('touchstart',touchStart,false);
+	document.getElementsByClassName("sec3")[0].addEventListener('touchmove',touchMove,false);
 	
 	//大人问题4
-	var a3 = [];
-	var b3 = null;
-	for (var i = 0; i <= big4.length-1; i++) {
-	  a3[i] = big4[i];
-	  big4[i].onclick = function () {
-	    b3 = a3.indexOf(this)+1 ;
-	    console.log("点击了第" + b3 + "个选项。");	
-	    	//如果选都不是
-	    	if(b3==8){
-	    		$(".sec4").hide();
-	    		$(".sec41").addClass("animated fadeInUp").show();
-	    	}else{
-	    		$(".sec4").hide();
-	    		$(".sec7").addClass("animated fadeInUp").show();
-	    	}
-	    	
-	  }
-	}
+	function touchMove1(e){//滑动          
+                 var len5=$("input[name='radio4']:checked()");		
+	                var  touch = e.touches[0];               
+	                 y = touch.pageY - startY;//滑动的距离
+	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
+					if(y<=-20){
+						if(len5.length>0){
+   							$(".sec4").hide();
+		    				$(".sec7").addClass("animated fadeInUp").show();
+						}else{
+							
+						}		
+					}                 
+           }
+	document.getElementsByClassName("sec4")[0].addEventListener('touchstart',touchStart,false);
+	document.getElementsByClassName("sec4")[0].addEventListener('touchmove',touchMove1,false);
 	
 	//大人问题4.1
-	var oTxt = document.getElementsByClassName("text1")[0];
-	var btn = document.getElementsByClassName("btn")[0];
-	function isnull(val) {
-        var str = val.replace(/(^\s*)|(\s*$)/g, '');//去除空格;
-        var han = val.replace(/^[A-Za-z0-9\u4e00-\u9fa5]/);
-        if (str == '' || str == undefined || str == null){
-            //return true;
-//          console.log('空');
-            $(".btn").css("background","skyblue")
-        } else if(str = han){
-            //return false;
-//          console.log('非空');
-            $(".btn").css("background","blue")
-            
-        }
-    }
-	$('.text1').bind('keyup', function () {
-		isnull(oTxt.value)
-	})
-	$(".btn").on("click",function(){
-		if(btn.style.background == "blue"){
-			$(".sec41").hide();
-	   		$(".sec7").addClass("animated fadeInUp").show();
-		}else{
-			return
-		}
-	})
+//	var oTxt = document.getElementsByClassName("text1")[0];
+//	var btn = document.getElementsByClassName("btn")[0];
+//	function isnull(val) {
+//      var str = val.replace(/(^\s*)|(\s*$)/g, '');//去除空格;
+//      var han = val.replace(/^[A-Za-z0-9\u4e00-\u9fa5]/);
+//      if (str == '' || str == undefined || str == null){
+//          //return true;
+////          console.log('空');
+//          $(".btn").css("background","skyblue")
+//      } else if(str = han){
+//          //return false;
+////          console.log('非空');
+//          $(".btn").css("background","blue")
+//          
+//      }
+//  }
+//	$('.text1').bind('keyup', function () {
+//		isnull(oTxt.value)
+//	})
+//	$(".btn").on("click",function(){
+//		if(btn.style.background == "blue"){
+//			$(".sec41").hide();
+//	   		$(".sec7").addClass("animated fadeInUp").show();
+//		}else{
+//			return
+//		}
+//	})
 
 	
 	//大人问题5
-	var a42 = [];
-	var b42 = null;
-	for (var i = 0; i <= big7.length-1; i++) {
-	  a42[i] = big7[i];
-	  big7[i].onclick = function () {
-	    b42 = a42.indexOf(this)+1 ;
-	    console.log("点击了第" + b42 + "个选项。");
-	    	$(".sec7").hide();
-			$(".sec8").addClass("animated fadeInUp").show();
-	  }
-	}
-	
+	function touchMove2(e){//滑动          
+	                var len6=$("input[name='radio7']:checked()");		
+	                var  touch = e.touches[0];               
+	                 y = touch.pageY - startY;//滑动的距离
+	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
+					if(y<=-20){
+						if(len6.length>0){
+   							$(".sec7").hide();
+		    				$(".sec8").addClass("animated fadeInUp").show();
+						}else{
+							
+						}		
+					}                  
+	           }
+		document.getElementsByClassName("sec7")[0].addEventListener('touchstart',touchStart,false);
+		document.getElementsByClassName("sec7")[0].addEventListener('touchmove',touchMove2,false);
+		
 	//大人问题6
-	var a43 = [];
-	var b43 = null;
-	for (var i = 0; i <= big8.length-1; i++) {
-	  a43[i] = big8[i];
-	  big8[i].onclick = function () {
-	    b43 = a43.indexOf(this)+1 ;
-	    console.log("点击了第" + b43 + "个选项。");
-	    	$(".sec8").hide();
-			$(".last").addClass("animated fadeInUp").show();
+	function touchMove3(e){//滑动          
+	                 var len8=$("input[name='radio8']:checked()");		
+	                var  touch = e.touches[0];               
+	                 y = touch.pageY - startY;//滑动的距离
+	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
+					if(y<=-20){
+						if(len8.length>0){
+   							$(".sec8").hide();
+		    				$(".last").addClass("animated fadeInUp").show();
+						}else{
+							
+						}		
+					}                  
+	           }
+		document.getElementsByClassName("sec8")[0].addEventListener('touchstart',touchStart,false);
+		document.getElementsByClassName("sec8")[0].addEventListener('touchmove',touchMove3,false);
+	
+	
+	
+	
+	
+	
+//小孩问题1
+	var a8 = [];
+	var b8 = null;
+	for (var i = 0; i <= son4.length-1; i++) {
+	  a8[i] = son4[i];
+	  son4[i].onclick = function () {
+	    b8 = a8.indexOf(this)+1 ;
+	    console.log("点击了第" + b8 + "个选项。");
+	    	$(".thr4").hide();
+			$(".thr5").addClass("animated fadeInUp").show();  	
+			//如果选大学
+	    	if(b8==4){
+	    		$(".app1").html('网易公开课');
+	    		$(".app2").html('腾讯课堂');
+	    		$(".app3").html('小猿搜题');
+	    		$(".app4").html('喜马拉雅');
+	    		$(".app5").html('新东方');
+	    		$(".app6").html('得到');
+	    		$(".app7").html('知乎');
+	    	}
 	  }
 	}
 	
+//小孩问题2
+	function touchMove4(e){//滑动          
+	                var len3=$("input[name='radio4']:checked()");		
+	                var  touch = e.touches[0];               
+	                 y = touch.pageY - startY;//滑动的距离
+	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
+					if(y<=-20){
+						if(len3.length>0){
+   							$(".thr5").hide();
+		    				$(".thr6").addClass("animated fadeInUp").show();
+						}else{
+							
+						}		
+					}                
+	           }
+		document.getElementsByClassName("thr5")[0].addEventListener('touchstart',touchStart,false);
+		document.getElementsByClassName("thr5")[0].addEventListener('touchmove',touchMove4,false);
+	
+//小孩问题2.1
 	
 	
+//小孩问题3
+	var a6 = [];
+	var b6 = null;
+	for (var i = 0; i <= son6.length-1; i++) {
+	  a6[i] = son6[i];
+	  son6[i].onclick = function () {
+	    b6 = a6.indexOf(this)+1 ;
+	    console.log("点击了第" + b6 + "个选项。");
+	    	$(".thr6").hide();
+	    	$(".thr").addClass("animated fadeInUp").show();
+	  }
+	}
 	
 	//小孩问题4
 	var a5 = [];
@@ -222,111 +308,39 @@
 	}
 	
 	//小孩问题5
-	var a6 = [];
-	var b6 = null;
-	for (var i = 0; i <= son2.length-1; i++) {
-	  a6[i] = son2[i];
-	  son2[i].onclick = function () {
-	    b6 = a6.indexOf(this)+1 ;
-	    console.log("点击了第" + b6 + "个选项。");
-	    	$(".thr2").hide();
-	    	$(".thr3").addClass("animated fadeInUp").show();
-	    	
-	  }
-	}
+
+
+	function touchMove5(e){//滑动          
+					var len=$("input[name='radio71']:checked()");		
+	                 var  touch = e.touches[0];               
+	                 y = touch.pageY - startY;//滑动的距离
+	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
+					if(y<=-20){
+						if(len.length>0){
+   							$(".thr2").hide();
+		    				$(".thr3").addClass("animated fadeInUp").show();
+						}else{
+							
+						}		
+					}                 
+	           }
+		document.getElementsByClassName("thr2")[0].addEventListener('touchstart',touchStart,false);
+		document.getElementsByClassName("thr2")[0].addEventListener('touchmove',touchMove5,false);
 	
 	//小孩问题6
-	var a7 = [];
-	var b7 = null;
-	for (var i = 0; i <= son3.length-1; i++) {
-	  a7[i] = son3[i];
-	  son3[i].onclick = function () {
-	    b7 = a7.indexOf(this)+1 ;
-	    console.log("点击了第" + b7 + "个选项。");
-	    	$(".thr3").hide();
-			$(".last").addClass("animated fadeInUp").show();  	
-	  }
-	}
 	
-//小孩问题1
-	var a8 = [];
-	var b8 = null;
-	for (var i = 0; i <= son4.length-1; i++) {
-	  a8[i] = son4[i];
-	  son4[i].onclick = function () {
-	    b8 = a8.indexOf(this)+1 ;
-	    console.log("点击了第" + b8 + "个选项。");
-	    	$(".thr4").hide();
-			$(".thr5").addClass("animated fadeInUp").show();  	
-			//如果选大学
-	    	if(b8==4){
-	    		$(".app1").html('知乎');
-	    		$(".app2").html('哔哩哔哩');
-	    		$(".app3").html('喜马拉雅');
-	    		$(".app4").html('得到');
-	    	}
-	  }
-	}
-	
-//小孩问题2
-	var a9 = [];
-	var b9 = null;
-	for (var i = 0; i <= son5.length-1; i++) {
-	  a9[i] = son5[i];
-	  son5[i].onclick = function () {
-	    b9 = a9.indexOf(this)+1 ;
-	    console.log("点击了第" + b9 + "个选项。");    		
-			if(b9==8){
-				$(".thr5").hide();
-				$(".sec42").addClass("animated fadeInUp").show();
-			}else{
-				$(".thr5").hide();
-				$(".thr6").addClass("animated fadeInUp").show();  
-			}
-	  }
-	}
-	
-//小孩问题2.1
-	var oTxt2 = document.getElementsByClassName("text2")[0];
-	var btn2 = document.getElementsByClassName("btn2")[0];
-	function isnull2(val) {
-        var str = val.replace(/(^\s*)|(\s*$)/g, '');//去除空格;
-        var han = val.replace(/^[A-Za-z0-9\u4e00-\u9fa5]/);
-        console.log(str)
-        if (str == '' || str == undefined || str == null){
-            //return true;
-            console.log('空');
-            $(".btn2").css("background","skyblue")
-        } else if(str = han){
-            //return false;
-            console.log('非空');
-            $(".btn2").css("background","blue")
-            
-        }
-    }
-	
-	$('.text2').bind('keyup', function () {
-		isnull2(oTxt2.value)
-	})
-	$(".btn2").on("click",function(){
-		if(btn2.style.background == "blue"){
-			$(".sec42").hide();
-	   		$(".thr6").addClass("animated fadeInUp").show();
-		}else{
-			return
-		}
-		
-	})
-	
-//小孩问题3
-	var a10 = [];
-	var b10 = null;
-	for (var i = 0; i <= son6.length-1; i++) {
-	  a10[i] = son6[i];
-	  son6[i].onclick = function () {
-	    b10 = a10.indexOf(this)+1 ;
-	    console.log("点击了第" + b10 + "个选项。");
-	    	$(".thr6").hide();
-			$(".thr").addClass("animated fadeInUp").show();  	
-	  }
-	}
+	function touchMove6(e){//滑动          
+					var len2=$("input[name='radio8']:checked()");
+	                 var  touch = e.touches[0];               
+	                 y = touch.pageY - startY;//滑动的距离
+	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
+					if(y<=-20){
+						if(len2.length>0){
+   							$(".thr3").hide();
+		    				$(".last").addClass("animated fadeInUp").show();
+						}else{			
+						}					
+					}                 
+	           }
+		document.getElementsByClassName("thr3")[0].addEventListener('touchstart',touchStart,false);
+		document.getElementsByClassName("thr3")[0].addEventListener('touchmove',touchMove6,false);
