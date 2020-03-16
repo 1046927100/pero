@@ -106,6 +106,13 @@
 	    console.log("点击了第" + b1 + "个选项。");
 	    	$(".sec2").hide();
 	    	$(".sec3").addClass("animated fadeInUp").show();
+	    	//如果选大学
+	    	if(b1==4){
+	    		$(".app1").html('知乎');
+	    		$(".app2").html('哔哩哔哩');
+	    		$(".app3").html('喜马拉雅');
+	    		$(".app4").html('得到');
+	    	} 	
 	  }
 	}
 	
@@ -129,39 +136,50 @@
 	  a3[i] = big4[i];
 	  big4[i].onclick = function () {
 	    b3 = a3.indexOf(this)+1 ;
-	    console.log("点击了第" + b3 + "个选项。");
-	    	$(".sec4").hide();
-	    	$(".sec5").addClass("animated fadeInUp").show();
+	    console.log("点击了第" + b3 + "个选项。");	
+	    	//如果选都不是
+	    	if(b3==8){
+	    		$(".sec4").hide();
+	    		$(".sec41").addClass("animated fadeInUp").show();
+	    	}else{
+	    		$(".sec4").hide();
+	    		$(".sec7").addClass("animated fadeInUp").show();
+	    	}
+	    	
 	  }
 	}
+	
+	//大人问题4.1
+	var oTxt = document.getElementsByClassName("text1")[0];
+	var btn = document.getElementsByClassName("btn")[0];
+	function isnull(val) {
+        var str = val.replace(/(^\s*)|(\s*$)/g, '');//去除空格;
+        var han = val.replace(/^[A-Za-z0-9\u4e00-\u9fa5]/);
+        if (str == '' || str == undefined || str == null){
+            //return true;
+//          console.log('空');
+            $(".btn").css("background","skyblue")
+        } else if(str = han){
+            //return false;
+//          console.log('非空');
+            $(".btn").css("background","blue")
+            
+        }
+    }
+	$('.text1').bind('keyup', function () {
+		isnull(oTxt.value)
+	})
+	$(".btn").on("click",function(){
+		if(btn.style.background == "blue"){
+			$(".sec41").hide();
+	   		$(".sec7").addClass("animated fadeInUp").show();
+		}else{
+			return
+		}
+	})
+
 	
 	//大人问题5
-	var a4 = [];
-	var b4 = null;
-	for (var i = 0; i <= big5.length-1; i++) {
-	  a4[i] = big5[i];
-	  big5[i].onclick = function () {
-	    b4 = a4.indexOf(this)+1 ;
-	    console.log("点击了第" + b4 + "个选项。");
-	    	$(".sec5").hide();
-			$(".sec6").addClass("animated fadeInUp").show();
-	  }
-	}
-	
-	//大人问题6
-	var a41 = [];
-	var b41 = null;
-	for (var i = 0; i <= big6.length-1; i++) {
-	  a41[i] = big6[i];
-	  big6[i].onclick = function () {
-	    b41 = a41.indexOf(this)+1 ;
-	    console.log("点击了第" + b41 + "个选项。");
-	    	$(".sec6").hide();
-			$(".sec7").addClass("animated fadeInUp").show();
-	  }
-	}
-	
-	//大人问题7
 	var a42 = [];
 	var b42 = null;
 	for (var i = 0; i <= big7.length-1; i++) {
@@ -174,7 +192,7 @@
 	  }
 	}
 	
-	//大人问题8
+	//大人问题6
 	var a43 = [];
 	var b43 = null;
 	for (var i = 0; i <= big8.length-1; i++) {
@@ -240,6 +258,13 @@
 	    console.log("点击了第" + b8 + "个选项。");
 	    	$(".thr4").hide();
 			$(".thr5").addClass("animated fadeInUp").show();  	
+			//如果选大学
+	    	if(b8==4){
+	    		$(".app1").html('知乎');
+	    		$(".app2").html('哔哩哔哩');
+	    		$(".app3").html('喜马拉雅');
+	    		$(".app4").html('得到');
+	    	}
 	  }
 	}
 	
@@ -250,11 +275,48 @@
 	  a9[i] = son5[i];
 	  son5[i].onclick = function () {
 	    b9 = a9.indexOf(this)+1 ;
-	    console.log("点击了第" + b9 + "个选项。");
-	    	$(".thr5").hide();
-			$(".thr6").addClass("animated fadeInUp").show();  	
+	    console.log("点击了第" + b9 + "个选项。");    		
+			if(b9==8){
+				$(".thr5").hide();
+				$(".sec42").addClass("animated fadeInUp").show();
+			}else{
+				$(".thr5").hide();
+				$(".thr6").addClass("animated fadeInUp").show();  
+			}
 	  }
 	}
+	
+//小孩问题2.1
+	var oTxt2 = document.getElementsByClassName("text2")[0];
+	var btn2 = document.getElementsByClassName("btn2")[0];
+	function isnull2(val) {
+        var str = val.replace(/(^\s*)|(\s*$)/g, '');//去除空格;
+        var han = val.replace(/^[A-Za-z0-9\u4e00-\u9fa5]/);
+        console.log(str)
+        if (str == '' || str == undefined || str == null){
+            //return true;
+            console.log('空');
+            $(".btn2").css("background","skyblue")
+        } else if(str = han){
+            //return false;
+            console.log('非空');
+            $(".btn2").css("background","blue")
+            
+        }
+    }
+	
+	$('.text2').bind('keyup', function () {
+		isnull2(oTxt2.value)
+	})
+	$(".btn2").on("click",function(){
+		if(btn2.style.background == "blue"){
+			$(".sec42").hide();
+	   		$(".thr6").addClass("animated fadeInUp").show();
+		}else{
+			return
+		}
+		
+	})
 	
 //小孩问题3
 	var a10 = [];
