@@ -43,6 +43,8 @@
 	  }
 	}(window, document));
 	
+	// 1.使用 HTTP 通道上报数据：初始化
+//	let _logger = MiGuSDK.Logger.build();
 	
 	//用户选定事件
 	var ques = document.getElementsByClassName("one");
@@ -497,8 +499,7 @@
 
 
 //埋点
-// 1.使用 HTTP 通道上报数据：
-	let _logger = MiGuSDK.Logger.build();
+
 	
 
 //分享样式
@@ -534,13 +535,7 @@ weChatShare();
 	function sub(a){
 		_logger.submit("pagePositionClickEvent",{
 			//点击
-			positionName:"a",
+			positionName:"+a+",
 			pageName:"教育内容调查问卷",
 		});
 	}
-
-	$(".one")[0].on("click",function(){
-		sub(妈妈)
-		console.log(positionName);
-		console.log(pageName)
-	});
