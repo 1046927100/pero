@@ -255,17 +255,7 @@
 //          
 //      }
 //  }
-//	$('.text1').bind('keyup', function () {
-//		isnull(oTxt.value)
-//	})
-//	$(".btn").on("click",function(){
-//		if(btn.style.background == "blue"){
-//			$(".sec41").hide();
-//	   		$(".sec7").addClass("animated fadeInUp").show();
-//		}else{
-//			return
-//		}
-//	})
+
 
 	
 	//大人问题5
@@ -491,9 +481,43 @@
 //      });
 //  });
 
+//手机键盘弹起收起事件
+//封装卷曲的高度
+	function getScroll(){
+        return {
+//              left:window.pageXOffset || document.body.scrollLeft || document.documentElement.scrollLeft,
+                top: window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop
+        }
+	}
+
+//获取原窗口的高度
+//一、Android
+var originalHeight=document.documentElement.clientHeight ||document.body.clientHeight;
+window.οnresize=function(){
+    //键盘弹起与隐藏都会引起窗口的高度发生变化
+       var resizeHeight=document.documentElement.clientHeight || document.body.clientHeight;
+        if(resizeHeight-0<originalHeight-0){
+         //当软键盘弹起，在此处操作
+         }else{
+         //当软键盘收起，在此处操作
+         document.body.scrollTop = document.documentElement.scrollTop = 0;
+         }
+}
 
 
-
+//二、ios
+ document.body.addEventListener('focusin', () => {
+            //软键盘弹出的事件处理
+            if(isIphone()){
+				
+            }
+        })
+  document.body.addEventListener('focusout', () => {
+       //软键盘收起的事件处理
+        if(isIphone()){
+			document.body.scrollTop = document.documentElement.scrollTop = 0;
+        }
+   })
 
 
 
