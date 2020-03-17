@@ -363,7 +363,7 @@
 							var bbq = $(".son55").prop("checked")
 							console.log(bbq)
 							if(bbq == true){
-								if($(".alone")[0].value ==''){
+								if($(".alone")[1].value ==''){
 									$(".danger").addClass("animated fadeInRight").show();
 								}else{
 									$(".danger").hide();
