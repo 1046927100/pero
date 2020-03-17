@@ -180,7 +180,7 @@
 	                var  touch = e.touches[0];               
 	                 y = touch.pageY - startY;//滑动的距离
 	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
-					if(y<=-50){
+					if(y<=-40){
 						if(len4.length>0){
    							$(".sec3").hide();
 		    				$(".sec4").addClass("animated fadeInUp").show();
@@ -211,7 +211,7 @@
 	                var  touch = e.touches[0];               
 	                 y = touch.pageY - startY;//滑动的距离
 	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
-					if(y<=-50){
+					if(y<=-40){
 						if(len5.length>0){
 							var bbq = $(".big41").prop("checked")
 							if(bbq == true){
@@ -272,7 +272,7 @@
 	                var  touch = e.touches[0];               
 	                 y = touch.pageY - startY;//滑动的距离
 	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
-					if(y<=-50){
+					if(y<=-40){
 						if(len6.length>0){
    							$(".sec7").hide();
 		    				$(".sec8").addClass("animated fadeInUp").show();
@@ -301,7 +301,7 @@
 	                var  touch = e.touches[0];               
 	                 y = touch.pageY - startY;//滑动的距离
 	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
-					if(y<=-50){
+					if(y<=-40){
 						if(len8.length>0){
    							$(".sec8").hide();
 		    				$(".last").addClass("animated fadeInUp").show();
@@ -358,10 +358,9 @@
 	                var  touch = e.touches[0];               
 	                 y = touch.pageY - startY;//滑动的距离
 	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
-					if(y<=-50){
+					if(y<=-40){
 						if(len3.length>0){
 							var bbq = $(".son55").prop("checked")
-							console.log(bbq)
 							if(bbq == true){
 								if($(".alone")[1].value ==''){
 									$(".danger").addClass("animated fadeInRight").show();
@@ -419,7 +418,7 @@
 	                 var  touch = e.touches[0];               
 	                 y = touch.pageY - startY;//滑动的距离
 	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
-					if(y<=-50){
+					if(y<=-40){
 						if(len.length>0){
    							$(".thr2").hide();
 		    				$(".thr3").addClass("animated fadeInUp").show();
@@ -448,7 +447,7 @@
 	                 var  touch = e.touches[0];               
 	                 y = touch.pageY - startY;//滑动的距离
 	//              inner.style.top=aboveY+y+"px"; //这一句中的aboveY是inner上次滑动后的位置       
-					if(y<=-50){
+					if(y<=-40){
 						if(len2.length>0){
    							$(".thr3").hide();
 		    				$(".last").addClass("animated fadeInUp").show();
@@ -476,3 +475,65 @@
 		$(".danger").hide();
 	})
 	
+//提交按钮
+//	$('.bounceOutDown').on('click',function(){
+//      $.ajax({
+//          url:"",
+//          type:"POST",
+//          data:JSON.stringify(),
+//          contentType:"application/json",  //缺失会出现URL编码，无法转成json对象
+//          success:function(){
+//              alert("成功");
+//              console.log(data)
+//          }
+//      });
+//  });
+
+
+
+
+
+
+
+
+//埋点
+// 1.使用 HTTPS 通道上报数据：
+	let _logger = MiGuSDK.Logger.build();
+
+//分享样式
+	var weChatShare = function(){
+	 $.ajax({
+	        url: "  ",
+	        type: "get",
+	        dataType: "json",
+	        async: true,
+	        success: function(data){
+	            console.log(data.shareInfo);
+	            var title = data.shareInfo.title;
+	            var subTitle = data.shareInfo.subTitle;
+	            var imgUrl = data.shareInfo.img;
+	            var shareUrl = location.href;
+	            $.weixinSecondShare(title,subTitle,imgUrl,shareUrl)
+	                
+	        }
+	 });
+	}
+	
+weChatShare();
+
+//pv
+	window.onload = function(){
+		_logger.submit("pageVisitEvent",{
+			pageName:"教育内容调查问卷",
+		})
+	}
+	
+
+//2.上报数据
+	$(".one")[0].on("click",function(){
+		_logger.submit("pagePositionClickEvent",{
+			//点击
+			positionName:"妈妈",
+			pageName:"教育内容调查问卷",
+		});
+	});
