@@ -497,8 +497,8 @@
 
 
 //埋点
-// 1.使用 HTTPS 通道上报数据：
-	let _logger = MiGuSDK.Logger.https();
+// 1.使用 HTTP 通道上报数据：
+	let _logger = MiGuSDK.Logger.build();
 	
 
 //分享样式
@@ -541,4 +541,6 @@ weChatShare();
 
 	$(".one")[0].on("click",function(){
 		sub(妈妈)
+		console.log(positionName);
+		console.log(pageName)
 	});
